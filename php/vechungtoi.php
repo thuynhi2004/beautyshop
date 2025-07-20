@@ -9,11 +9,28 @@
     <link rel="stylesheet" href="../css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
+<style>
+  .navbar {
+  background-color: #f1f1f1; /* Màu nền của navbar */
+  color: white;
+}
+
+.navbar-nav a {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: black; /* Màu chữ */
+}
+
+.navbar-nav a:hover {
+  color: #33cc99; /* Màu khi hover */
+  text-decoration: none; /* Bỏ gạch chân khi hover */
+}
+</style>
+
 <body>
   
 <!-- header  -->
 
-<nav class="small navbar navbar-expand-lg border-bottom sticky-top  ">
+<nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
             <img src="../img/logo.png" alt="Bootstrap" />
@@ -48,12 +65,19 @@
                 >
                   Danh Mục sản phẩm
                 </a>
-                <ul class="dropdown-menu">
-                
-                  <li><a href="index.php?temp=suaruamat">🧴Sữa rửa mặt </a></li>
-                  <li><a href="index.php?temp=kemchongnang">🌞 Kem chống nắng </a></li>
-                  <li><a href="index.php?temp=trangdiemmoi">👄Trang điểm môi </a></li>
+                <ul class="dropdown-menu">               
+                  <li><a href="index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
+                  <li><a href="index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
+                  <li><a href="index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
+                  <li><a href="index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
+                  <li><a href="index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
+                  <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="cart.php"
+                  >Đặt Hàng 
+                </a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -67,13 +91,16 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="vechungtoi.php">Về chúng tôi </a></li>
-                  <li><a class="dropdown-item" href="chinhsachnguoisohuu.php">Chính sách  </a></li>
-                  <!-- <li><a class="dropdown-item" href="lienhe.php">Hỗ trợ </a></li> -->
                 </ul>
               </li>
               <li class="nav-item">
                
-                <a class="nav-link" aria-disabled="true" href="lienhe.php">Liên Hệ </a>
+                <a class="nav-link" aria-disabled="true" href="trang_lienhe.php">Liên Hệ </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="trang_danhgia.php"
+                  >Đánh giá 
+                </a>
               </li>
             </ul>
 
@@ -108,19 +135,11 @@
           </div>
         </div>
       </nav>
-
-
-
-<!-- biểu mẫu  -->
-<header class="header">
-        <li class="cart">
-        <a href="cart.php"><img src="../img/cart-icon.png" alt="Cart Icon"></a>
-        </li>
        
 </header>
 <div class="container">
        <header>
-            <h2>Shop mĩ phẫm BEAUTYSHOP  </h2>
+            <h2 style="margin-top: 20px; margin-bottom: 15px;">Shop mỹ phẩm BEAUTYSHOP  </h2>
 
         </header>
         <main>
@@ -141,9 +160,11 @@
                  Tại<strong> BeautyShop</strong>, chúng tôi cung cấp một loạt các sản phẩm mỹ phẩm từ các thương hiệu nổi tiếng trong và ngoài nước, bao gồm:
                 </p>
                 <ul>
-                    <li>Trang điểm: Son môi, phấn nền, phấn mắt, mascara và nhiều sản phẩm khác.</li>
-                    <li>Chăm sóc da: Kem dưỡng ẩm, serum, mặt nạ và sản phẩm chăm sóc da khác.</li>
-                    <li>Chăm sóc tóc: Dầu gội, dầu xả và các sản phẩm chăm sóc tóc chuyên biệt.</li>
+                    <li>Sữa rửa mặt: Làm sạch da, loại bỏ bụi bẩn và bã nhờn, giúp da thông thoáng.</li>
+                    <li>Kem chống nắng: Bảo vệ da khỏi tác hại của tia UV, ngăn ngừa lão hóa sớm.</li>
+                    <li>Son môi - son dưỡng: Giúp đôi môi tươi tắn, rạng rỡ với nhiều màu sắc đa dạng.</li>
+                    <li>Tẩy trang: Làm sạch lớp trang điểm và bụi bẩn, giúp da thông thoáng và khỏe mạnh.</li>
+                    <li>Kem nền - Phấn phủ: Tạo lớp nền mịn màng, đều màu và che phủ khuyết điểm hiệu quả.</li>
                     <li>Và nhiều sản phẩm khác để bạn lựa chọn!</li>
                 </ul>
                </section>
@@ -170,16 +191,15 @@
                 Đừng bỏ lỡ các chương trình khuyến mãi và ưu đãi đặc biệt mà chúng tôi thường xuyên tổ chức! Theo dõi trang web và các kênh truyền thông xã hội của chúng tôi để cập nhật thông tin mới nhất.
                 </p>
 
-                
+                <section>
+                <h4 >6.Hỗ Trợ Khách Hàng</h4>
+                <p>Nếu bạn có bất kỳ câu hỏi nào về chính sách này, vui lòng liên hệ với chúng tôi qua:</p>
+                <p><strong>Email:</strong> webmipham@gmail.com</p>
+                <p><strong>Hotline:</strong> 0879 342 732 </p>
+                <p><strong>Địa chỉ:</strong> 162/1, Đường 3/2, Ninh Kiều, Cần Thơ</p>
+            </section>
         </main>
 </div>
-
-
-
-
-
-
-
 
 <footer class="text-bg-dark py-5">
       <div class="container">
@@ -188,20 +208,20 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="index.php">
-                <img src="./img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến
                 những trải nghiệm mua sắm tiện lợi, hiện đại và phong phú.
               </p>
               <div class="small text-start">
-                <i class="fa-solid fa-location-dot"></i> Địa chỉ: Đồng Văn Cống, An Thới, Bình Thủy, Cần Thơ.
+                <i class="fa-solid fa-location-dot"></i> Địa chỉ: 162/1, Đường 3/2, Ninh Kiều, Cần Thơ.
               </div>
               <div class="small text-start">
-                <i class="fa-solid fa-phone-volume"></i> Hotline: 09876340987634
+                <i class="fa-solid fa-phone-volume"></i> Hotline: 0879 342 732
               </div>
               <div class="small text-start">
-                <i class="fa-solid fa-envelope"></i> Email: ho353huynh@gmail.com
+                <i class="fa-solid fa-envelope"></i> Email: webmipham@gmail.com
               </div>
             </div>
           </div>
@@ -209,25 +229,22 @@
             <h6>Hỗ trợ khách hàng</h6>
             <ul class="mb-2">
               <li>
-                <a class="text-decoration-none text-light" href="lienhe.php"
+                <a class="text-decoration-none" href="trang_lienhe.php"
                   >Liên hệ </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-light" href=""
+                <a class="text-decoration-none" href=""
                   >Hệ thống cửa hàng</a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-light" href="">Tìm kiếm</a>
+                <a class="text-decoration-none" href="">Tìm kiếm</a>
               </li>
               <li>
-                <a class="text-decoration-none text-light" href=""
+                <a class="text-decoration-none" href="vechungtoi.php"
                   >Giới thiệu</a
                 >
-              </li>
-              <li>
-              <a class="text-decoration-none text-light" href="lienhe.php">Liên hệ</a>
               </li>
             </ul>
           </div>
@@ -235,18 +252,38 @@
             <h6>Chính sách</h6>
             <ul>
               <li>
-                <a class="text-decoration-none text-light" href="chinhsachnguoisohuu.php"
+                <a class="text-decoration-none" href="chinhsach_nguoisohuu.php"
                   >Chính sách người sở hữu</a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-light" href="chinhsachdoitra.php"
-                  >Chính sách đổi trả </a
+                <a class="text-decoration-none" href="chinhsach_baohanh.php"
+                  >Chính sách bảo hành </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-light" href="chinhsachthanhtoan.php"
-                  >Chính sách thanh toán </a
+                <a class="text-decoration-none" href="chinhsach_doitra.php"
+                  >Chính sách đổi trả </a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="chinhsach_thanhtoan.php"
+                  >Chính sách thanh toán </a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="chinhsach_vanchuyen.php"
+                  >Chính sách vận chuyển-giao nhận </a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="chinhsach_baomat.php"
+                  >Chính sách bảo mật </a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="huongdan_muahang.php"
+                  >Hướng dẫn mua hàng và thanh toán online </a
                 >
               </li>
             </ul>
@@ -289,6 +326,11 @@
                 <span>Youtube</span>
               </a>
             </div>
+
+            <div style="margin-top: 10px;">
+              <img src="../img/bct.png" alt="" style="width: 150px;">
+            </div>
+            
           </div>
         </div>
        </div>

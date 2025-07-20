@@ -1,0 +1,62 @@
+.container1 {
+  display: flex;
+  width: 70%; /* dùng phần trăm thay vì px cố định */
+  margin: 0 auto; /* canh giữa màn hình */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 25%;
+  height: 10%;
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+}
+
+.content {
+  width: 75%;
+  padding: 20px;
+}
+
+.sidebar ul li a {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: black; /* Màu chữ đen */
+  display: block;
+  padding: 10px 15px;
+  border-left: 4px solid transparent; /* Mặc định không có vạch */
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  border-left: 4px solid #d62828; /* Vạch đỏ khi hover hoặc đang active */
+  background-color: #e5e7eb; /* (Tùy chọn) màu nền nhẹ khi hover */
+}
+
+.sidebar h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ccc; /* Đường kẻ ngang */
+  padding-bottom: 8px;
+}
+
+.sidebar ul {
+  padding-left: 0; /* Xóa padding mặc định */
+  margin-top: 10px;
+}
+
+.sidebar ul li a {
+  padding-left: 0; /* Căn thẳng hàng với h3 */
+}

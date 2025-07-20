@@ -1,0 +1,125 @@
+.form-lienhe-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.form-lienhe-box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+}
+
+.form-lienhe-box h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-lienhe-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-lienhe-box p {
+  margin: 12px 0;
+  color: #444;
+  font-size: 15px;
+  text-align: center;
+}
+
+.form-lienhe-social-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-lienhe-social-icons a {
+  text-decoration: none;
+  margin: 0 8px;
+  color: #1d72f3;
+  font-size: 18px;
+}
+
+/* Form */
+.form-lienhe-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-lienhe-group {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-lienhe-label {
+  width: 105px;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 4px 8px;
+  height: 38px;
+}
+
+.form-lienhe-group input {
+  padding: 3px 10px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  flex: 1;
+  font-size: 13px;
+  height: 38px;
+  outline: none;
+}
+
+.form-lienhe-form textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none; /* KHÔNG cho kéo giãn */
+  margin-bottom: 20px;
+  height: 120px;
+}
+
+.form-lienhe-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-lienhe-actions button {
+  margin-top: 15px;
+  background-color: orange;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-lienhe-actions button:hover {
+  background-color: rgb(208, 147, 33);
+}

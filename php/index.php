@@ -1,4 +1,3 @@
- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +19,22 @@
         filter: contrast(110%) brightness(105%);
         -webkit-optimize-contrast: 2;
     }
+
+    .navbar {
+  background-color: #f1f1f1; /* Màu nền của navbar */
+  color: white;
+}
+
+.navbar-nav a {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: black; /* Màu chữ */
+}
+
+.navbar-nav a:hover {
+  color: #33cc99; /* Màu khi hover */
+  text-decoration: none; /* Bỏ gạch chân khi hover */
+}
+
 </style>
 </head>
 <body>
@@ -38,11 +53,21 @@
                 <!-- Center: Auth Links -->
                 <div class="header-center">
                     <div class="auth-links">
-                        <a href="dangki.php">Đăng ký</a>
-                        <span class="divider">|</span>
-                        <a href="dangnhap.php">Đăng nhập</a>
+                        <?php
+                        session_start();
+                        if (!isset($_SESSION['hoten'])) {
+                            echo '<a href="dangki.php">Đăng ký</a> | <a href="dangnhap.php">Đăng nhập</a>';
+                        } else {
+                            echo '<span class="welcome-message">Xin Chào:  ' . htmlspecialchars($_SESSION['hoten']) . '</span>';
+                            echo ' | <a href="dangxuat.php" class="logout-button">Đăng xuất</a>'; 
+                            if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+                                echo ' | <a href="admin.php" class="logout-button"> Quản Trị</a>';
+                            }
+                        }
+                    ?>
                     </div>
                 </div>
+            
 
                 <!-- Right: Contact Info -->
                 <div class="header-right">
@@ -63,12 +88,7 @@
     </div>
 
 
-
-
-
-
-    
-      <nav class="small navbar navbar-expand-lg border-bottom sticky-top  ">
+      <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
             <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
@@ -103,15 +123,17 @@
                 >
                   Danh Mục Sản Phẩm
                 </a>
-                <ul class="dropdown-menu">
-                
-                  <li><a href="index.php?temp=suaruamat">🧴Sữa rửa mặt </a></li>
-                  <li><a href="index.php?temp=kemchongnang">🌞 Kem chống nắng </a></li>
-                  <li><a href="index.php?temp=trangdiemmoi">👄Trang điểm môi </a></li>
+                <ul class="dropdown-menu">               
+                  <li><a href="index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
+                  <li><a href="index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
+                  <li><a href="index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
+                  <li><a href="index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
+                  <li><a href="index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
+                  <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
                 </ul>
               </li>
-               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="cart.php"
                   >Đặt Hàng 
                 </a>
               </li>
@@ -126,15 +148,18 @@
                   Giới Thiệu
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="vechungtoi.php">Về chúng tôi </a></li>
-                  <li><a class="dropdown-item" href="../php/chinhsach.php">Chính sách  </a></li>
-                   
+                  <li><a class="dropdown-item" href="vechungtoi.php">Về chúng tôi </a></li>                   
                 </ul>
               </li>
                
                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="trang_lienhe.php"
                   >Liên Hệ 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="trang_danhgia.php"
+                  >Đánh giá 
                 </a>
               </li>
             </ul>
@@ -163,10 +188,24 @@
                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
                   />
                 </svg>
-              </button>
+              </button>         
             </form>
 
             <!--gio hang dang nhap yeu thich -->
+            <?php 
+              $cart_count = 0;
+              if (isset($_SESSION['cart'])) {
+                $cart_count = count($_SESSION['cart']); // chỉ đếm số loại sản phẩm
+              }
+            ?>
+
+<div class="cart">
+  <a href="cart.php">
+    <img src="../img/cart-icon.png" alt="Cart Icon">
+    <span class="cart-badge"><?php echo $cart_count; ?></span>
+  </a>
+</div>
+
             
           </div>
         </div>
@@ -204,16 +243,47 @@
             </div>
         </div>
     </div>
-    <div class="cart">
-        <a href="cart.php"><img src="../img/cart-icon.png" alt="Cart Icon"></a>
-    </div>
+
+
 </header>
+ 
+<div class="container text-center my-5">
+      <!-- Tiêu đề -->
+      <div class="product-title">
+        <h2 class="fw-bold">DÒNG SẢN PHẨM</h2>
+        <div class="title-decoration">
+          <img src="../img/anhsp.png" alt="Decoration" class="" />
+        </div>
+      </div>
+</div>
 
+    <main>
+        <div class="container2">
+          <div class="product-grid">
+        <?php
+        if (isset($_GET['temp'])) {
+            $page = $_GET['temp'];
+        } else {
+            $page = '';
+        }
 
-
-   
-
-  
+        if ($page == 'suaruamat') {
+            include("../pages/suaruamat.php");
+        } elseif ($page == 'kemchongnang') {
+            include("../pages/kemchongnang.php");
+        } elseif ($page == 'trangdiemmoi') {
+            include("../pages/trangdiemmoi.php");
+        } elseif ($page == 'taytrang') {
+            include("../pages/taytrang.php");
+        }elseif ($page == 'kemnen_phanphu') {
+            include("../pages/kemnen_phanphu.php");
+        }else {
+            include("../pages/main.php");
+        }
+        ?>
+          </div>
+        </div>
+    </main>
 
 
     <footer class="text-bg-dark py-5">
@@ -223,20 +293,20 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="./img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến
                 những trải nghiệm mua sắm tiện lợi, hiện đại và phong phú.
               </p>
               <div class="small text-start">
-                <i class="fa-solid fa-location-dot"></i> Địa chỉ: Đồng Văn Cống, An Thới, Bình Thủy, Cần Thơ.
+                <i class="fa-solid fa-location-dot"></i> Địa chỉ: 162/1, Đường 3/2, Ninh Kiều, Cần Thơ.
               </div>
               <div class="small text-start">
-                <i class="fa-solid fa-phone-volume"></i> Hotline: 09876340987634
+                <i class="fa-solid fa-phone-volume"></i> Hotline: 0879 342 732
               </div>
               <div class="small text-start">
-                <i class="fa-solid fa-envelope"></i> Email: ho353huynh@gmail.com
+                <i class="fa-solid fa-envelope"></i> Email: webmipham@gmail.com
               </div>
             </div>
           </div>
@@ -244,25 +314,22 @@
             <h6>Hỗ trợ khách hàng</h6>
             <ul class="mb-2">
               <li>
-                <a class="text-decoration-none text-light" href="lienhe.php"
+                <a class="text-decoration-none" href="trang_lienhe.php"
                   >Liên hệ </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-light" href=""
+                <a class="text-decoration-none" href=""
                   >Hệ thống cửa hàng</a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-light" href="">Tìm kiếm</a>
+                <a class="text-decoration-none" href="">Tìm kiếm</a>
               </li>
               <li>
-                <a class="text-decoration-none text-light" href=""
+                <a class="text-decoration-none" href="vechungtoi.php"
                   >Giới thiệu</a
                 >
-              </li>
-              <li>
-              <a class="text-decoration-none text-light" href="lienhe.php">Liên hệ</a>
               </li>
             </ul>
           </div>
@@ -270,18 +337,38 @@
             <h6>Chính sách</h6>
             <ul>
               <li>
-                <a class="text-decoration-none text-light" href="chinhsachnguoisohuu.php"
+                <a class="text-decoration-none" href="chinhsach_nguoisohuu.php"
                   >Chính sách người sở hữu</a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-light" href="chinnhsachdoitra.php"
-                  >Chính sách đổi trả </a
+                <a class="text-decoration-none" href="chinhsach_baohanh.php"
+                  >Chính sách bảo hành </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none text-light" href="chinnhsachthanhtoan.php"
-                  >Chính sách thanh toán </a
+                <a class="text-decoration-none" href="chinhsach_doitra.php"
+                  >Chính sách đổi trả </a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="chinhsach_thanhtoan.php"
+                  >Chính sách thanh toán </a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="chinhsach_vanchuyen.php"
+                  >Chính sách vận chuyển-giao nhận </a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="chinhsach_baomat.php"
+                  >Chính sách bảo mật </a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none" href="huongdan_muahang.php"
+                  >Hướng dẫn mua hàng và thanh toán online </a
                 >
               </li>
             </ul>
@@ -324,7 +411,12 @@
                 <span>Youtube</span>
               </a>
             </div>
+            
+            <div style="margin-top: 10px;">
+              <img src="../img/bct.png" alt="" style="width: 150px;">
+            </div>
           </div>
+
         </div>
        </div>
       <div class="map">
@@ -342,9 +434,6 @@
     <div class="container-fluid bg-black text-white text-center p-2">
       © Bản quyền thuộc về EGANY | Cung cấp bởi Haravan
     </div>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 

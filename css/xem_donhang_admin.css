@@ -1,0 +1,46 @@
+table.donhang-admin {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+table.donhang-admin th {
+  background-color: #3498db; /* màu xanh ngọc */
+  color: white;
+  padding: 10px;
+}
+
+table.donhang-admin td {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+table.donhang-admin img {
+  width: 60px;
+  height: auto;
+}
+
+.xem-donhang {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.xem-donhang:hover {
+  color: #3498db;
+}
+
+.btn-cart-admin {
+  background-color: #f5f5f5; /* Màu nền ban đầu */
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cart-admin:hover {
+  background-color: #3498db; /* Màu hồng đậm */
+  color: white;
+}

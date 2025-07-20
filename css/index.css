@@ -238,3 +238,51 @@ body {
   margin-bottom: 0; /* Loại bỏ khoảng cách dưới */
 }
 /* ***** */
+
+/* Mặc định chữ trắng */
+.small ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.title-decoration img {
+  margin-top: 10px;
+  width: 170px; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của thẻ */
+  height: 60px; /* Đặt chiều cao cố định */
+
+  border-radius: 5px; /* Bo góc hình ảnh */
+}
+
+/* Khi hover: chỉ đổi màu chữ */
+.small ul li a:hover {
+  color: #33cc99;
+}
+
+.cart {
+  position: absolute;
+  top: 15px; /* điều chỉnh tùy theo chiều cao thanh navbar */
+  right: 20px; /* đẩy vào bên trong một chút */
+  z-index: 999;
+}
+
+.cart img {
+  width: 30px;
+  height: 30px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/*.header-content {
+  position: relative; /* hoặc .navbar nếu bạn gắn vào đó */
+/*}
+

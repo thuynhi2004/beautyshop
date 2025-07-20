@@ -1,0 +1,72 @@
+/* Căn giữa toàn bộ khung trong tongquan-section */
+#tongquan-section > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Căn giữa trong div con (vẫn giữ nếu bạn có thêm nhiều khung sau này) */
+#tongquan-section > div > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Giao diện khung + hiệu ứng */
+.overview-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 180px;
+  height: 120px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.overview-item:hover {
+  background-color: #f0f8ff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.overview-item h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.overview-item p {
+  font-size: 16px;
+  color: #777;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.overview-item:hover h2,
+.overview-item:hover p {
+  color: #007bff;
+}
+
+.overview-item {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 20px 30px;
+  text-align: center;
+  width: 240px;
+}
+.overview-item h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+.overview-item p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 14px;
+}
