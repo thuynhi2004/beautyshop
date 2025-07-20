@@ -366,7 +366,7 @@ if ($payment_method === 'vnpay') {
             <!--menu item-->
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="../index.php"
                   >Trang Chủ
                 </a>
               </li>

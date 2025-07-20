@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +8,7 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" >
     <title> BeautyShop </title>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
  
@@ -56,12 +55,12 @@
                         <?php
                         session_start();
                         if (!isset($_SESSION['hoten'])) {
-                            echo '<a href="dangki.php">Đăng ký</a> | <a href="dangnhap.php">Đăng nhập</a>';
+                            echo '<a href="php/dangki.php">Đăng ký</a> | <a href="php/dangnhap.php">Đăng nhập</a>';
                         } else {
                             echo '<span class="welcome-message">Xin Chào:  ' . htmlspecialchars($_SESSION['hoten']) . '</span>';
-                            echo ' | <a href="dangxuat.php" class="logout-button">Đăng xuất</a>'; 
+                            echo ' | <a href="php/dangxuat.php" class="logout-button">Đăng xuất</a>'; 
                             if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
-                                echo ' | <a href="admin.php" class="logout-button"> Quản Trị</a>';
+                                echo ' | <a href="php/admin.php" class="logout-button"> Quản Trị</a>';
                             }
                         }
                     ?>
@@ -91,7 +90,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="img/logo.png" alt="Bootstrap"  />
           </a>
           <button
             class="navbar-toggler"
@@ -133,7 +132,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cart.php"
+                <a class="nav-link active" aria-current="page" href="../php/cart.php"
                   >Đặt Hàng 
                 </a>
               </li>
@@ -148,26 +147,25 @@
                   Giới Thiệu
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="vechungtoi.php">Về chúng tôi </a></li>                   
+                  <li><a class="dropdown-item" href="php/vechungtoi.php">Về chúng tôi </a></li>                   
                 </ul>
               </li>
                
                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="trang_lienhe.php"
+                <a class="nav-link active" aria-current="page" href="php/trang_lienhe.php"
                   >Liên Hệ 
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="trang_danhgia.php"
+                <a class="nav-link active" aria-current="page" href="php/trang_danhgia.php"
                   >Đánh giá 
                 </a>
               </li>
             </ul>
             
-
             <!--fromsearch -->
 
-            <form class="d-flex mx-auto ms-5 search-bar" action="timkiemsp.php" method="GET" role="search">
+            <form class="d-flex mx-auto ms-5 search-bar" action="php/timkiemsp.php" method="GET" role="search">
               <input
                  name="keyword"
                 class="form-control me-0 search-input"
@@ -200,8 +198,8 @@
             ?>
 
 <div class="cart">
-  <a href="cart.php">
-    <img src="../img/cart-icon.png" alt="Cart Icon">
+  <a href="php/cart.php">
+    <img src="img/cart-icon.png" alt="Cart Icon">
     <span class="cart-badge"><?php echo $cart_count; ?></span>
   </a>
 </div>
@@ -223,13 +221,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="3000">
-                        <img src="../img/banner1.png" class="d-block w-100" alt="Banner 1" />
+                        <img src="img/banner1.png" class="d-block w-100" alt="Banner 1" />
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
-                        <img src="../img/banner2.png" class="d-block w-100" alt="Banner 2" />
+                        <img src="img/banner2.png" class="d-block w-100" alt="Banner 2" />
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
-                        <img src="../img/banner3.png" class="d-block w-100" alt="Banner 3" />
+                        <img src="img/banner3.png" class="d-block w-100" alt="Banner 3" />
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -252,7 +250,7 @@
       <div class="product-title">
         <h2 class="fw-bold">DÒNG SẢN PHẨM</h2>
         <div class="title-decoration">
-          <img src="../img/anhsp.png" alt="Decoration" class="" />
+          <img src="img/anhsp.png" alt="Decoration" class="" />
         </div>
       </div>
 </div>
@@ -268,17 +266,17 @@
         }
 
         if ($page == 'suaruamat') {
-            include("../pages/suaruamat.php");
+            include("pages/suaruamat.php");
         } elseif ($page == 'kemchongnang') {
-            include("../pages/kemchongnang.php");
+            include("pages/kemchongnang.php");
         } elseif ($page == 'trangdiemmoi') {
-            include("../pages/trangdiemmoi.php");
+            include("pages/trangdiemmoi.php");
         } elseif ($page == 'taytrang') {
-            include("../pages/taytrang.php");
+            include("pages/taytrang.php");
         }elseif ($page == 'kemnen_phanphu') {
-            include("../pages/kemnen_phanphu.php");
+            include("pages/kemnen_phanphu.php");
         }else {
-            include("../pages/main.php");
+            include("pages/main.php");
         }
         ?>
           </div>
@@ -293,7 +291,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến
@@ -314,7 +312,7 @@
             <h6>Hỗ trợ khách hàng</h6>
             <ul class="mb-2">
               <li>
-                <a class="text-decoration-none" href="trang_lienhe.php"
+                <a class="text-decoration-none" href="php/trang_lienhe.php"
                   >Liên hệ </a
                 >
               </li>
@@ -327,7 +325,7 @@
                 <a class="text-decoration-none" href="">Tìm kiếm</a>
               </li>
               <li>
-                <a class="text-decoration-none" href="vechungtoi.php"
+                <a class="text-decoration-none" href="php/vechungtoi.php"
                   >Giới thiệu</a
                 >
               </li>
@@ -337,37 +335,37 @@
             <h6>Chính sách</h6>
             <ul>
               <li>
-                <a class="text-decoration-none" href="chinhsach_nguoisohuu.php"
+                <a class="text-decoration-none" href="php/chinhsach_nguoisohuu.php"
                   >Chính sách người sở hữu</a
                 >
               </li>
               <li>
-                <a class="text-decoration-none" href="chinhsach_baohanh.php"
+                <a class="text-decoration-none" href="php/chinhsach_baohanh.php"
                   >Chính sách bảo hành </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none" href="chinhsach_doitra.php"
+                <a class="text-decoration-none" href="php/chinhsach_doitra.php"
                   >Chính sách đổi trả </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none" href="chinhsach_thanhtoan.php"
+                <a class="text-decoration-none" href="php/chinhsach_thanhtoan.php"
                   >Chính sách thanh toán </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none" href="chinhsach_vanchuyen.php"
+                <a class="text-decoration-none" href="php/chinhsach_vanchuyen.php"
                   >Chính sách vận chuyển-giao nhận </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none" href="chinhsach_baomat.php"
+                <a class="text-decoration-none" href="php/chinhsach_baomat.php"
                   >Chính sách bảo mật </a
                 >
               </li>
               <li>
-                <a class="text-decoration-none" href="huongdan_muahang.php"
+                <a class="text-decoration-none" href="php/huongdan_muahang.php"
                   >Hướng dẫn mua hàng và thanh toán online </a
                 >
               </li>
@@ -413,7 +411,7 @@
             </div>
             
             <div style="margin-top: 10px;">
-              <img src="../img/bct.png" alt="" style="width: 150px;">
+              <img src="/img/bct.png" alt="" style="width: 150px;">
             </div>
           </div>
 

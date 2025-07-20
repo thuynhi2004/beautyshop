@@ -130,7 +130,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
         <button class="menu-item" data-section="thongke">
             <i class="fas fa-user-tie"></i>Thống Kê
         </button>
-        <button class="menu-item" onclick="location.href='index.php'">
+        <button class="menu-item" onclick="location.href='../index.php'">
             <i class="fas fa-sign-out-alt"></i> Trang chủ
         </button>
 

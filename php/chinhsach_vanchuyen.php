@@ -146,7 +146,7 @@
             <!--menu item-->
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="../index.php"
                   >Trang Chủ
                 </a>
               </li>
@@ -161,12 +161,12 @@
                   Danh Mục Sản Phẩm
                 </a>
                 <ul class="dropdown-menu">               
-                  <li><a href="index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
-                  <li><a href="index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
-                  <li><a href="index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
-                  <li><a href="index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
-                  <li><a href="index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
-                  <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
+                  <li><a href="../index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
+                  <li><a href="../index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
+                  <li><a href="../index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
+                  <li><a href="../index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
+                  <li><a href="../index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
+                  <li><a href="../index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -190,7 +190,7 @@
               </li>
                
                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="trang_lienhe.php"
                   >Liên Hệ 
                 </a>
               </li>
@@ -238,7 +238,7 @@
 
 
     <div class="breadcrumb">
-  <a href="index.php">Trang chủ</a> / Chính sách vận chuyển-giao nhận
+  <a href="../index.php">Trang chủ</a> / Chính sách vận chuyển-giao nhận
 </div>
 
     <div class="container1">
@@ -393,7 +393,7 @@
             <h6>Hỗ trợ khách hàng</h6>
             <ul class="mb-2">
               <li>
-                <a class="text-decoration-none" href="lienhe.php"
+                <a class="text-decoration-none" href="trang_lienhe.php"
                   >Liên hệ </a
                 >
               </li>
@@ -509,6 +509,7 @@
  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.007!2d105.7817961!3d10.0302531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDE4JzEwLjkiTiAxMDXCsDQ2JzU0LjUiRQ!5e0!3m2!1svi!2s!4v1623456789!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">            >
             </iframe>
      </div>
+
     </footer>
     <div class="container-fluid bg-black text-white text-center p-2">
       © Bản quyền thuộc về EGANY | Cung cấp bởi Haravan

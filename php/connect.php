@@ -1,7 +1,7 @@
 <?php
 $server = 'localhost';
 $user = 'root';
-$pass = ''; // Không có khoảng trắng ở đây!
+$pass = '';
 $database = 'thuongmaidientu';
 
 // Tạo kết nối

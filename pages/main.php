@@ -147,7 +147,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Kết nối CSDL
-include 'connect.php';
+include 'php/connect.php';
 
 // Cấu hình phân trang
 $limit = 24; // Số sản phẩm mỗi trang
@@ -169,14 +169,14 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo '<div class="product-card">';
-        echo '<a href="chitietsp.php?maSP=' . $row['maSP'] . '">';
+        echo '<a href="php/chitietsp.php?maSP=' . $row['maSP'] . '">';
         echo '<img class="product-image" src="' . $row['hinhAnh'] . '" alt="' . $row['tenSP'] . '">';
         echo '</a>';
         echo '<h3 class="product-name"><a href="chitietsp.php?maSP=' . $row['maSP'] . '">' . $row['tenSP'] . '</a></h3>';
         echo '<p class="product-price">Giá: ' . number_format($row['giaBan'], 0, ',', '.') . ' VNĐ</p>';
         echo '<div class="button-group">';
-        echo '<a href="cart.php?maSP=' . $row['maSP'] . '" class="add-to-cart">Thêm giỏ hàng</a>';
-        echo '<a href="chitietsp.php?maSP=' . $row['maSP'] . '" class="add-to-cart view-button">Xem</a>';
+        echo '<a href="php/cart.php?maSP=' . $row['maSP'] . '" class="add-to-cart">Thêm giỏ hàng</a>';
+        echo '<a href="php/chitietsp.php?maSP=' . $row['maSP'] . '" class="add-to-cart view-button">Xem</a>';
         echo '</div>';
         echo '</div>';
     }

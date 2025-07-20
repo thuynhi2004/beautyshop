@@ -119,21 +119,21 @@
 
 <div class="product-grid"><div class="products-wrapper">
 <?php
-    include 'connect.php';
+    include 'php/connect.php';
     $sql = "SELECT * FROM sanpham WHERE ma_danhmuc=3"; 
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class="product">';
-            echo '<a href="chitietsp.php?maSP=' . $row['maSP'] . '">';
+            echo '<a href="php/chitietsp.php?maSP=' . $row['maSP'] . '">';
             echo '<img src="' . $row['hinhAnh'] . '" alt="' . $row['tenSP'] . '">';
             echo '</a>';
-            echo '<a href="chitietsp.php?maSP=' . $row['maSP'] . '" class="product-name">' . $row['tenSP'] . '</a>';
+            echo '<a href="php/chitietsp.php?maSP=' . $row['maSP'] . '" class="product-name">' . $row['tenSP'] . '</a>';
             echo '<p class="product-price">Giá: ' . number_format($row['giaBan'], 0, ',', '.') . ' VNĐ</p>';
             echo '<div class="button-group">';
-            echo '<a href="../php/cart.php?maSP=' . $row['maSP'] . '" class="add-to-cart">Thêm giỏ hàng</a>';
-            echo '<a href="../php/chitietsp.php?maSP=' . $row['maSP'] . '" class="add-to-cart view-button">Xem</a>';
+            echo '<a href="php/cart.php?maSP=' . $row['maSP'] . '" class="add-to-cart">Thêm giỏ hàng</a>';
+            echo '<a href="php/chitietsp.php?maSP=' . $row['maSP'] . '" class="add-to-cart view-button">Xem</a>';
             echo '</div>';
             echo '</div>';
         }

@@ -1,24 +1,26 @@
 // Gọi khi vào tab Khách Hàng
-function loadCustomers() {
-  document.getElementById("customers-loading").classList.remove("hidden");
-
-  fetch("danhsachKH.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: "action=get_customers",
+fetch("danhsachKH.php", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+  },
+  body: "action=get_customers",
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("HTTP error " + response.status);
+    }
+    return response.json();
   })
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("customers-loading").classList.add("hidden");
-      displayCustomers(data);
-    })
-    .catch((error) => {
-      document.getElementById("customers-loading").classList.add("hidden");
-      alert("Có lỗi khi tải danh sách khách hàng");
-    });
-}
+  .then((data) => {
+    console.log("Dữ liệu khách hàng:", data); // ← Kiểm tra tại đây
+    document.getElementById("customers-loading").classList.add("hidden");
+    displayCustomers(data);
+  })
+  .catch((error) => {
+    console.error("Lỗi khi fetch:", error);
+    alert("Có lỗi khi tải danh sách khách hàng");
+  });
 
 function displayCustomers(customers) {
   const tbody = document.getElementById("customers-tbody");

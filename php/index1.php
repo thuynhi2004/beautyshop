@@ -1,56 +1,6 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "thuongmaidientu";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// ✅ Bắt buộc thêm dòng này để PHP đọc tiếng Việt có dấu đúng
-$conn->set_charset("utf8");
-
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}
-
-$keyword = isset($_GET['keyword']) ? trim($_GET['keyword']) : '';
-
-if (!empty($keyword)) {
-    // Loại bỏ dấu chấm (.) trong chuỗi để xử lý giá
-    $numericValue = str_replace('.', '', $keyword);
-
-    // Nếu là số → tìm theo giá gần đúng
-    if (is_numeric($numericValue)) {
-        $number = (int)$numericValue;
-        $min = $number - 50000;
-        $max = $number + 50000;
-
-        $sql = "
-            SELECT sp.*, dm.ten_danhmuc
-            FROM sanpham sp
-            JOIN danhmuc dm ON sp.ma_danhmuc = dm.ma_danhmuc
-            WHERE sp.giaBan BETWEEN $min AND $max
-        ";
-    } else {
-        // Nếu là chữ → tìm theo tên hoặc danh mục
-        $escaped = $conn->real_escape_string($keyword);
-        $sql = "
-            SELECT sp.*, dm.ten_danhmuc
-            FROM sanpham sp
-            JOIN danhmuc dm ON sp.ma_danhmuc = dm.ma_danhmuc
-            WHERE sp.tenSP LIKE '%$escaped%' OR dm.ten_danhmuc LIKE '%$escaped%'
-        ";
-    }
-
-    $result = $conn->query($sql);
-} else {
-    $result = false;
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +9,6 @@ if (!empty($keyword)) {
     crossorigin="anonymous" referrerpolicy="no-referrer" >
     <title> BeautyShop </title>
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/timkiemsp.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
  
@@ -159,7 +108,7 @@ if (!empty($keyword)) {
             <!--menu item-->
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.php"
+                <a class="nav-link active" aria-current="page" href="index.php"
                   >Trang Chủ
                 </a>
               </li>
@@ -182,8 +131,8 @@ if (!empty($keyword)) {
                   <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
                 </ul>
               </li>
-               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="cart.php"
                   >Đặt Hàng 
                 </a>
               </li>
@@ -238,44 +187,102 @@ if (!empty($keyword)) {
                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
                   />
                 </svg>
-              </button>
+              </button>         
             </form>
 
             <!--gio hang dang nhap yeu thich -->
+            <?php 
+              $cart_count = 0;
+              if (isset($_SESSION['cart'])) {
+                $cart_count = count($_SESSION['cart']); // chỉ đếm số loại sản phẩm
+              }
+            ?>
+
+<div class="cart">
+  <a href="cart.php">
+    <img src="../img/cart-icon.png" alt="Cart Icon">
+    <span class="cart-badge"><?php echo $cart_count; ?></span>
+  </a>
+</div>
+
             
           </div>
         </div>
       </nav>
    
 
-
-    <h2 class="centered-text" >Kết quả tìm kiếm cho: "<?= htmlspecialchars($keyword) ?>"</h2>
-
-    <div class="container2">
-        <div class="product-grid">
-        <?php if ($result && $result->num_rows > 0): ?>
-            <?php while ($row = $result->fetch_assoc()): ?>
-                <div class="product-timkiem">
-                    <img src="<?= htmlspecialchars($row['hinhAnh']) ?>" class="product-img-timkiem" alt="<?= htmlspecialchars($row['tenSP']) ?>">
-                    <div class="product-name-timkiem">
-                        <?= htmlspecialchars($row['tenSP']) ?>
+     <header>
+    <div class="container ">
+        <div class="slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="../img/banner1.png" class="d-block w-100" alt="Banner 1" />
                     </div>
-                    <div class="product-price-timkiem">
-                        <?= number_format($row['giaBan'], 0, ',', '.') ?>đ
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="../img/banner2.png" class="d-block w-100" alt="Banner 2" />
                     </div>
-                    <div class="button-group">
-                        <a href="cart.php?maSP=<?= $row['maSP'] ?>" class="add-to-cart">Thêm giỏ hàng</a>
-                        <a href="chitietsp.php?maSP=<?= $row['maSP'] ?>" class="add-to-cart view-button">Xem</a>
-
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="../img/banner3.png" class="d-block w-100" alt="Banner 3" />
                     </div>
-                    </div>
-            <?php endwhile; ?>
-        <?php else: ?>
-            <p>Không tìm thấy sản phẩm nào phù hợp.</p>
-        <?php endif; ?>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </div>
-    </div>
 
+
+</header>
+ 
+<div class="container text-center my-5">
+      <!-- Tiêu đề -->
+      <div class="product-title">
+        <h2 class="fw-bold">DÒNG SẢN PHẨM</h2>
+        <div class="title-decoration">
+          <img src="../img/anhsp.png" alt="Decoration" class="" />
+        </div>
+      </div>
+</div>
+
+    <main>
+        <div class="container2">
+          <div class="product-grid">
+        <?php
+        if (isset($_GET['temp'])) {
+            $page = $_GET['temp'];
+        } else {
+            $page = '';
+        }
+
+        if ($page == 'suaruamat') {
+            include("../pages/suaruamat.php");
+        } elseif ($page == 'kemchongnang') {
+            include("../pages/kemchongnang.php");
+        } elseif ($page == 'trangdiemmoi') {
+            include("../pages/trangdiemmoi.php");
+        } elseif ($page == 'taytrang') {
+            include("../pages/taytrang.php");
+        }elseif ($page == 'kemnen_phanphu') {
+            include("../pages/kemnen_phanphu.php");
+        }else {
+            include("../pages/main.php");
+        }
+        ?>
+          </div>
+        </div>
+    </main>
 
 
     <footer class="text-bg-dark py-5">
@@ -285,7 +292,7 @@ if (!empty($keyword)) {
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="./img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến
@@ -403,12 +410,12 @@ if (!empty($keyword)) {
                 <span>Youtube</span>
               </a>
             </div>
-
+            
             <div style="margin-top: 10px;">
               <img src="../img/bct.png" alt="" style="width: 150px;">
             </div>
-            
           </div>
+
         </div>
        </div>
       <div class="map">
