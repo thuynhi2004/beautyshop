@@ -32,7 +32,7 @@
 
 <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="">
             <img src="../img/logo.png" alt="Bootstrap" />
           </a>
           <button
@@ -207,7 +207,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="../index.php">
                 <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
             </a>
               <p class="small text-start">

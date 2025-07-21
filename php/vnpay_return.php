@@ -23,7 +23,7 @@ if ($vnp_ResponseCode === '00') {
     // Xoá session tạm
     unset($_SESSION['order_id_vnpay']);
 
-    echo "<script>alert('Thanh toán thành công qua VNPAY!'); window.location.href='index.php';</script>";
+    echo "<script>alert('Thanh toán thành công qua VNPAY!'); window.location.href='../index.php';</script>";
 } else {
     echo "<script>alert('Thanh toán không thành công hoặc bị huỷ!'); window.location.href='cart.php';</script>";
 }

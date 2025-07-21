@@ -1,10 +1,11 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "thuongmaidientu";
+// Thông tin kết nối
+$server = 'sql210.infinityfree.com';
+$user = 'if0_39510426';
+$pass = 'KQVOq66pT8';
+$database = 'if0_39510426_thuongmaidientu';
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($server, $user, $pass, $database);
 
 // ✅ Bắt buộc thêm dòng này để PHP đọc tiếng Việt có dấu đúng
 $conn->set_charset("utf8");
@@ -140,7 +141,7 @@ if (!empty($keyword)) {
 
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="">
             <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
           </a>
           <button
@@ -174,16 +175,16 @@ if (!empty($keyword)) {
                   Danh Mục Sản Phẩm
                 </a>
                 <ul class="dropdown-menu">               
-                  <li><a href="index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
-                  <li><a href="index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
-                  <li><a href="index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
-                  <li><a href="index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
-                  <li><a href="index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
-                  <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
+                  <li><a href="../index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
+                  <li><a href="../index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
+                  <li><a href="../index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
+                  <li><a href="../index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
+                  <li><a href="../index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
+                  <li><a href="../index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
                 </ul>
               </li>
                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="cart.php"
                   >Đặt Hàng 
                 </a>
               </li>

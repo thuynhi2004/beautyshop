@@ -71,7 +71,8 @@
 
 /*thông tin sản phẩm*/
 .product-info {
-  width: 1250px;
+  width: 100%;
+  max-width: 1250px; /* GIỚI HẠN độ rộng tối đa */
   margin: 40px auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 25px;
@@ -79,6 +80,7 @@
   background-color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .product-header {

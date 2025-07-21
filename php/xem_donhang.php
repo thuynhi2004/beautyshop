@@ -128,7 +128,7 @@ $result = $stmt->get_result();
 
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="">
             <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
           </a>
           <button
@@ -147,7 +147,7 @@ $result = $stmt->get_result();
             <!--menu item-->
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="../index.php"
                   >Trang Chủ
                 </a>
               </li>
@@ -171,7 +171,7 @@ $result = $stmt->get_result();
                 </ul>
               </li>
                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="cart.php"
                   >Đặt Hàng 
                 </a>
               </li>
@@ -300,8 +300,9 @@ if ($result->num_rows > 0) {
 
     </table>
 
-        <button class="btn-cart" type="button" onclick="window.location.href='index.php'">Trang chủ</button>
+        <button class="btn-cart" type="button" onclick="window.location.href='../index.php'">Trang chủ</button>
         <button class="btn-cart" type="button" onclick="window.location.href='cart.php'">Giỏ hàng</button>
+        
     </form>
 
     <footer class="text-bg-dark py-5">

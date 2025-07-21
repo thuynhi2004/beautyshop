@@ -1,11 +1,12 @@
 <?php
- $servername = "localhost";
-$username = "root"; // Tên người dùng MySQL
-$password = ""; // Mật khẩu MySQL (thường để trống trên XAMPP)
-$dbname = "thuongmaidientu"; // Tên cơ sở dữ liệu của bạn
- 
+// Thông tin kết nối
+$server = 'sql210.infinityfree.com';
+$user = 'if0_39510426';
+$pass = 'KQVOq66pT8';
+$database = 'if0_39510426_thuongmaidientu';
+
  // Tạo kết nối
- $conn = new mysqli($servername, $username, $password, $dbname);
+ $conn = new mysqli($server, $user, $pass, $database);
  
  // Thêm dòng này để set UTF-8
  mysqli_set_charset($conn, "utf8mb4");
@@ -175,7 +176,7 @@ $dbname = "thuongmaidientu"; // Tên cơ sở dữ liệu của bạn
 
 <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="../index.php">
             <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
           </a>
           <button
@@ -218,7 +219,7 @@ $dbname = "thuongmaidientu"; // Tên cơ sở dữ liệu của bạn
                 </ul>
               </li>
                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="cart.php"
                   >Đặt Hàng 
                 </a>
               </li>
@@ -351,7 +352,7 @@ $dbname = "thuongmaidientu"; // Tên cơ sở dữ liệu của bạn
 
     <div class="product-actions">
         <a href="cart.php?add=<?php echo $row['maSP']; ?>" class="add-to-cart-btn">Thêm vào giỏ hàng</a>
-        <a href="index.php" class="back-btn"><strong>Quay lại trang chủ</strong></a>
+        <a href="../index.php" class="back-btn"><strong>Quay lại trang chủ</strong></a>
     </div>
 </div>
 

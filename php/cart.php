@@ -219,7 +219,7 @@ if ($payment_method === 'vnpay') {
 
           $stmt_detail->close();
           unset($_SESSION['cart']);
-          echo "<script>alert('Đặt hàng thành công!'); window.location.href = 'index.php';</script>";
+          echo "<script>alert('Đặt hàng thành công!'); window.location.href = '../index.php';</script>";
       } else {
           echo "<script>alert('Có lỗi xảy ra khi thanh toán: " . $stmt->error . "');</script>";
       }
@@ -347,7 +347,7 @@ if ($payment_method === 'vnpay') {
 
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="">
             <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
           </a>
           <button
@@ -381,16 +381,16 @@ if ($payment_method === 'vnpay') {
                   Danh Mục Sản Phẩm
                 </a>
                 <ul class="dropdown-menu">               
-                  <li><a href="index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
-                  <li><a href="index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
-                  <li><a href="index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
-                  <li><a href="index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
-                  <li><a href="index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
-                  <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
+                  <li><a href="../index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
+                  <li><a href="../index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
+                  <li><a href="../index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
+                  <li><a href="../index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
+                  <li><a href="../index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
+                  <li><a href="../index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
                 </ul>
               </li>
                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="cart.php"
                   >Đặt Hàng 
                 </a>
               </li>
@@ -493,7 +493,7 @@ if ($payment_method === 'vnpay') {
 </table>
 <h3>Tổng tiền: <span id="total-price"><?php echo number_format($total, 0, ',', '.'); ?> VNĐ</span></h3>
 <div style="display: flex; gap: 10px; margin-top: 20px;">
-    <button class="btn-cart" type="button" onclick="window.location.href='index.php'">Tiếp tục mua hàng</button>
+    <button class="btn-cart" type="button" onclick="window.location.href='../index.php'">Tiếp tục mua hàng</button>
     <button id="btn-dat-hang" class="btn-cart" type="button" onclick="document.getElementById('checkout-form').style.display='block'">Đặt hàng</button>
 </div>
 

@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Thực thi và kiểm tra
     if ($stmt->execute()) {
-        echo "<script>alert('Gửi thành công!'); window.location.href='index.php';</script>";
+        echo "<script>alert('Gửi thành công!'); window.location.href='../index.php';</script>";
     } else {
         echo "Lỗi: " . $stmt->error;
     }

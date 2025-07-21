@@ -92,7 +92,7 @@ if ($row_count = $result_count->fetch_assoc()) {
 
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="">
             <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
           </a>
           <button
@@ -111,7 +111,7 @@ if ($row_count = $result_count->fetch_assoc()) {
             <!--menu item-->
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="../index.php"
                   >Trang Chủ
                 </a>
               </li>
@@ -126,12 +126,12 @@ if ($row_count = $result_count->fetch_assoc()) {
                   Danh Mục Sản Phẩm
                 </a>
                 <ul class="dropdown-menu">               
-                  <li><a href="index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
-                  <li><a href="index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
-                  <li><a href="index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
-                  <li><a href="index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
-                  <li><a href="index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
-                  <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
+                  <li><a href="../index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
+                  <li><a href="../index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
+                  <li><a href="../index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
+                  <li><a href="../index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
+                  <li><a href="../index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
+                  <li><a href="../index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
                 </ul>
               </li>
               <li class="nav-item">

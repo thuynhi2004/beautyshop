@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $insert->bind_param("sssss", $hoten, $email, $sdt, $hashed_password, $role);
 
             if ($insert->execute()) {
-                echo "<script>alert('Đăng ký thành công!'); window.location.href='index.php';</script>";
+                echo "<script>alert('Đăng ký thành công!'); window.location.href='../index.php';</script>";
                 exit;
             } else {
                 $errors[] = "Lỗi khi đăng ký: " . $conn->error;

@@ -1,10 +1,10 @@
 <?php
 // Kết nối database
 class Database {
-    private $host = 'localhost';
-    private $dbname = 'thuongmaidientu';     // ✅ Tên database đã cập nhật
-    private $username = 'root';         // ✅ Tên người dùng
-    private $password = '';             // ✅ Mật khẩu trống (như bạn nói, không có khoảng trắng)
+    private $host = 'sql210.infinityfree.com';
+    private $dbname = 'if0_39510426_thuongmaidientu';     // ✅ Tên database đã cập nhật
+    private $username = 'if0_39510426';         // ✅ Tên người dùng
+    private $password = 'KQVOq66pT8';             // ✅ Mật khẩu trống (như bạn nói, không có khoảng trắng)
     private $conn;
 
     public function connect() {

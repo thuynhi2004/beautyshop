@@ -111,7 +111,7 @@
 
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="">
             <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
           </a>
           <button
