@@ -142,7 +142,7 @@
             <h2 style="margin-top: 20px; margin-bottom: 15px;">Shop mỹ phẩm BEAUTYSHOP  </h2>
 
         </header>
-        <main>
+        <main class="text-justify">
            <section>
             <h4>
                 1.Giới thiệu 
@@ -153,21 +153,32 @@
 
 
               <section>
-                <h4>
-                 2.Sản phẩm đa dạng 
-                </h4>
-                <p>
-                 Tại<strong> BeautyShop</strong>, chúng tôi cung cấp một loạt các sản phẩm mỹ phẩm từ các thương hiệu nổi tiếng trong và ngoài nước, bao gồm:
-                </p>
-                <ul>
-                    <li>Sữa rửa mặt: Làm sạch da, loại bỏ bụi bẩn và bã nhờn, giúp da thông thoáng.</li>
-                    <li>Kem chống nắng: Bảo vệ da khỏi tác hại của tia UV, ngăn ngừa lão hóa sớm.</li>
-                    <li>Son môi - son dưỡng: Giúp đôi môi tươi tắn, rạng rỡ với nhiều màu sắc đa dạng.</li>
-                    <li>Tẩy trang: Làm sạch lớp trang điểm và bụi bẩn, giúp da thông thoáng và khỏe mạnh.</li>
-                    <li>Kem nền - Phấn phủ: Tạo lớp nền mịn màng, đều màu và che phủ khuyết điểm hiệu quả.</li>
-                    <li>Và nhiều sản phẩm khác để bạn lựa chọn!</li>
-                </ul>
-               </section>
+  <h4>2. Đặc tính sản phẩm</h4>
+  <p>
+    Tại <strong>BeautyShop</strong>, chúng tôi cung cấp một loạt các sản phẩm mỹ phẩm từ các thương hiệu nổi tiếng trong và ngoài nước, bao gồm: <strong>Sữa rửa mặt, Kem chống nắng, Trang điểm môi, Tẩy trang, Kem nền - Phấn phủ</strong>. Dưới đây là đặc tính chi tiết của từng loại:
+  </p>
+  <ul>
+    <li>
+      <strong>Sữa rửa mặt:</strong> Là bước đầu tiên và quan trọng nhất trong quy trình chăm sóc da. Sản phẩm của chúng tôi được thiết kế với công thức dịu nhẹ, không chứa xà phòng, giúp làm sạch sâu mà vẫn giữ ẩm cho da. Có các loại sữa rửa mặt chuyên biệt dành cho da dầu (kiềm dầu, ngừa mụn), da khô (bổ sung độ ẩm), da nhạy cảm (không hương liệu, không cồn), da hỗn hợp và da thường. Một số dòng còn có thành phần than hoạt tính, trà xanh, nha đam, BHA/AHA giúp làm sạch da chết, thu nhỏ lỗ chân lông và ngừa mụn hiệu quả.
+    </li>
+
+    <li>
+      <strong>Kem chống nắng:</strong> Được chia thành hai dòng chính: kem chống nắng vật lý (an toàn cho da nhạy cảm, không gây kích ứng) và kem chống nắng hóa học (thẩm thấu nhanh, không để lại vệt trắng). Ngoài khả năng chống tia UVA/UVB với chỉ số SPF từ 30 đến 50+, một số sản phẩm còn có khả năng kiềm dầu, nâng tông nhẹ, chống thấm nước và dưỡng trắng. Kem chống nắng dạng gel, dạng xịt, dạng sữa cũng được cập nhật liên tục để phù hợp với từng nhu cầu sử dụng.
+    </li>
+
+    <li>
+      <strong>Son môi - Son dưỡng:</strong> Bộ sưu tập son tại BeautyShop phong phú với nhiều chất son như son lì, son kem, son tint, son bóng. Màu sắc đa dạng từ tông nude nhẹ nhàng đến đỏ rượu quyến rũ, phù hợp nhiều tone da. Đặc biệt, các dòng son đều chứa thành phần dưỡng chất như vitamin E, dầu argan, bơ hạt mỡ giúp môi luôn mềm mượt. Ngoài ra, chúng tôi còn có son dưỡng không màu, dưỡng môi ban đêm và son có chỉ số chống nắng cho môi (SPF 15-20).
+    </li>
+
+    <li>
+      <strong>Tẩy trang:</strong> Gồm nhiều loại như nước tẩy trang (micellar), dầu tẩy trang, sáp tẩy trang. Nước tẩy trang thích hợp cho da nhạy cảm, không chứa cồn và dễ sử dụng hàng ngày. Dầu và sáp tẩy trang chuyên dùng cho lớp trang điểm dày, waterproof, có khả năng hòa tan lớp makeup và bụi bẩn cứng đầu nhất. Các sản phẩm đều được thiết kế không gây cay mắt, không bí da và hỗ trợ làm sạch sâu mà không làm khô hay kích ứng da.
+    </li>
+
+    <li>
+      <strong>Kem nền - Phấn phủ:</strong> Sản phẩm nền của chúng tôi có độ che phủ linh hoạt (từ nhẹ đến cao), kiềm dầu tốt, phù hợp cả trang điểm hàng ngày và chuyên nghiệp. Kem nền có các loại dạng lỏng, dạng mousse, cushion (phấn nước) với khả năng dưỡng ẩm, chống nắng và bền màu nhiều giờ. Phấn phủ dạng nén và dạng bột giúp khóa lớp nền, tạo lớp finish mịn lì tự nhiên. Một số dòng còn tích hợp thành phần chăm sóc da như collagen, niacinamide, hyaluronic acid giúp vừa trang điểm vừa dưỡng da.
+    </li>
+  </ul>
+</section>
 
 
                 <section>
@@ -282,6 +293,11 @@
                 >
               </li>
               <li>
+                <a class="text-decoration-none" href="php/thongtin_giaca.php"
+                  >Thông tin về giá cả </a
+                >
+              </li>
+              <li>
                 <a class="text-decoration-none" href="huongdan_muahang.php"
                   >Hướng dẫn mua hàng và thanh toán online </a
                 >
@@ -328,7 +344,9 @@
             </div>
 
             <div style="margin-top: 10px;">
-              <img src="../img/bct.png" alt="" style="width: 150px;">
+              <a href="http://online.gov.vn/">
+                <img src="../img/bct.png" alt="" style="width: 150px;">
+              </a>
             </div>
             
           </div>

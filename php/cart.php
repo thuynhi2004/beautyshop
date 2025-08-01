@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 include 'connect.php';
 
@@ -16,6 +17,7 @@ if (!isset($_SESSION['cart'])) {
 // Hàm tính tổng tiền
 function calculateTotal($cart) {
     $total = 0;
+
     foreach ($cart as $product) {
         $total += $product['giaBan'] * $product['quantity'];  
     }
@@ -151,25 +153,27 @@ if (isset($_POST['checkout'])) {
 
     // Nếu kiểm tra xong ổn, mới bắt đầu thêm đơn hàng
     $total = calculateTotal($_SESSION['cart']);
+    $ngayDat = date('Y-m-d H:i:s');
 
 // Nếu chọn thanh toán qua VNPAY thì chuyển hướng sang trang thanh toán
 if ($payment_method === 'vnpay') {
     $pay_method = 'vnpay';
-    $stmt = $conn->prepare("INSERT INTO donhang (tenKH, mailKH, sdt, diachi, total, ngayDat, pay_method) VALUES (?, ?, ?, ?, ?, NOW(), ?)");
-    $stmt->bind_param("ssssds", $tenkh, $mailkh, $sdt, $diachi, $total, $pay_method);
+    $stmt = $conn->prepare("INSERT INTO donhang (tenKH, mailKH, sdt, diachi, total, ngayDat, pay_method) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssdss", $tenkh, $mailkh, $sdt, $diachi, $total, $ngayDat, $pay_method);
+
 
     if ($stmt->execute()) {
         $order_id = $stmt->insert_id;
 
         // Lưu chi tiết đơn hàng NGAY TẠI ĐÂY
-        $stmt_detail = $conn->prepare("INSERT INTO donhang_chitiet (ma_donhang, maSP, soLuong, giaBan, ngayDat) VALUES (?, ?, ?, ?, NOW())");
+        $stmt_detail = $conn->prepare("INSERT INTO donhang_chitiet (ma_donhang, maSP, soLuong, giaBan, ngayDat) VALUES (?, ?, ?, ?, ?)");
 
         foreach ($_SESSION['cart'] as $item) {
             $maSP = $item['maSP'];
             $soLuong = $item['quantity'];
             $giaBan = $item['giaBan'] * $soLuong;
 
-            $stmt_detail->bind_param("iiid", $order_id, $maSP, $soLuong, $giaBan);
+            $stmt_detail->bind_param("iiids", $order_id, $maSP, $soLuong, $giaBan, $ngayDat);
             $stmt_detail->execute();
 
             // Trừ tồn kho
@@ -192,23 +196,24 @@ if ($payment_method === 'vnpay') {
 }
 
 
-      $stmt = $conn->prepare("INSERT INTO donhang (tenKH, mailKH, sdt, diachi, total, ngayDat) VALUES (?, ?, ?, ?, ?, NOW())");
+      $stmt = $conn->prepare("INSERT INTO donhang (tenKH, mailKH, sdt, diachi, total, ngayDat) VALUES (?, ?, ?, ?, ?, ?)");
       if (!$stmt) {
           die("Lỗi prepare statement: " . $conn->error);
       }
-      $stmt->bind_param("ssssd", $tenkh, $mailkh, $sdt, $diachi, $total);
+      $stmt->bind_param("ssssds", $tenkh, $mailkh, $sdt, $diachi, $total, $ngayDat);
+
 
       if ($stmt->execute()) {
           $orderID = $stmt->insert_id;
 
-          $stmt_detail = $conn->prepare("INSERT INTO donhang_chitiet (ma_donhang, maSP, soLuong, giaBan, ngayDat) VALUES (?, ?, ?, ?, NOW())");
+          $stmt_detail = $conn->prepare("INSERT INTO donhang_chitiet (ma_donhang, maSP, soLuong, giaBan, ngayDat) VALUES (?, ?, ?, ?, ?)");
 
           foreach ($_SESSION['cart'] as $item) {
               $maSP = $item['maSP'];
               $soLuong = $item['quantity'];
               $giaBan = $item['giaBan'] * $item['quantity'];
 
-              $stmt_detail->bind_param("iiid", $orderID, $maSP, $soLuong, $giaBan);
+              $stmt_detail->bind_param("iiids", $orderID, $maSP, $soLuong, $giaBan, $ngayDat);
               $stmt_detail->execute();
 
               $stmt_updateQty = $conn->prepare("UPDATE sanpham SET soLuong = soLuong - ? WHERE maSP = ?");
@@ -454,10 +459,11 @@ if ($payment_method === 'vnpay') {
         </div>
       </nav>
    
-    <h2 class="h2-cart">Giỏ hàng của bạn</h2>
+    <h2 class="h2-cart">Giỏ hàng của bạn</h2>
     <?php if (!empty($_SESSION['cart'])): ?>
     <form id="cart-form" method="POST">
-        <table id="cart-table">
+  <div class="table-responsive">
+    <table id="cart-table">
             <thead>
                 <tr>
                     <th>Hình ảnh</th>
@@ -468,7 +474,7 @@ if ($payment_method === 'vnpay') {
                     <th>Thao tác</th>
                 </tr>
             </thead>
-            <body>
+            <tbody>
     <?php $total = 0; foreach ($_SESSION['cart'] as $key => $product): ?>
     <tr>
         <td><img src="<?php echo $product['hinhAnh']; ?>" alt="Ảnh" width="60"></td>
@@ -489,13 +495,17 @@ if ($payment_method === 'vnpay') {
         </td>
     </tr>
     <?php $total += $product['giaBan'] * $product['quantity']; endforeach; ?>
-</body>
+</tbody>
 </table>
+  </div>
+
 <h3>Tổng tiền: <span id="total-price"><?php echo number_format($total, 0, ',', '.'); ?> VNĐ</span></h3>
 <div style="display: flex; gap: 10px; margin-top: 20px;">
     <button class="btn-cart" type="button" onclick="window.location.href='../index.php'">Tiếp tục mua hàng</button>
     <button id="btn-dat-hang" class="btn-cart" type="button" onclick="document.getElementById('checkout-form').style.display='block'">Đặt hàng</button>
 </div>
+      
+        
 
 <div class="footer-content">
               
@@ -517,6 +527,7 @@ if ($payment_method === 'vnpay') {
         </table>
         <h3>Tổng tiền: <span id="total-price"><?php echo number_format($total, 0, ',', '.'); ?> 
 -->
+        
     </form>
 
     <div id="checkout-form" style="display: none;">
@@ -644,6 +655,11 @@ if ($payment_method === 'vnpay') {
                 >
               </li>
               <li>
+                <a class="text-decoration-none" href="thongtin_giaca.php"
+                  >Thông tin về giá cả </a
+                >
+              </li>
+              <li>
                 <a class="text-decoration-none" href="huongdan_muahang.php"
                   >Hướng dẫn mua hàng và thanh toán online </a
                 >
@@ -690,7 +706,9 @@ if ($payment_method === 'vnpay') {
             </div>
 
             <div style="margin-top: 10px;">
-              <img src="../img/bct.png" alt="" style="width: 150px;">
+              <a href="http://online.gov.vn/">
+                <img src="../img/bct.png" alt="" style="width: 150px;">
+              </a>
             </div>
             
           </div>

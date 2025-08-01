@@ -1,40 +1,3 @@
-<?php
-session_start();
-include 'connect.php';
-
-if (!isset($_SESSION['hoten'])) {
-    echo "<script>
-        alert('Vui lòng đăng nhập để xem đơn hàng của bạn!');
-        window.location.href = 'dangnhap.php';
-    </script>";
-    exit;
-}
-
-$tenKH = $_SESSION['hoten']; // dùng đúng tên session đã lưu
-
-$sql = "SELECT 
-    d.tenKH,
-    d.ngayDat,
-    d.trangthai,
-    s.tenSP,
-    s.hinhAnh,
-    c.soLuong,
-    c.giaBan,
-    (c.soLuong * c.giaBan) AS tongTien
-FROM donhang d
-JOIN donhang_chitiet c ON d.ma_donhang = c.ma_donhang
-JOIN sanpham s ON c.maSP = s.maSP
-WHERE d.tenKH = ?
-ORDER BY d.ngayDat ASC";
-
-
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $tenKH);
-$stmt->execute();
-$result = $stmt->get_result();
-?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +9,8 @@ $result = $stmt->get_result();
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" >
     <title> BeautyShop </title>
-    <link rel="stylesheet" href="../css/cart.css">
-    <link rel="stylesheet" href="../css/xem_donhang.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/chinhsach.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
  
@@ -58,7 +21,30 @@ $result = $stmt->get_result();
         -webkit-optimize-contrast: 2;
     }
 
-    .navbar {
+    .breadcrumb {
+  margin-top: 20px;
+  display: block;
+  padding-left: 300px; 
+}
+
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb a:hover {
+  text-decoration: none;
+  color:rgb(2, 72, 147);
+}
+
+.content p {
+        text-align: justify; /* Đây là dòng quan trọng để canh đều 2 bên */
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+.navbar {
   background-color: #f1f1f1; /* Màu nền của navbar */
   color: white;
 }
@@ -72,11 +58,9 @@ $result = $stmt->get_result();
   color: #33cc99; /* Màu khi hover */
   text-decoration: none; /* Bỏ gạch chân khi hover */
 }
-
 </style>
 </head>
-
-<body class="cart-body">
+<body>
 
    <div class="header-bar">
         <div class="container">
@@ -92,7 +76,8 @@ $result = $stmt->get_result();
                 <!-- Center: Auth Links -->
                 <div class="header-center">
                     <div class="auth-links">
-                        <?php                        
+                        <?php
+                        session_start();
                         if (!isset($_SESSION['hoten'])) {
                             echo '<a href="dangki.php">Đăng ký</a> | <a href="dangnhap.php">Đăng nhập</a>';
                         } else {
@@ -105,7 +90,6 @@ $result = $stmt->get_result();
                     ?>
                     </div>
                 </div>
-            
 
                 <!-- Right: Contact Info -->
                 <div class="header-right">
@@ -125,10 +109,9 @@ $result = $stmt->get_result();
         </div>
     </div>
 
-
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="">
+          <a class="navbar-brand" href="index.php">
             <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
           </a>
           <button
@@ -162,15 +145,15 @@ $result = $stmt->get_result();
                   Danh Mục Sản Phẩm
                 </a>
                 <ul class="dropdown-menu">               
-                  <li><a href="index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
-                  <li><a href="index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
-                  <li><a href="index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
-                  <li><a href="index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
-                  <li><a href="index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
-                  <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
+                  <li><a href="../index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
+                  <li><a href="../index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
+                  <li><a href="../index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
+                  <li><a href="../index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
+                  <li><a href="../index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
+                  <li><a href="../index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
                 </ul>
               </li>
-               <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="cart.php"
                   >Đặt Hàng 
                 </a>
@@ -186,7 +169,7 @@ $result = $stmt->get_result();
                   Giới Thiệu
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="vechungtoi.php">Về chúng tôi </a></li>                   
+                  <li><a class="dropdown-item" href="vechungtoi.php">Về chúng tôi </a></li>
                 </ul>
               </li>
                
@@ -195,11 +178,13 @@ $result = $stmt->get_result();
                   >Liên Hệ 
                 </a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="trang_danhgia.php"
                   >Đánh giá 
                 </a>
               </li>
+              
             </ul>
             
 
@@ -234,76 +219,126 @@ $result = $stmt->get_result();
           </div>
         </div>
       </nav>
-    
-      <h2 class="xem-donhang">
-    Đơn hàng của "<?php echo htmlspecialchars($_SESSION['hoten']);?>"
-</h2>
 
 
-    <form id="cart-form" method="POST">
-        <table id="cart-table">
-            <tr>
-    <th>Hình ảnh</th>
-    <th>Tên sản phẩm</th>
-    <th>Giá</th>
-    <th>Số lượng</th>
-    <th>Tổng tiền</th>
-    <th>Ngày đặt</th>
-    <th>Trạng thái</th>
-  </tr>
+    <div class="breadcrumb">
+  <a href="../index.php">Trang chủ</a> / Thông tin về giá cả
+</div>
 
-<?php
-$orders = [];
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $orders[$row['ngayDat']][] = $row;
-    }
-
-    foreach ($orders as $ngayDat => $items):
-        $rowspan = count($items);
-        $tongGia = 0;
-        foreach ($items as $item) {
-            $tongGia += $item['giaBan'];
-        }
-        $tongGiaFormatted = number_format($tongGia, 0, ',', '.') . ' VNĐ';
-
-        foreach ($items as $index => $row):
-            $gia = number_format($row['giaBan'], 0, ',', '.') . ' VNĐ';
-            $soluong = $row['soLuong'];
-?>
-<tr>
-    <td><img src="<?php echo $row['hinhAnh']; ?>" alt="Ảnh" width="60"></td>
-    <td><?php echo $row['tenSP']; ?></td>
-    <td style="color: #d87093;"><?php echo $gia; ?></td>
-    <td><?php echo $soluong; ?></td>
-
-    <?php if ($index === 0): ?>
-        <td style="color: #d87093;" rowspan="<?php echo $rowspan; ?>"><?php echo $tongGiaFormatted; ?></td>
-        <td rowspan="<?php echo $rowspan; ?>"><?php echo $ngayDat; ?></td>
-        <td rowspan="<?php echo $rowspan; ?>"><?php echo $row['trangthai']; ?></td>
-    <?php endif; ?>
-</tr>
-<?php endforeach; ?>
-
-<!-- Dòng phân cách -->
-<tr>
-    <td colspan="7" style="border-top: 2px solid #d87093;"></td>
-</tr>
-
-<?php endforeach; ?>
-
-<?php } else { ?>
-<tr>
-    <td colspan="7">Bạn chưa có đơn hàng nào.</td>
-</tr>
-<?php } ?>
-
-    </table>
-
-        <button class="btn-cart" type="button" onclick="window.location.href='../index.php'">Trang chủ</button>
-        <button class="btn-cart" type="button" onclick="window.location.href='cart.php'">Giỏ hàng</button>
+    <div class="container1">
+  <div class="sidebar">
+    <h3>Danh mục chính sách</h3>
+    <ul>
+        <li>
+                <a  href="cauhoi_thuonggap.php"
+                  >Câu hỏi thường gặp </a
+                >
+        </li>
+        <li>
+                <a  href="chinhsach_nguoisohuu.php"
+                  >Chính sách người sở hữu </a
+                >
+        </li>
+        <li>
+                <a  href="chinhsach_baohanh.php"
+                  >Chính sách bảo hành </a
+                >
+        </li>
+        <li>
+                <a  href="chinhsach_doitra.php"
+                  >Chính sách đổi trả </a
+                >
+        </li>
+        <li>
+                <a  href="chinhsach_thanhtoan.php"
+                  >Chính sách thanh toán </a
+                >
+        </li>
+        <li>
+                <a  href="chinhsach_vanchuyen.php"
+                  >Chính sách vận chuyển-giao nhận </a
+                >
+        </li>
+        <li>
+                <a  href="chinhsach_baomat.php"
+                  >Chính sách bảo mật </a
+                >
+        </li>
+        <li>
+                <a  href="thongtin_giaca.php"
+                  >Thông tin về giá cả </a
+                >
+        </li>
+        <li>
+                <a  href="huongdan_muahang.php"
+                  >Hướng dẫn mua hàng online </a
+                >
+        </li>
         
-    </form>
+    </ul>
+  </div>
+
+<div class="content">
+  <h2>Thông tin về giá cả</h2>
+
+  <h4>1. Giá sản phẩm đã bao gồm các chi phí liên quan</h4>
+  <p>
+    Tất cả các sản phẩm mỹ phẩm được niêm yết trên website <strong>BeautyShop</strong> như sữa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền - phấn phủ,... đều có giá được công khai minh bạch. Trừ khi có thông báo khác, giá hiển thị trên trang sản phẩm được hiểu là đã bao gồm toàn bộ các chi phí liên quan sau:
+  </p>
+  <ul>
+    <li>Thuế giá trị gia tăng (VAT);</li>
+    <li>Phí đóng gói sản phẩm (nếu có);</li>
+    <li>Phí vận chuyển, giao hàng nội thành hoặc liên tỉnh;</li>
+    <li>Các chi phí phát sinh khác có liên quan đến việc mua hàng (nếu có).</li>
+  </ul>
+  <p>
+    Điều này giúp người tiêu dùng dễ dàng tính toán chi phí cần thanh toán mà không lo phát sinh thêm ngoài giá niêm yết.
+  </p>
+
+  <h4>2. Trường hợp giá sản phẩm chưa bao gồm chi phí</h4>
+  <p>
+    Trong một số trường hợp đặc biệt, nếu giá hiển thị <strong>chưa bao gồm</strong> một hoặc nhiều chi phí liên quan như VAT, phí vận chuyển vùng xa, phí đóng gói quà tặng,... thì BeautyShop sẽ ghi chú cụ thể tại phần mô tả sản phẩm hoặc trong bước thanh toán cuối cùng. Khi đó, người tiêu dùng sẽ được thông báo rõ về khoản phí phát sinh và có quyền quyết định tiếp tục hay không.
+  </p>
+  <p>
+    Các trường hợp chưa bao gồm chi phí thường áp dụng cho:
+  </p>
+  <ul>
+    <li>Giao hàng ngoài khu vực nội thành (tỉnh xa, hải đảo...);</li>
+    <li>Các yêu cầu đóng gói đặc biệt hoặc theo mẫu riêng;</li>
+    <li>Mua số lượng lớn cần chi phí xử lý riêng biệt;</li>
+    <li>Dịch vụ ship hỏa tốc, ship theo giờ,...</li>
+  </ul>
+
+  <h4>3. Cam kết minh bạch và rõ ràng</h4>
+  <p>
+    BeautyShop cam kết tuân thủ nghiêm túc quy định tại <strong>Điều 31 – Nghị định 52/2013/NĐ-CP</strong>. Trong mọi trường hợp, nếu không có chú thích cụ thể về việc chưa bao gồm chi phí, thì giá niêm yết sẽ được hiểu là đã bao gồm toàn bộ các khoản liên quan nêu trên.
+  </p>
+  <p>
+    Người tiêu dùng có quyền liên hệ với bộ phận chăm sóc khách hàng của BeautyShop để được giải thích rõ về cơ cấu giá trước khi thanh toán. Mọi hành vi mập mờ về giá đều bị nghiêm cấm và sẽ được xử lý nghiêm nếu vi phạm.
+  </p>
+  <h4>4. Cơ chế thanh toán</h4>
+  <p>
+    Website <strong>BeautyShop</strong> cung cấp hai phương thức thanh toán tiện lợi:
+  </p>
+  <ul>
+    <li>
+      <strong>Thanh toán khi nhận hàng (C.O.D):</strong> Khách hàng thanh toán tiền mặt trực tiếp cho đơn vị vận chuyển khi nhận được hàng.
+    </li>
+    <li>
+      <strong>Thanh toán qua thẻ ngân hàng (online):</strong> Hỗ trợ thanh toán qua cổng VNPAY bằng thẻ ATM nội địa, thẻ tín dụng hoặc thẻ ghi nợ quốc tế. Tất cả giao dịch đều được mã hóa và bảo mật theo tiêu chuẩn của ngân hàng nhà nước và cổng thanh toán liên kết.
+    </li>
+  </ul>
+  <p>
+    Thông tin về hình thức thanh toán luôn được hiển thị rõ ràng trong bước thanh toán. Khách hàng có thể lựa chọn hình thức phù hợp trước khi hoàn tất đơn hàng.
+  </p>
+</div>
+
+
+
+</div>
+
+    </div>
+ 
 
     <footer class="text-bg-dark py-5">
       <div class="container">
@@ -386,13 +421,13 @@ if ($result->num_rows > 0) {
                 >
               </li>
               <li>
-                <a class="text-decoration-none" href="thongtin_giaca.php">
-                  Thông tin về giá cả
-                </a>
+                <a class="text-decoration-none" href="thongtin_giaca.php"
+                  >Thông tin về giá cả </a
+                >
               </li>
               <li>
                 <a class="text-decoration-none" href="huongdan_muahang.php"
-                  >Hướng dẫn mua hàng và thanh toán online </a
+                  >Hướng dẫn mua hàng online </a
                 >
               </li>
             </ul>
@@ -464,4 +499,5 @@ if ($result->num_rows > 0) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 </body>
+
 </html> 

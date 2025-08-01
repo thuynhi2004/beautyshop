@@ -6,6 +6,7 @@ class Database {
     private $username = 'if0_39510426';         // ✅ Tên người dùng
     private $password = 'KQVOq66pT8';             // ✅ Mật khẩu trống (như bạn nói, không có khoảng trắng)
     private $conn;
+// Thông tin kết nối
 
     public function connect() {
         try {

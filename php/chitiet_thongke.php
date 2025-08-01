@@ -9,20 +9,20 @@ if (!isset($_GET['ngay'])) {
 $ngay = $_GET['ngay'];
 
 $sql = "SELECT 
-            d.ma_donhang,
+            d.id AS ma_donhang,
             d.tenKH,
             d.ngayDat,
-            s.tenSP,
-            s.hinhAnh,
-            c.soLuong,
-            c.giaBan,
-            (c.soLuong * c.giaBan) AS tongTienSP
+            ct.tenmon,
+            ct.soluong,
+            ct.gia,
+            ct.thanhtien,
+            m.hinhanh
         FROM donhang d
-        JOIN donhang_chitiet c ON d.ma_donhang = c.ma_donhang
-        JOIN sanpham s ON c.maSP = s.maSP
-        WHERE DATE(d.ngayDat) = DATE(?) 
+        JOIN chitiet_donhang ct ON d.id = ct.id_donhang
+        LEFT JOIN menu m ON ct.tenmon = m.tenmon
+        WHERE DATE(d.ngayDat) = DATE(?)
           AND d.trangthai != 'Đã huỷ'
-        ORDER BY d.ma_donhang, d.ngayDat ASC";
+        ORDER BY d.id, d.ngayDat ASC";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $ngay);
@@ -38,8 +38,14 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/chitiet_thongke_admin.css">
     <style>
-        tr.separator-row td {
+        tr.phancach td {
             border-top: 2px solid #d87093;
+        }
+        img.sp {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -52,10 +58,10 @@ $result = $stmt->get_result();
                 <th>Mã đơn</th>
                 <th>Khách hàng</th>
                 <th>Hình ảnh</th>
-                <th>Tên sản phẩm</th>
+                <th>Tên món</th>
                 <th>Giá</th>
                 <th>Số lượng</th>
-                <th>Tổng</th>
+                <th>Thành tiền</th>
                 <th>Ngày đặt</th>
             </tr>
 
@@ -75,13 +81,6 @@ if ($result->num_rows > 0) {
         $rowspan = count($order['items']);
         $first = true;
 
-        // Tính tổng tiền cho cả đơn hàng
-        $tongTienDon = 0;
-        foreach ($order['items'] as $item) {
-            $tongTienDon += $item['giaBan'];
-        }
-        $tongTienFormatted = number_format($tongTienDon, 0, ',', '.') . " VNĐ";
-
         foreach ($order['items'] as $item) {
             echo "<tr>";
 
@@ -90,13 +89,16 @@ if ($result->num_rows > 0) {
                 echo "<td rowspan='$rowspan'>" . htmlspecialchars($order['info']['tenKH']) . "</td>";
             }
 
-            echo "<td><img src='" . $item['hinhAnh'] . "' alt='Ảnh' width='60'></td>";
-            echo "<td>" . $item['tenSP'] . "</td>";
-            echo "<td>" . number_format($item['giaBan'], 0, ',', '.') . " đ</td>";
-            echo "<td>" . $item['soLuong'] . "</td>";
+            // Hình ảnh
+            $imgPath = (!empty($item['hinhanh'])) ? "../img/" . $item['hinhanh'] : "../img/default.png";
+            echo "<td><img class='sp' src='$imgPath' alt='Ảnh món'></td>";
+
+            echo "<td>" . htmlspecialchars($item['tenmon']) . "</td>";
+            echo "<td>" . number_format($item['gia'], 0, ',', '.') . " đ</td>";
+            echo "<td>" . $item['soluong'] . "</td>";
+            echo "<td>" . number_format($item['thanhtien'], 0, ',', '.') . " đ</td>";
 
             if ($first) {
-                echo "<td rowspan='$rowspan'>" . $tongTienFormatted . "</td>";
                 echo "<td rowspan='$rowspan'>" . $order['info']['ngayDat'] . "</td>";
             }
 
@@ -104,7 +106,7 @@ if ($result->num_rows > 0) {
             $first = false;
         }
 
-        // Dòng phân cách đơn hàng
+        // Dòng phân cách
         echo "<tr class='phancach'><td colspan='8'></td></tr>";
     }
 } else {

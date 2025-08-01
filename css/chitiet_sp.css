@@ -83,6 +83,18 @@
   box-sizing: border-box;
 }
 
+/* Khung cuộn ngang cho mobile */
+.product-info-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .product-info {
+    min-width: 600px; /* hoặc rộng hơn tùy bố cục */
+  }
+}
+
 .product-header {
   background-color: #f9f9f9;
   padding: 20px;

@@ -22,22 +22,15 @@
 /* Bố cục form giỏ hàng */
 #cart-form {
   width: 100%;
-  max-width: 1200px; /* hoặc 1000px tùy bạn muốn rộng bao nhiêu */
-  margin: 10px auto;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  margin: 0;
   padding: 20px;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
   box-sizing: border-box;
 }
 
 /* Bảng hiển thị giỏ hàng */
-#cart-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
 #cart-table th,
 #cart-table td {
   text-align: center;
@@ -301,44 +294,6 @@ p {
   opacity: 0.8;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .header-left,
-  .header-center,
-  .header-right {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .header-bar {
-    padding: 15px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-info {
-    gap: 8px;
-  }
-
-  .contact-item {
-    font-size: 12px;
-  }
-
-  .location-info {
-    font-size: 12px;
-  }
-}
 /* ***** */
 /* narbar */
 .navbar {
@@ -397,4 +352,19 @@ p {
 /* Khi hover: chỉ đổi màu chữ */
 .small ul li a:hover {
   color: #33cc99;
+}
+
+/* ==== FIX TRÀN BẢNG, TẠO THANH CUỘN ==== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+#cart-table {
+  width: 100%;
+  min-width: 800px; /* chiều rộng tối thiểu để xuất hiện thanh cuộn khi cần */
+  border-collapse: collapse;
+  table-layout: auto;
+  margin-bottom: 20px;
 }

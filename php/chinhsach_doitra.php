@@ -296,6 +296,11 @@
                 >
         </li>
         <li>
+                <a  href="thongtin_giaca.php"
+                  >Thông tin về giá cả </a
+                >
+        </li>
+        <li>
                 <a  href="huongdan_muahang.php"
                   >Hướng dẫn mua hàng online </a
                 >
@@ -554,6 +559,11 @@
                 >
               </li>
               <li>
+                <a class="text-decoration-none" href="thongtin_giaca.php"
+                  >Thông tin về giá cả </a
+                >
+              </li>
+              <li>
                 <a class="text-decoration-none" href="huongdan_muahang.php"
                   >Hướng dẫn mua hàng online </a
                 >
@@ -600,7 +610,9 @@
             </div>
 
             <div style="margin-top: 10px;">
-              <img src="../img/bct.png" alt="" style="width: 150px;">
+              <a href="http://online.gov.vn/">
+                <img src="../img/bct.png" alt="" style="width: 150px;">
+              </a>
             </div>
             
           </div>

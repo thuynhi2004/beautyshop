@@ -1,5 +1,6 @@
 <?php
 // Thông tin kết nối
+// Thông tin kết nối
 $server = 'sql210.infinityfree.com';
 $user = 'if0_39510426';
 $pass = 'KQVOq66pT8';
@@ -324,6 +325,7 @@ $database = 'if0_39510426_thuongmaidientu';
 
 
 <!-- Thông tin sản phẩm -->
+ <div class="product-info-wrapper">
   <div class="product-info">
     <div class="product-header">
         <h1 class="product-title"><?php echo $row['tenSP']; ?></h1>
@@ -354,6 +356,7 @@ $database = 'if0_39510426_thuongmaidientu';
         <a href="cart.php?add=<?php echo $row['maSP']; ?>" class="add-to-cart-btn">Thêm vào giỏ hàng</a>
         <a href="../index.php" class="back-btn"><strong>Quay lại trang chủ</strong></a>
     </div>
+</div>
 </div>
 
 <h2>CÁC SẢN PHẨM LIÊN QUAN</h2>
@@ -475,6 +478,11 @@ if ($result_related->num_rows > 0) {
                 >
               </li>
               <li>
+                <a class="text-decoration-none" href="php/thongtin_giaca.php"
+                  >Thông tin về giá cả </a
+                >
+              </li>
+              <li>
                 <a class="text-decoration-none" href="huongdan_muahang.php"
                   >Hướng dẫn mua hàng và thanh toán online </a
                 >
@@ -521,7 +529,9 @@ if ($result_related->num_rows > 0) {
             </div>
 
             <div style="margin-top: 10px;">
-              <img src="../img/bocongthuong.png" alt="">
+              <a href="http://online.gov.vn/">
+                <img src="../img/bct.png" alt="" style="width: 150px;">
+              </a>
             </div>
             
           </div>
