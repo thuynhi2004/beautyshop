@@ -1,5 +1,5 @@
 // Gọi khi vào tab Khách Hàng
-fetch("danhsachKH.php", {
+fetch("../php/danhsachKH.php", {
   method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -83,7 +83,7 @@ function closeCustomerModal() {
 
 function deleteCustomer(id) {
   if (confirm("Bạn có chắc muốn xóa khách hàng này?")) {
-    fetch("danhsachKH.php", {
+    fetch("../php/danhsachKH.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",

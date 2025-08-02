@@ -112,7 +112,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -290,7 +290,7 @@
     <p>- Chính sách áp dụng với thẻ tín dụng hoặc thẻ ghi nợ Quốc Tế và các loại thẻ ATM nội địa khi thanh toán online tại website Beauty Shop.</p>
     <p>- Hạn mức thẻ tín dụng/thẻ ghi nợ phải cao hơn giá trị sản phẩm mà khách hàng chọn mua.</p>
     <p>- Các nguyên tắc và quy định bảo mật thông tin trong ngành tài chính ngân hàng theo quy định của Ngân hàng nhà nước Việt Nam.</p>
-    <p>Beauty Shop cam kết đảm bảo thực hiện nghiêm túc các biện pháp bảo mật cần thiết cho mọi hoạt động thanh toán thực hiện trên sàn giao dịch thương mại điện tử Beauty Shop.</p>
+    <p>The Bad Gold cam kết đảm bảo thực hiện nghiêm túc các biện pháp bảo mật cần thiết cho mọi hoạt động thanh toán thực hiện trên sàn giao dịch thương mại điện tử Beauty Shop.</p>
 
 </div>
 </div>
@@ -305,7 +305,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

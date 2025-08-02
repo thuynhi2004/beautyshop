@@ -112,7 +112,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -282,55 +282,58 @@
   <h2>Thông tin về giá cả</h2>
 
   <h4>1. Giá sản phẩm đã bao gồm các chi phí liên quan</h4>
-  <p>
-    Tất cả các sản phẩm mỹ phẩm được niêm yết trên website <strong>BeautyShop</strong> như sữa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền - phấn phủ,... đều có giá được công khai minh bạch. Trừ khi có thông báo khác, giá hiển thị trên trang sản phẩm được hiểu là đã bao gồm toàn bộ các chi phí liên quan sau:
-  </p>
-  <ul>
-    <li>Thuế giá trị gia tăng (VAT);</li>
-    <li>Phí đóng gói sản phẩm (nếu có);</li>
-    <li>Phí vận chuyển, giao hàng nội thành hoặc liên tỉnh;</li>
-    <li>Các chi phí phát sinh khác có liên quan đến việc mua hàng (nếu có).</li>
-  </ul>
-  <p>
-    Điều này giúp người tiêu dùng dễ dàng tính toán chi phí cần thanh toán mà không lo phát sinh thêm ngoài giá niêm yết.
-  </p>
+<p>
+  Tất cả các sản phẩm thời trang tại <strong>The Bad Gold</strong> như áo thun, quần jeans, váy, áo khoác, set outfit,... đều có giá niêm yết rõ ràng và minh bạch. Trừ khi có ghi chú khác, mức giá hiển thị trên trang sản phẩm được hiểu là đã bao gồm toàn bộ các chi phí sau:
+</p>
+<ul>
+  <li>Thuế giá trị gia tăng (VAT);</li>
+  <li>Phí đóng gói sản phẩm (nếu có);</li>
+  <li>Phí vận chuyển nội thành hoặc liên tỉnh;</li>
+  <li>Các khoản chi phí khác liên quan đến đơn hàng (nếu có).</li>
+</ul>
+<p>
+  Việc công khai giá giúp khách hàng dễ dàng nắm bắt chi phí cần thanh toán mà không gặp tình trạng phát sinh ngoài mong đợi.
+</p>
 
-  <h4>2. Trường hợp giá sản phẩm chưa bao gồm chi phí</h4>
-  <p>
-    Trong một số trường hợp đặc biệt, nếu giá hiển thị <strong>chưa bao gồm</strong> một hoặc nhiều chi phí liên quan như VAT, phí vận chuyển vùng xa, phí đóng gói quà tặng,... thì BeautyShop sẽ ghi chú cụ thể tại phần mô tả sản phẩm hoặc trong bước thanh toán cuối cùng. Khi đó, người tiêu dùng sẽ được thông báo rõ về khoản phí phát sinh và có quyền quyết định tiếp tục hay không.
-  </p>
-  <p>
-    Các trường hợp chưa bao gồm chi phí thường áp dụng cho:
-  </p>
-  <ul>
-    <li>Giao hàng ngoài khu vực nội thành (tỉnh xa, hải đảo...);</li>
-    <li>Các yêu cầu đóng gói đặc biệt hoặc theo mẫu riêng;</li>
-    <li>Mua số lượng lớn cần chi phí xử lý riêng biệt;</li>
-    <li>Dịch vụ ship hỏa tốc, ship theo giờ,...</li>
-  </ul>
+<h4>2. Trường hợp giá sản phẩm chưa bao gồm chi phí</h4>
+<p>
+  Trong một số trường hợp cụ thể, nếu giá niêm yết <strong>chưa bao gồm</strong> một hoặc nhiều loại phí như phí vận chuyển xa, đóng gói quà tặng,... thì <strong>The Bad Gold</strong> sẽ ghi rõ thông tin trong mô tả sản phẩm hoặc trong bước thanh toán cuối cùng. Khách hàng sẽ được thông báo chi tiết và có quyền lựa chọn tiếp tục mua hoặc không.
+</p>
+<p>
+  Những trường hợp phổ biến bao gồm:
+</p>
+<ul>
+  <li>Giao hàng đến khu vực xa (tỉnh lẻ, hải đảo,...);</li>
+  <li>Yêu cầu đóng gói theo mẫu, hộp quà đặc biệt;</li>
+  <li>Đơn hàng số lượng lớn cần xử lý riêng;</li>
+  <li>Giao hàng siêu tốc hoặc theo thời gian cụ thể.</li>
+</ul>
 
-  <h4>3. Cam kết minh bạch và rõ ràng</h4>
-  <p>
-    BeautyShop cam kết tuân thủ nghiêm túc quy định tại <strong>Điều 31 – Nghị định 52/2013/NĐ-CP</strong>. Trong mọi trường hợp, nếu không có chú thích cụ thể về việc chưa bao gồm chi phí, thì giá niêm yết sẽ được hiểu là đã bao gồm toàn bộ các khoản liên quan nêu trên.
-  </p>
-  <p>
-    Người tiêu dùng có quyền liên hệ với bộ phận chăm sóc khách hàng của BeautyShop để được giải thích rõ về cơ cấu giá trước khi thanh toán. Mọi hành vi mập mờ về giá đều bị nghiêm cấm và sẽ được xử lý nghiêm nếu vi phạm.
-  </p>
-  <h4>4. Cơ chế thanh toán</h4>
-  <p>
-    Website <strong>BeautyShop</strong> cung cấp hai phương thức thanh toán tiện lợi:
-  </p>
-  <ul>
-    <li>
-      <strong>Thanh toán khi nhận hàng (C.O.D):</strong> Khách hàng thanh toán tiền mặt trực tiếp cho đơn vị vận chuyển khi nhận được hàng.
-    </li>
-    <li>
-      <strong>Thanh toán qua thẻ ngân hàng (online):</strong> Hỗ trợ thanh toán qua cổng VNPAY bằng thẻ ATM nội địa, thẻ tín dụng hoặc thẻ ghi nợ quốc tế. Tất cả giao dịch đều được mã hóa và bảo mật theo tiêu chuẩn của ngân hàng nhà nước và cổng thanh toán liên kết.
-    </li>
-  </ul>
-  <p>
-    Thông tin về hình thức thanh toán luôn được hiển thị rõ ràng trong bước thanh toán. Khách hàng có thể lựa chọn hình thức phù hợp trước khi hoàn tất đơn hàng.
-  </p>
+<h4>3. Cam kết minh bạch và rõ ràng</h4>
+<p>
+  <strong>The Bad Gold</strong> cam kết tuân thủ quy định tại <strong>Điều 31 – Nghị định 52/2013/NĐ-CP</strong>. Trong mọi trường hợp, nếu không có chú thích đặc biệt, giá niêm yết sẽ được hiểu là đã bao gồm toàn bộ chi phí liên quan.
+</p>
+<p>
+  Khách hàng có thể liên hệ bộ phận chăm sóc khách hàng của <strong>The Bad Gold</strong> để được tư vấn chi tiết về cơ cấu giá. Mọi hành vi không minh bạch về giá đều bị nghiêm cấm và sẽ xử lý nghiêm theo quy định.
+</p>
+
+<h4>4. Cơ chế thanh toán</h4>
+<p>
+  Website <strong>The Bad Gold</strong> hỗ trợ hai hình thức thanh toán thuận tiện:
+</p>
+<ul>
+  <li>
+    <strong>Thanh toán khi nhận hàng (C.O.D):</strong> Thanh toán tiền mặt cho đơn vị giao hàng khi nhận sản phẩm.
+  </li>
+  <li>
+    <strong>Thanh toán online qua thẻ ngân hàng:</strong> Hỗ trợ thanh toán an toàn qua cổng VNPAY, bao gồm thẻ ATM nội địa, thẻ tín dụng và thẻ ghi nợ quốc tế. Mọi giao dịch đều được mã hóa, bảo mật theo tiêu chuẩn ngân hàng và đối tác thanh toán.
+  </li>
+</ul>
+<p>
+  Các lựa chọn thanh toán luôn hiển thị rõ trong bước thanh toán cuối cùng để khách hàng dễ dàng lựa chọn phương thức phù hợp.
+</p>
+
+
 </div>
 
 
@@ -347,7 +350,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;" />
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

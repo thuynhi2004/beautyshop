@@ -15,12 +15,14 @@ $sql = "SELECT
     d.ngayDat,
     s.tenSP,
     s.hinhAnh,
+    sz.ten_size AS size,
     c.soLuong,
     c.giaBan,
     (c.soLuong * c.giaBan) AS tongTien
 FROM donhang d
 JOIN donhang_chitiet c ON d.ma_donhang = c.ma_donhang
 JOIN sanpham s ON c.maSP = s.maSP
+LEFT JOIN size sz ON c.ma_size = sz.ma_size
 WHERE d.ma_donhang = ?
 ORDER BY d.ngayDat ASC;
 ";
@@ -73,6 +75,7 @@ if ($result->num_rows > 0) {
     <th>Hình ảnh</th>
     <th>Tên sản phẩm</th>
     <th>Giá</th>
+    <th>Size</th>
     <th>Số lượng</th>
     <th>Tổng tiền</th>
     <th>Ngày đặt</th>
@@ -94,13 +97,15 @@ if ($result->num_rows > 0) {
         $tongGiaFormatted = number_format($tongGia, 0, ',', '.') . ' VNĐ';
 
         foreach ($items as $index => $row):
-            $gia = number_format($row['giaBan'], 0, ',', '.') . ' VNĐ';
+            $donGia = $row['giaBan'] / $row['soLuong'];
+$gia = number_format($donGia, 0, ',', '.') . ' VNĐ';
             $soluong = $row['soLuong'];
 ?>
 <tr>
     <td><img src="<?php echo $row['hinhAnh']; ?>" alt="Ảnh" width="60"></td>
     <td><?php echo $row['tenSP']; ?></td>
     <td><?php echo $gia; ?></td>
+    <td><?php echo htmlspecialchars($row['size']); ?></td>
     <td><?php echo $soluong; ?></td>
 
     <?php if ($index === 0): ?>
@@ -112,14 +117,14 @@ if ($result->num_rows > 0) {
 
 <!-- Dòng phân cách -->
 <tr>
-    <td colspan="6" style="border-top: 2px solid #d87093;"></td>
+    <td colspan="7" style="border-top: 2px solid #d87093;"></td>
 </tr>
 
 <?php endforeach; ?>
 
 <?php } else { ?>
 <tr>
-    <td colspan="6">Bạn chưa có đơn hàng nào.</td>
+    <td colspan="7">Bạn chưa có đơn hàng nào.</td>
 </tr>
 <?php } ?>
 

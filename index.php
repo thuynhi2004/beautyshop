@@ -89,8 +89,8 @@
 
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
-          <a class="navbar-brand" href="index.php">
-            <img class="logo" src="img/logo.png" alt="Bootstrap"  />
+          <a class="navbar-brand" href="">
+            <img class="logo" src="img/logo_thebadgold.png" alt="Bootstrap" style="height: 60px;" />
           </a>
           <button
             class="navbar-toggler"
@@ -123,12 +123,11 @@
                   Danh Mục Sản Phẩm
                 </a>
                 <ul class="dropdown-menu">               
-                  <li><a href="index.php?temp=suaruamat" style="text-decoration: none;">🧴Sữa rửa mặt </a></li>
-                  <li><a href="index.php?temp=kemchongnang" style="text-decoration: none;">🌞 Kem chống nắng </a></li>
-                  <li><a href="index.php?temp=trangdiemmoi" style="text-decoration: none;">👄Trang điểm môi </a></li>
-                  <li><a href="index.php?temp=taytrang" style="text-decoration: none;">🧽Tẩy trang </a></li>
-                  <li><a href="index.php?temp=kemnen_phanphu" style="text-decoration: none;">🧏‍♀️Kem nền-Phấn phủ </a></li>
-                  <li><a href="index.php?temp=main" style="text-decoration: none;">🛍️Tất cả </a></li>
+                  <li><a href="index.php?temp=aophong" style="text-decoration: none;">👕Áo Phông</a></li>
+                  <li><a href="index.php?temp=sweater" style="text-decoration: none;">🧥Áo Sweater</a></li>
+                  <li><a href="index.php?temp=polo" style="text-decoration: none;">👔Áo Polo</a></li>
+                  <li><a href="index.php?temp=quan" style="text-decoration: none;">👖Quần</a></li>
+                  <li><a href="index.php?temp=main" style="text-decoration: none;">🧺Tất cả </a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -265,14 +264,14 @@
             $page = '';
         }
 
-        if ($page == 'suaruamat') {
-            include("pages/suaruamat.php");
-        } elseif ($page == 'kemchongnang') {
-            include("pages/kemchongnang.php");
-        } elseif ($page == 'trangdiemmoi') {
-            include("pages/trangdiemmoi.php");
-        } elseif ($page == 'taytrang') {
-            include("pages/taytrang.php");
+        if ($page == 'aophong') {
+            include("pages/aophong.php");
+        } elseif ($page == 'sweater') {
+            include("pages/sweater.php");
+        } elseif ($page == 'polo') {
+            include("pages/polo.php");
+        } elseif ($page == 'quan') {
+            include("pages/quan.php");
         }elseif ($page == 'kemnen_phanphu') {
             include("pages/kemnen_phanphu.php");
         }else {
@@ -291,7 +290,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;" />
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

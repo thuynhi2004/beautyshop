@@ -18,12 +18,14 @@ $sql = "SELECT
     d.trangthai,
     s.tenSP,
     s.hinhAnh,
+    sz.ten_size AS size,
     c.soLuong,
     c.giaBan,
     (c.soLuong * c.giaBan) AS tongTien
 FROM donhang d
 JOIN donhang_chitiet c ON d.ma_donhang = c.ma_donhang
 JOIN sanpham s ON c.maSP = s.maSP
+LEFT JOIN size sz ON c.ma_size = sz.ma_size
 WHERE d.tenKH = ?
 ORDER BY d.ngayDat ASC";
 
@@ -240,17 +242,18 @@ $result = $stmt->get_result();
 </h2>
 
 
-    <form id="cart-form" method="POST">
-        <table id="cart-table">
-            <tr>
-    <th>Hình ảnh</th>
-    <th>Tên sản phẩm</th>
-    <th>Giá</th>
-    <th>Số lượng</th>
-    <th>Tổng tiền</th>
-    <th>Ngày đặt</th>
-    <th>Trạng thái</th>
-  </tr>
+   <form id="cart-form" method="POST">
+    <table id="cart-table">
+        <tr>
+            <th>Hình ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Size</th> <!-- Cột Size -->
+            <th>Số lượng</th>
+            <th>Tổng tiền</th>
+            <th>Ngày đặt</th>
+            <th>Trạng thái</th>
+        </tr>
 
 <?php
 $orders = [];
@@ -270,11 +273,13 @@ if ($result->num_rows > 0) {
         foreach ($items as $index => $row):
             $gia = number_format($row['giaBan'], 0, ',', '.') . ' VNĐ';
             $soluong = $row['soLuong'];
+            $size = $row['size'];
 ?>
 <tr>
     <td><img src="<?php echo $row['hinhAnh']; ?>" alt="Ảnh" width="60"></td>
     <td><?php echo $row['tenSP']; ?></td>
     <td style="color: #d87093;"><?php echo $gia; ?></td>
+    <td><?php echo htmlspecialchars($size); ?></td> <!-- Hiển thị size -->
     <td><?php echo $soluong; ?></td>
 
     <?php if ($index === 0): ?>
@@ -287,23 +292,23 @@ if ($result->num_rows > 0) {
 
 <!-- Dòng phân cách -->
 <tr>
-    <td colspan="7" style="border-top: 2px solid #d87093;"></td>
+    <td colspan="8" style="border-top: 2px solid #d87093;"></td>
 </tr>
 
 <?php endforeach; ?>
 
 <?php } else { ?>
 <tr>
-    <td colspan="7">Bạn chưa có đơn hàng nào.</td>
+    <td colspan="8">Bạn chưa có đơn hàng nào.</td>
 </tr>
 <?php } ?>
 
     </table>
 
-        <button class="btn-cart" type="button" onclick="window.location.href='../index.php'">Trang chủ</button>
-        <button class="btn-cart" type="button" onclick="window.location.href='cart.php'">Giỏ hàng</button>
-        
-    </form>
+    <button class="btn-cart" type="button" onclick="window.location.href='../index.php'">Trang chủ</button>
+    <button class="btn-cart" type="button" onclick="window.location.href='cart.php'">Giỏ hàng</button>
+</form>
+
 
     <footer class="text-bg-dark py-5">
       <div class="container">

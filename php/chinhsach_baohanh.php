@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" >
-    <title> BeautyShop </title>
+    <title> The Bad Gold </title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/chinhsach.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -112,7 +112,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;" />
           </a>
           <button
             class="navbar-toggler"
@@ -280,42 +280,43 @@
 
   <div class="content">
     <h2>Chính sách bảo hành</h2>
-    <p>Tất cả sản phẩm mỹ phẩm tại <span class="bold"><strong>Beauty Shop</strong></span> đều là hàng chính hãng, có nguồn gốc rõ ràng từ nhà sản xuất hoặc nhà phân phối được ủy quyền. <span class="bold"><strong>Beauty Shop</strong></span> cam kết tuân thủ chính sách đổi trả – hỗ trợ khách hàng minh bạch, rõ ràng.</p>
+    <p>Tất cả sản phẩm tại <span class="bold"><strong>The Bad Gold</strong></span> đều là hàng chính hãng, được nhập từ các thương hiệu uy tín trong và ngoài nước. <span class="bold"><strong>The Bad Gold</strong></span> cam kết tuân thủ chính sách đổi trả rõ ràng, hỗ trợ khách hàng minh bạch và tận tâm.</p>
 
-    <h4>Đặc quyền khi mua hàng tại Beauty Shop</h4>
-    <ul>
-      <li> Đổi sản phẩm mới trong 07 ngày nếu phát hiện lỗi do nhà sản xuất <span class="red">(*)</span>.</li>
-      <li> Hỗ trợ đổi trả miễn phí nếu sản phẩm giao bị lỗi, hư hỏng, không đúng mô tả hoặc bị đổ vỡ trong quá trình vận chuyển <span class="red">(**)</span>.</li>
-      <li> Tư vấn và hỗ trợ xử lý phản hồi về sản phẩm với nhà sản xuất/phân phối nếu phát sinh sự cố.</li>
-      <li> Theo dõi tiến độ xử lý khiếu nại nhanh chóng qua hotline hoặc inbox fanpage.</li>
-    </ul>
+<h4>Đặc quyền khi mua sắm tại The Bad Gold</h4>
+<ul>
+  <li>Đổi sản phẩm mới trong vòng 07 ngày nếu phát hiện lỗi do nhà sản xuất <span class="red">(*)</span>.</li>
+  <li>Hỗ trợ đổi trả miễn phí nếu sản phẩm bị lỗi kỹ thuật, nhầm size, nhầm mẫu hoặc hư hỏng trong quá trình vận chuyển <span class="red">(**)</span>.</li>
+  <li>Hỗ trợ phản hồi về chất lượng sản phẩm với nhà cung cấp nếu có sự cố phát sinh.</li>
+  <li>Khách hàng có thể theo dõi quá trình xử lý khiếu nại thông qua hotline hoặc fanpage chính thức.</li>
+</ul>
 
-    <h4>Một số trường hợp KHÔNG áp dụng đổi trả – bảo hành</h4>
-    <ul>
-       <li> Sản phẩm đã sử dụng quá 30% hoặc quá thời gian quy định đổi trả.</li>
-       <li> Sản phẩm không còn tem niêm phong, bao bì gốc hoặc bị rách/móp/hư hại do bảo quản sai cách.</li>
-       <li> Sản phẩm có mùi lạ, màu sắc biến đổi do bảo quản không phù hợp (nóng ẩm, ánh sáng trực tiếp…).</li>
-       <li> Sản phẩm bị mở nắp, sử dụng sai hướng dẫn, trộn lẫn với sản phẩm khác.</li>
-       <li> Sản phẩm là quà tặng hoặc khuyến mãi không áp dụng đổi trả (nếu có ghi chú).</li>
-       <li> Không có phiếu mua hàng/hóa đơn hoặc thông tin đặt hàng không xác thực.</li>
-       <li> Sản phẩm đã bị làm giả, bị tráo đổi với sản phẩm khác không mua từ shop.</li>
-       <li> Sản phẩm bị hư hỏng do tác động bên ngoài như làm rơi, đổ nước, côn trùng xâm nhập…</li>
-       <li> Sản phẩm đã hết hạn sử dụng tại thời điểm yêu cầu đổi trả.</li>
-       <li> Sản phẩm sử dụng kèm phụ kiện không chính hãng gây ảnh hưởng đến chất lượng.</li>
-       <li> Khách hàng cố tình thay đổi, chỉnh sửa bao bì, mã vạch, tem bảo hành.</li>
-    </ul>
+<h4>Một số trường hợp KHÔNG áp dụng đổi trả</h4>
+<ul>
+  <li>Sản phẩm đã được giặt, mặc quá 30% thời gian quy định đổi trả.</li>
+  <li>Sản phẩm không còn tag mác, tem size hoặc bao bì gốc bị rách, nhàu nát do bảo quản sai cách.</li>
+  <li>Sản phẩm bị phai màu, co rút, hư hỏng do giặt sai hướng dẫn (ví dụ: giặt máy, giặt nóng…).</li>
+  <li>Sản phẩm bị can thiệp như cắt sửa, thay đổi thiết kế ban đầu.</li>
+  <li>Sản phẩm khuyến mãi, quà tặng không áp dụng đổi trả (nếu có ghi chú).</li>
+  <li>Không có hóa đơn mua hàng hoặc thông tin đặt hàng không trùng khớp.</li>
+  <li>Sản phẩm bị tráo đổi hoặc không phải mua từ hệ thống của The Bad Gold.</li>
+  <li>Sản phẩm bị dính vết bẩn, rách do tác động bên ngoài như kéo, móc, vật nhọn…</li>
+  <li>Sản phẩm quá hạn yêu cầu đổi trả theo chính sách.</li>
+  <li>Sản phẩm sử dụng phụ kiện không phù hợp gây biến dạng (ví dụ: thắt lưng, giày kèm theo…).</li>
+  <li>Khách hàng cố ý làm mờ, chỉnh sửa mã vạch, tag sản phẩm.</li>
+</ul>
 
-    <div class="note">
-      <h3>Lưu ý:</h3>
-      <ul>
-        <li> Thời gian đổi trả tính từ thời điểm <strong>Beauty Shop</strong> xuất hóa đơn hoặc xác nhận đơn hàng.</li>
-        <li> Mỗi dòng sản phẩm (sửa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền, phấn phủ…) có chính sách riêng tùy theo nhà sản xuất.</li>
-        <li> Trước khi gửi lại sản phẩm, vui lòng liên hệ CSKH qua số hotline <strong>0879 342 732</strong> để được hướng dẫn.</li>
-        <li> <strong>Beauty Shop</strong> luôn hỗ trợ tối đa, đảm bảo quyền lợi khách hàng theo đúng chính sách công bố.</li>
-      </ul>
-      <p><span class="red">(*)</span> Áp dụng với sản phẩm chưa sử dụng, còn nguyên tem niêm phong.<br>
-      <span class="red">(**)</span> Áp dụng với đơn hàng online có bằng chứng lỗi do vận chuyển.</p>
-    </div>
+<div class="note">
+  <h3>Lưu ý:</h3>
+  <ul>
+    <li>Thời gian đổi trả được tính từ thời điểm <strong>The Bad Gold</strong> xuất hóa đơn hoặc xác nhận đơn hàng.</li>
+    <li>Các dòng sản phẩm như áo, quần, phụ kiện có chính sách riêng tùy thuộc vào từng thiết kế và chất liệu.</li>
+    <li>Trước khi gửi lại sản phẩm, khách hàng vui lòng liên hệ CSKH qua hotline <strong>0879 342 732</strong> để được hướng dẫn chi tiết.</li>
+    <li><strong>The Bad Gold</strong> luôn đặt quyền lợi khách hàng lên hàng đầu và hỗ trợ theo đúng chính sách đã công bố.</li>
+  </ul>
+  <p><span class="red">(*)</span> Áp dụng với sản phẩm chưa mặc, còn nguyên tag, chưa qua giặt.<br>
+  <span class="red">(**)</span> Áp dụng cho đơn hàng online có bằng chứng rõ ràng về lỗi vận chuyển.</p>
+</div>
+
   </div>
 </div>
 
@@ -326,7 +327,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

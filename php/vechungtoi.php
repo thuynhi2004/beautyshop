@@ -33,7 +33,7 @@
 <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="">
-            <img src="../img/logo.png" alt="Bootstrap" />
+            <img src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -143,73 +143,60 @@
 
         </header>
         <main class="text-justify">
-           <section>
-            <h4>
-                1.Giới thiệu 
-            </h4>
-            <p>
-                Chào mừng bạn đến với<strong> BeautyShop</strong> - nơi mang đến cho bạn những sản phẩm làm đẹp chất lượng nhất! Chúng tôi tự hào là một trong những cửa hàng hàng đầu trong lĩnh vực mỹ phẩm, với sứ mệnh mang đến cho bạn những sản phẩm tốt nhất để tôn vinh vẻ đẹp tự nhiên của bạn.
-           </section>
+  <section>
+    <h4>1. Giới thiệu</h4>
+    <p>
+      Chào mừng bạn đến với <strong>The Bad Gold</strong> – thương hiệu thời trang dành cho giới trẻ năng động và cá tính! Chúng tôi tự hào mang đến những sản phẩm quần áo chất lượng cao, thiết kế độc đáo, giúp bạn thể hiện phong cách riêng và tự tin trong mọi khoảnh khắc.
+    </p>
+  </section>
 
+  <section>
+    <h4>2. Đặc điểm sản phẩm</h4>
+    <p>
+      Tại <strong>The Bad Gold</strong>, chúng tôi cung cấp đa dạng các dòng sản phẩm thời trang cho cả nam và nữ như: <strong>áo thun, áo sơ mi, áo khoác, quần jean, quần tây, quần short, chân váy, dép và phụ kiện đi kèm</strong>. Dưới đây là một số đặc điểm nổi bật:
+    </p>
+    <ul>
+      <li>
+  <strong>Áo:</strong> Các mẫu áo tại <strong>The Bad Gold</strong> được làm từ vải cotton cao cấp, co giãn 4 chiều, thấm hút mồ hôi tốt, giúp thoải mái trong mọi hoạt động. Thiết kế đa dạng với form oversize trẻ trung, unisex hiện đại và slim-fit ôm dáng. Phong cách thời trang được lấy cảm hứng từ streetwear, retro và Hàn Quốc. Sản phẩm có đủ 4 size phổ biến: <strong>S, M, L, XL</strong>, phù hợp nhiều dáng người, giúp bạn dễ dàng chọn lựa theo chiều cao và cân nặng.
+</li>
 
-              <section>
-  <h4>2. Đặc tính sản phẩm</h4>
-  <p>
-    Tại <strong>BeautyShop</strong>, chúng tôi cung cấp một loạt các sản phẩm mỹ phẩm từ các thương hiệu nổi tiếng trong và ngoài nước, bao gồm: <strong>Sữa rửa mặt, Kem chống nắng, Trang điểm môi, Tẩy trang, Kem nền - Phấn phủ</strong>. Dưới đây là đặc tính chi tiết của từng loại:
-  </p>
-  <ul>
-    <li>
-      <strong>Sữa rửa mặt:</strong> Là bước đầu tiên và quan trọng nhất trong quy trình chăm sóc da. Sản phẩm của chúng tôi được thiết kế với công thức dịu nhẹ, không chứa xà phòng, giúp làm sạch sâu mà vẫn giữ ẩm cho da. Có các loại sữa rửa mặt chuyên biệt dành cho da dầu (kiềm dầu, ngừa mụn), da khô (bổ sung độ ẩm), da nhạy cảm (không hương liệu, không cồn), da hỗn hợp và da thường. Một số dòng còn có thành phần than hoạt tính, trà xanh, nha đam, BHA/AHA giúp làm sạch da chết, thu nhỏ lỗ chân lông và ngừa mụn hiệu quả.
-    </li>
+<li>
+  <strong>Quần:</strong> Bộ sưu tập quần của <strong>The Bad Gold</strong> bao gồm các dòng quần jean, jogger, cargo, short,... sử dụng chất liệu vải dày dặn, mềm mại, bền màu, co giãn nhẹ. Kiểu dáng được thiết kế theo form chuẩn, dễ phối với nhiều loại áo. Các chi tiết như đường chỉ, khuy quần, túi hộp đều được may chắc chắn, tinh tế. Quần có đủ các size <strong>S, M, L, XL</strong> cho nam và nữ, phù hợp với nhiều vóc dáng từ nhỏ gọn đến cao lớn.
+</li>
 
-    <li>
-      <strong>Kem chống nắng:</strong> Được chia thành hai dòng chính: kem chống nắng vật lý (an toàn cho da nhạy cảm, không gây kích ứng) và kem chống nắng hóa học (thẩm thấu nhanh, không để lại vệt trắng). Ngoài khả năng chống tia UVA/UVB với chỉ số SPF từ 30 đến 50+, một số sản phẩm còn có khả năng kiềm dầu, nâng tông nhẹ, chống thấm nước và dưỡng trắng. Kem chống nắng dạng gel, dạng xịt, dạng sữa cũng được cập nhật liên tục để phù hợp với từng nhu cầu sử dụng.
-    </li>
+    </ul>
+  </section>
 
-    <li>
-      <strong>Son môi - Son dưỡng:</strong> Bộ sưu tập son tại BeautyShop phong phú với nhiều chất son như son lì, son kem, son tint, son bóng. Màu sắc đa dạng từ tông nude nhẹ nhàng đến đỏ rượu quyến rũ, phù hợp nhiều tone da. Đặc biệt, các dòng son đều chứa thành phần dưỡng chất như vitamin E, dầu argan, bơ hạt mỡ giúp môi luôn mềm mượt. Ngoài ra, chúng tôi còn có son dưỡng không màu, dưỡng môi ban đêm và son có chỉ số chống nắng cho môi (SPF 15-20).
-    </li>
+  <section>
+    <h4>3. Cam kết chất lượng</h4>
+    <p>
+      <strong>The Bad Gold</strong> cam kết cung cấp sản phẩm chính hãng, chất liệu cao cấp, bền đẹp và an toàn cho người mặc. Mỗi sản phẩm đều trải qua quy trình kiểm tra chất lượng kỹ lưỡng trước khi đến tay khách hàng.
+    </p>
+  </section>
 
-    <li>
-      <strong>Tẩy trang:</strong> Gồm nhiều loại như nước tẩy trang (micellar), dầu tẩy trang, sáp tẩy trang. Nước tẩy trang thích hợp cho da nhạy cảm, không chứa cồn và dễ sử dụng hàng ngày. Dầu và sáp tẩy trang chuyên dùng cho lớp trang điểm dày, waterproof, có khả năng hòa tan lớp makeup và bụi bẩn cứng đầu nhất. Các sản phẩm đều được thiết kế không gây cay mắt, không bí da và hỗ trợ làm sạch sâu mà không làm khô hay kích ứng da.
-    </li>
+  <section>
+    <h4>4. Dịch vụ khách hàng tận tâm</h4>
+    <p>
+      Đội ngũ tư vấn của chúng tôi luôn sẵn sàng hỗ trợ bạn trong việc lựa chọn size, kiểu dáng, phối đồ. Chúng tôi lắng nghe mọi phản hồi từ khách hàng để cải thiện dịch vụ và mang lại trải nghiệm mua sắm tốt nhất.
+    </p>
+  </section>
 
-    <li>
-      <strong>Kem nền - Phấn phủ:</strong> Sản phẩm nền của chúng tôi có độ che phủ linh hoạt (từ nhẹ đến cao), kiềm dầu tốt, phù hợp cả trang điểm hàng ngày và chuyên nghiệp. Kem nền có các loại dạng lỏng, dạng mousse, cushion (phấn nước) với khả năng dưỡng ẩm, chống nắng và bền màu nhiều giờ. Phấn phủ dạng nén và dạng bột giúp khóa lớp nền, tạo lớp finish mịn lì tự nhiên. Một số dòng còn tích hợp thành phần chăm sóc da như collagen, niacinamide, hyaluronic acid giúp vừa trang điểm vừa dưỡng da.
-    </li>
-  </ul>
-</section>
+  <section>
+    <h4>5. Chương trình khuyến mãi hấp dẫn</h4>
+    <p>
+      <strong>The Bad Gold</strong> thường xuyên tổ chức các chương trình giảm giá, ưu đãi theo mùa và combo sản phẩm. Đừng quên theo dõi website và fanpage của chúng tôi để không bỏ lỡ cơ hội săn deal chất lượng với giá tốt nhất!
+    </p>
+  </section>
 
+  <section>
+    <h4>6. Hỗ trợ khách hàng</h4>
+    <p>Nếu bạn có bất kỳ câu hỏi hay cần tư vấn thêm, hãy liên hệ với chúng tôi qua:</p>
+    <p><strong>Email:</strong> thebadgold@gmail.com</p>
+    <p><strong>Hotline:</strong> 0907326239</p>
+    <p><strong>Địa chỉ:</strong> 162/1, Đường 3/2, Ninh Kiều, Cần Thơ</p>
+  </section>
+</main>
 
-                <section>
-               <h4>3.Cam Kết Chất Lượng</h4>
-                <p>Chúng tôi cam kết mang đến cho khách hàng những sản phẩm chính hãng, an toàn và hiệu quả. Mỗi sản phẩm đều được lựa chọn kỹ lưỡng để đảm bảo đáp ứng nhu cầu và mong muốn của khách hàng.</p>
-
-                </section>
-                <section>
-                <h4>
-                    4.Dịch vụ khách hàng tận tâm
-                </h4>       
-                <p>
-                Đội ngũ nhân viên của chúng tôi luôn sẵn sàng hỗ trợ và tư vấn để bạn có thể lựa chọn được sản phẩm phù hợp nhất. Chúng tôi luôn lắng nghe và tiếp thu ý kiến của khách hàng để cải thiện dịch vụ.                </p>
-                </section>
-                <section>
-                <h4>
-                    5.Chương Trình Khuyến Mãi Hấp Dẫn
-
-                </h4>
-                <p>
-                Đừng bỏ lỡ các chương trình khuyến mãi và ưu đãi đặc biệt mà chúng tôi thường xuyên tổ chức! Theo dõi trang web và các kênh truyền thông xã hội của chúng tôi để cập nhật thông tin mới nhất.
-                </p>
-
-                <section>
-                <h4 >6.Hỗ Trợ Khách Hàng</h4>
-                <p>Nếu bạn có bất kỳ câu hỏi nào về chính sách này, vui lòng liên hệ với chúng tôi qua:</p>
-                <p><strong>Email:</strong> webmipham@gmail.com</p>
-                <p><strong>Hotline:</strong> 0879 342 732 </p>
-                <p><strong>Địa chỉ:</strong> 162/1, Đường 3/2, Ninh Kiều, Cần Thơ</p>
-            </section>
-        </main>
 </div>
 
 <footer class="text-bg-dark py-5">
@@ -219,7 +206,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="../index.php">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;" />
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

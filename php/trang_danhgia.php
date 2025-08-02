@@ -93,7 +93,7 @@ if ($row_count = $result_count->fetch_assoc()) {
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -288,7 +288,7 @@ if ($row_count = $result_count->fetch_assoc()) {
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

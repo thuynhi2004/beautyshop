@@ -68,12 +68,12 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <span>Hotline:</span>
-                            <a href="tel:0879342732">0879 342 732</a>
+                            <a href="tel:0879342732">0907 326 239</a>
                         </div>
                         <span class="divider">|</span>
                         <div class="contact-item">
                             <span>Email:</span>
-                            <a href="mailto:hohuynh@gmail.com">webmipham@gmail.com</a>
+                            <a href="mailto:hohuynh@gmail.com">the bad gold@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -210,8 +210,8 @@
   <div class="form-lienhe-box info-box">
     <h2>Thông tin liên hệ</h2>
     <p>📍 Địa chỉ: 162/1, Đường 3/2, Ninh Kiều, Cần Thơ</p>
-    <p>📞 Hotline: 0879 342 732</p>
-    <p>📧 Email: webmipham@gmail.com</p>
+    <p>📞 Hotline: 0907 326 239</p>
+    <p>📧 Email: thebadgold@gmail.com</p>
     <p>🕘 Giờ làm việc: 8:00 - 20:00 (Thứ 2 - Thứ 7)</p>
     <div class="form-lienhe-social-icons">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -258,7 +258,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

@@ -1,9 +1,9 @@
 <?php
 // Thông tin kết nối
-$server = 'sql210.infinityfree.com';
-$user = 'if0_39510426';
-$pass = 'KQVOq66pT8';
-$database = 'if0_39510426_thuongmaidientu';
+$server = 'localhost';
+$user = 'root';
+$pass = '';
+$database = 'webquanao';
 
 // Tạo kết nối
 $conn = new mysqli($server, $user, $pass, $database);

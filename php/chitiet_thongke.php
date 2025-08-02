@@ -6,23 +6,25 @@ if (!isset($_GET['ngay'])) {
     exit;
 }
 
-$ngay = $_GET['ngay'];
+$ngay = $_GET['ngay']; // dạng: YYYY-MM-DD
 
 $sql = "SELECT 
-            d.id AS ma_donhang,
+            d.ma_donhang,
             d.tenKH,
             d.ngayDat,
-            ct.tenmon,
-            ct.soluong,
-            ct.gia,
-            ct.thanhtien,
-            m.hinhanh
+            s.tenSP,
+            s.hinhAnh,
+            sz.ten_size AS size,
+            c.soLuong,
+            c.giaBan,
+            c.giaBan AS tongTienSP
         FROM donhang d
-        JOIN chitiet_donhang ct ON d.id = ct.id_donhang
-        LEFT JOIN menu m ON ct.tenmon = m.tenmon
-        WHERE DATE(d.ngayDat) = DATE(?)
+        JOIN donhang_chitiet c ON d.ma_donhang = c.ma_donhang
+        JOIN sanpham s ON c.maSP = s.maSP
+        LEFT JOIN size sz ON c.ma_size = sz.ma_size
+        WHERE DATE(d.ngayDat) = ?
           AND d.trangthai != 'Đã huỷ'
-        ORDER BY d.id, d.ngayDat ASC";
+        ORDER BY d.ma_donhang, d.ngayDat ASC";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $ngay);
@@ -38,30 +40,34 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/chitiet_thongke_admin.css">
     <style>
-        tr.phancach td {
+        tr.separator-row td {
             border-top: 2px solid #d87093;
+        }
+        td, th {
+            text-align: center;
         }
         img.sp {
             width: 60px;
             height: 60px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
     <div>
-        <h2 class="xem-donhang">Chi tiết các đơn hàng ngày "<?php echo htmlspecialchars($ngay); ?>"</h2>
+        <h2 class="xem-donhang">Chi tiết các đơn hàng trong ngày "<?php echo htmlspecialchars($ngay); ?>"</h2>
 
         <table class="donhang-admin" id="cart-table">
             <tr>
                 <th>Mã đơn</th>
                 <th>Khách hàng</th>
                 <th>Hình ảnh</th>
-                <th>Tên món</th>
+                <th>Tên sản phẩm</th>
                 <th>Giá</th>
+                <th>Size</th>
                 <th>Số lượng</th>
-                <th>Thành tiền</th>
+                <th>Tổng</th>
                 <th>Ngày đặt</th>
             </tr>
 
@@ -81,6 +87,12 @@ if ($result->num_rows > 0) {
         $rowspan = count($order['items']);
         $first = true;
 
+        $tongTienDon = 0;
+        foreach ($order['items'] as $item) {
+            $tongTienDon += $item['tongTienSP'];
+        }
+        $tongTienFormatted = number_format($tongTienDon, 0, ',', '.') . " VNĐ";
+
         foreach ($order['items'] as $item) {
             echo "<tr>";
 
@@ -89,16 +101,16 @@ if ($result->num_rows > 0) {
                 echo "<td rowspan='$rowspan'>" . htmlspecialchars($order['info']['tenKH']) . "</td>";
             }
 
-            // Hình ảnh
-            $imgPath = (!empty($item['hinhanh'])) ? "../img/" . $item['hinhanh'] : "../img/default.png";
-            echo "<td><img class='sp' src='$imgPath' alt='Ảnh món'></td>";
+            echo "<td><img src='" . $item['hinhAnh'] . "' alt='Ảnh' width='60'></td>";
+            echo "<td>" . htmlspecialchars($item['tenSP']) . "</td>";
+            $donGia = $item['soLuong'] > 0 ? $item['giaBan'] / $item['soLuong'] : 0;
+            echo "<td>" . number_format($donGia, 0, ',', '.') . " đ</td>";
 
-            echo "<td>" . htmlspecialchars($item['tenmon']) . "</td>";
-            echo "<td>" . number_format($item['gia'], 0, ',', '.') . " đ</td>";
-            echo "<td>" . $item['soluong'] . "</td>";
-            echo "<td>" . number_format($item['thanhtien'], 0, ',', '.') . " đ</td>";
+            echo "<td>" . ($item['size'] ?? '-') . "</td>";
+            echo "<td>" . $item['soLuong'] . "</td>";
 
             if ($first) {
+                echo "<td rowspan='$rowspan'>" . $tongTienFormatted . "</td>";
                 echo "<td rowspan='$rowspan'>" . $order['info']['ngayDat'] . "</td>";
             }
 
@@ -106,11 +118,10 @@ if ($result->num_rows > 0) {
             $first = false;
         }
 
-        // Dòng phân cách
-        echo "<tr class='phancach'><td colspan='8'></td></tr>";
+        echo "<tr class='separator-row'><td colspan='9'></td></tr>";
     }
 } else {
-    echo "<tr><td colspan='8'>Không có đơn hàng nào trong ngày này.</td></tr>";
+    echo "<tr><td colspan='9'>Không có đơn hàng nào trong ngày này.</td></tr>";
 }
 ?>
         </table>

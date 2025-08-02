@@ -10,26 +10,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $row = $result->fetch_assoc();
     $trangthai_hientai = $row['trangthai'];
 
-    // Nếu đã là Hoàn thành hoặc Đã huỷ thì không cập nhật nữa
-    if ($trangthai_hientai === 'Hoàn thành' || $trangthai_hientai === 'Đã huỷ') {
-        header("Location: admin.php?error=not-allowed");
-        exit();
-    }
+    // Danh sách trạng thái hợp lệ tiếp theo (quy trình A ➜ B ➜ C ➜ D)
+    $transitions = [
+        'Đang xác nhận' => ['Đã xác nhận'],
+        'Đã xác nhận'   => ['Đang giao'],
+        'Đang giao'     => ['Hoàn thành', 'Đã huỷ'],
+        'Hoàn thành'    => [], // Không cho phép đổi nữa
+        'Đã huỷ'        => []  // Không cho phép đổi nữa
+    ];
 
-    // Nếu đang là Đang giao thì cho phép cập nhật sang Hoàn thành hoặc Đã huỷ
-    if ($trangthai_hientai === 'Đang giao' && 
-       ($trangthai_moi === 'Hoàn thành' || $trangthai_moi === 'Đã huỷ')) {
+    // Kiểm tra nếu trạng thái mới hợp lệ với trạng thái hiện tại
+    if (in_array($trangthai_moi, $transitions[$trangthai_hientai] ?? [])) {
         $stmt = $conn->prepare("UPDATE donhang SET trangthai = ? WHERE ma_donhang = ?");
         $stmt->bind_param("si", $trangthai_moi, $ma_donhang);
         $stmt->execute();
         $stmt->close();
+    } else {
+        // Không hợp lệ thì quay về và báo lỗi
+        header("Location: admin.php?error=not-allowed");
+        exit();
     }
 
+    // Nếu ok thì quay lại trang admin
     header("Location: admin.php");
     exit();
 }
-
 ?>
+
 
 <script>
 function openUpdateModal(maDonHang, trangThaiHienTai) {
@@ -39,56 +46,49 @@ function openUpdateModal(maDonHang, trangThaiHienTai) {
 
   const select = document.getElementById("modal_trangthai");
 
-  // Gán giá trị hiện tại để hiển thị đúng ô bên trên
   select.value = trangThaiHienTai;
 
-  // Reset trạng thái option
+  // Reset: disable hết
   for (let option of select.options) {
-    option.disabled = false;
-    option.style.color = "black";
+    option.disabled = true;
+    option.style.color = "gray";
   }
 
-  // Nếu trạng thái là "Hoàn thành"
-  if (trangThaiHienTai === "Hoàn thành") {
-    for (let option of select.options) {
-      if (option.value !== "Hoàn thành") {
-        option.disabled = true;
-        option.style.color = "gray";
-      }
-    }
-    return;
+  // Quy định chuyển trạng thái (theo thứ tự hợp lệ)
+  const transitions = {
+    "Đang xác nhận": ["Đã xác nhận"],
+    "Đã xác nhận": ["Đang giao"],
+    "Đang giao": ["Hoàn thành", "Đã huỷ"],
+    "Hoàn thành": [],
+    "Đã huỷ": [],
+  };
+
+  // Lấy danh sách trạng thái có thể chọn tiếp theo
+  const allowedNext = transitions[trangThaiHienTai] || [];
+
+  // Cho phép chọn trạng thái hiện tại để hiển thị (nhưng disabled)
+  const currentOption = select.querySelector(`option[value="${trangThaiHienTai}"]`);
+  if (currentOption) {
+    currentOption.disabled = false;
+    currentOption.style.color = "black";
   }
 
-  // Nếu trạng thái là "Đã huỷ"
-  if (trangThaiHienTai === "Đã huỷ") {
-    for (let option of select.options) {
-      if (option.value !== "Đã huỷ") {
-        option.disabled = true;
-        option.style.color = "gray";
-      }
+  // Bật trạng thái kế tiếp (nếu có)
+  allowedNext.forEach(status => {
+    const opt = select.querySelector(`option[value="${status}"]`);
+    if (opt) {
+      opt.disabled = false;
+      opt.style.color = "black";
     }
-    return;
-  }
+  });
 
-  // Nếu đang là "Đang giao", cho phép chọn "Hoàn thành" hoặc "Đã huỷ", disable chính nó
-  if (trangThaiHienTai === "Đang giao") {
-    for (let option of select.options) {
-      if (option.value === "Đang giao") {
-        option.disabled = true;
-        option.style.color = "gray";
-      }
-    }
-
-    // Khi chọn trạng thái mới, khóa luôn các lựa chọn khác
-    select.onchange = function () {
-      for (let option of select.options) {
-        if (option.value !== select.value) {
-          option.disabled = true;
-          option.style.color = "gray";
-        }
-      }
-    };
+  // Nếu là "Hoàn thành" hoặc "Đã huỷ", thì khóa toàn bộ
+  if (trangThaiHienTai === "Hoàn thành" || trangThaiHienTai === "Đã huỷ") {
+    select.disabled = true;
+  } else {
+    select.disabled = false;
   }
 }
+
 </script>
 

@@ -1,9 +1,9 @@
 <?php
 // Thông tin kết nối
-$server = 'sql210.infinityfree.com';
-$user = 'if0_39510426';
-$pass = 'KQVOq66pT8';
-$database = 'if0_39510426_thuongmaidientu';
+$server = 'localhost';
+$user = 'root';
+$pass = '';
+$database = 'webquanao';
 
 $conn = new mysqli($server, $user, $pass, $database);
 
@@ -286,7 +286,7 @@ if (!empty($keyword)) {
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="./img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

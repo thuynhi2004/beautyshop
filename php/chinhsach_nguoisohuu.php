@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" >
-    <title> BeautyShop </title>
+    <title> The Bad Gold </title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/chinhsach.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -112,7 +112,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -282,48 +282,49 @@
 
   <div class="content" >
     <h2>Chính sách người sỡ hữu</h2>
-    <p><strong>Beauty Shop</strong> là sàn thương mại điện tử chuyên cung cấp các sản phẩm mỹ phẩm chính hãng như sữa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền, phấn phủ... Chúng tôi cam kết thực hiện đúng quy định về quản lý, vận hành sàn TMĐT theo pháp luật hiện hành.</p>
+    <p><strong>The Bad Gold</strong> là nền tảng thương mại điện tử chuyên cung cấp các sản phẩm thời trang như áo thun, quần jeans, quần short, hoodie, sơ mi... với phong cách trẻ trung, unisex và cập nhật xu hướng mới nhất. Chúng tôi cam kết vận hành đúng theo quy định pháp luật hiện hành về hoạt động thương mại điện tử.</p>
 
 <h4>1. Trách nhiệm của người sở hữu sàn TMĐT</h4>
 <ul>
-  <li>Đăng ký hoạt động thương mại điện tử với Bộ Công Thương theo quy định.</li>
-  <li>Đảm bảo mọi sản phẩm được cung cấp đều rõ nguồn gốc, xuất xứ, còn hạn sử dụng và được niêm yết giá minh bạch.</li>
-  <li>Đảm bảo thông tin mô tả sản phẩm mỹ phẩm đúng với công dụng và đặc tính đã được công bố.</li>
-  <li>Thiết lập cơ chế tiếp nhận, xử lý khiếu nại, tranh chấp liên quan đến sản phẩm.</li>
-  <li>Chịu trách nhiệm về thông tin, nội dung và hình ảnh được đăng tải trên sàn.</li>
+  <li>Đăng ký và duy trì hoạt động thương mại điện tử hợp pháp theo quy định của Bộ Công Thương.</li>
+  <li>Đảm bảo sản phẩm trên sàn có nguồn gốc rõ ràng, chất lượng đúng mô tả, giá bán minh bạch và đúng với niêm yết.</li>
+  <li>Thông tin chi tiết về chất liệu, kích cỡ (size S, M, L, XL), kiểu dáng và cách phối đồ luôn được công khai rõ ràng.</li>
+  <li>Thiết lập và vận hành hệ thống tiếp nhận, xử lý khiếu nại, đổi trả và bảo vệ quyền lợi khách hàng.</li>
+  <li>Chịu trách nhiệm hoàn toàn với nội dung, hình ảnh và thông tin đăng tải trên website.</li>
 </ul>
 
 <h4>2. Quy trình giao dịch</h4>
-<p>Khách hàng lựa chọn sản phẩm → Thêm vào giỏ hàng → Nhập thông tin mua hàng → Chọn phương thức thanh toán → Xác nhận đơn hàng → Nhận email xác nhận & chờ giao hàng.</p>
+<p>Khách hàng chọn sản phẩm → Thêm vào giỏ hàng → Điền thông tin nhận hàng → Chọn phương thức thanh toán → Xác nhận đơn → Nhận email xác nhận → Đợi giao hàng.</p>
 
 <h4>3. Chính sách bảo mật thông tin</h4>
-<p>Beauty Shop cam kết bảo mật tuyệt đối mọi thông tin cá nhân của khách hàng. Mọi thông tin thu thập chỉ phục vụ mục đích bán hàng, chăm sóc khách và hỗ trợ sau mua.</p>
+<p><strong>The Bad Gold</strong> cam kết bảo vệ tuyệt đối thông tin cá nhân của khách hàng. Dữ liệu được thu thập chỉ dùng để xử lý đơn hàng, hỗ trợ khách và nâng cao trải nghiệm mua sắm.</p>
 
 <h4>4. Cơ chế giải quyết tranh chấp</h4>
-<p>Trong trường hợp phát sinh tranh chấp, Beauty Shop ưu tiên giải quyết bằng thương lượng. Nếu không đạt được thỏa thuận, vụ việc sẽ được chuyển đến cơ quan có thẩm quyền giải quyết theo pháp luật Việt Nam.</p>
+<p>Mọi tranh chấp, khiếu nại phát sinh sẽ được <strong>The Bad Gold</strong> ưu tiên xử lý bằng phương thức thương lượng, hòa giải. Trường hợp cần thiết sẽ chuyển đến cơ quan chức năng có thẩm quyền theo pháp luật Việt Nam.</p>
 
 <h4>5. Quyền và nghĩa vụ của người mua</h4>
 <ul>
-  <li>Cung cấp thông tin cá nhân chính xác khi mua hàng.</li>
-  <li>Kiểm tra kỹ sản phẩm trước khi xác nhận nhận hàng.</li>
-  <li>Thực hiện thanh toán đúng thời gian và hình thức đã chọn.</li>
-  <li>Liên hệ Beauty Shop khi có khiếu nại hoặc yêu cầu đổi trả theo chính sách công bố.</li>
+  <li>Cung cấp thông tin chính xác khi mua hàng.</li>
+  <li>Kiểm tra kỹ sản phẩm, mẫu mã, size, màu sắc trước khi xác nhận nhận hàng.</li>
+  <li>Thanh toán đúng thời hạn và theo hình thức đã chọn.</li>
+  <li>Chủ động liên hệ <strong>The Bad Gold</strong> khi có yêu cầu hỗ trợ hoặc đổi trả.</li>
 </ul>
 
-<h4>6. Quyền và nghĩa vụ của người bán (Beauty Shop)</h4>
+<h4>6. Quyền và nghĩa vụ của người bán (The Bad Gold)</h4>
 <ul>
-  <li>Đảm bảo cung cấp hàng hóa đúng chất lượng, chủng loại, hạn sử dụng còn dài.</li>
-  <li>Chịu trách nhiệm về tính pháp lý của hàng hóa và hóa đơn, chứng từ.</li>
-  <li>Hỗ trợ bảo hành/đổi trả theo đúng quy trình.</li>
+  <li>Cung cấp sản phẩm đúng mô tả, đảm bảo còn mới, nguyên tag, chất lượng và đúng size đã đặt.</li>
+  <li>Chịu trách nhiệm với nguồn gốc sản phẩm, đảm bảo hợp pháp và phù hợp quy định pháp luật.</li>
+  <li>Hỗ trợ khách hàng đổi size, đổi mẫu hoặc hoàn tiền nếu có lỗi từ phía nhà cung cấp theo quy trình rõ ràng.</li>
 </ul>
 
 <h4>7. Liên hệ</h4>
 <p>
-<strong>CỬA HÀNG MỸ PHẨM BEAUTY SHOP</strong><br>
+<strong>CỬA HÀNG THỜI TRANG THE BAD GOLD</strong><br>
 Địa chỉ: 162/1, Đường 3/2, Ninh Kiều, Cần Thơ<br>
-Hotline: 0879 342 732 – Email: webmipham@gmail.com<br>
+Hotline: 0907326239 – Email: thebadgold@gmail.com<br>
 Thời gian làm việc: 8:00 – 20:00 (Thứ 2 – Thứ 7)
 </p>
+
 
   </div>
 </div>
@@ -335,7 +336,7 @@ Thời gian làm việc: 8:00 – 20:00 (Thứ 2 – Thứ 7)
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

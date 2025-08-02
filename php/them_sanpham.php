@@ -100,12 +100,12 @@ $target_file = $target_dir . basename($hinh['name']);
             </div>
 
             <div class="form-group">
-                <label for="CongDung">Công Dụng:</label>
+                <label for="CongDung">Chất Liệu:</label>
                 <textarea id="CongDung" name="CongDung" rows="4"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="HuongDanSuDung">Hướng dẫn sử dụng:</label>
+                <label for="HuongDanSuDung">Xuất xứ:</label>
                 <textarea id="HuongDanSuDung" name="HuongDanSuDung" rows="4"></textarea>
             </div>
         

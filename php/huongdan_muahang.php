@@ -112,7 +112,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -280,68 +280,65 @@
 
   <div class="content" >
     <h2>Hướng dẫn mua hàng</h2>
-    <p><strong>Beauty Shop</strong> là sàn thương mại điện tử chuyên cung cấp các sản phẩm mỹ phẩm chính hãng như sữa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền, phấn phủ... Chúng tôi cam kết thực hiện đúng quy định về quản lý, vận hành sàn TMĐT theo pháp luật hiện hành.</p>
+    <p><strong>The Bad Gold</strong> là sàn thương mại điện tử chuyên cung cấp các sản phẩm thời trang nam nữ chính hãng như áo thun, áo sơ mi, hoodie, quần jean, quần short, quần jogger,... với thiết kế hiện đại, chất lượng cao và giá cả hợp lý. Chúng tôi cam kết vận hành đúng quy định pháp luật về TMĐT, đảm bảo quyền lợi cho khách hàng.</p>
 
-<h4>1. Đăng ký, đăng nhập tài khoản tại Beauty Shop</h4>
-<p>Để mua sắm và trải nghiệm các dịch vụ tại Beauty Shop, quý khách cần đăng ký tài khoản cá nhân. Việc tạo tài khoản giúp lưu trữ thông tin đơn hàng, theo dõi lịch sử mua hàng, nhận các chương trình khuyến mãi đặc biệt, cũng như đảm bảo quyền lợi bảo hành và đổi trả về sau.</p>
-<p>Để đăng ký, quý khách truy cập vào biểu tượng tài khoản ở góc phải phía trên website, chọn mục "Đăng ký". Sau đó, điền đầy đủ thông tin như: họ tên, địa chỉ email, số điện thoại và mật khẩu. Quý khách nên sử dụng email và số điện thoại đang hoạt động để dễ dàng nhận thông báo và xác minh.</p>
-<p>Nếu đã có tài khoản, quý khách chỉ cần chọn "Đăng nhập", nhập đúng thông tin tài khoản để tiếp tục sử dụng dịch vụ. Trong trường hợp quên mật khẩu, quý khách có thể chọn "Quên mật khẩu" để được hỗ trợ khôi phục qua email.</p>
+<h4>1. Đăng ký, đăng nhập tài khoản tại The Bad Gold</h4>
+<p>Để mua sắm và theo dõi đơn hàng tại The Bad Gold, quý khách cần đăng ký tài khoản. Việc đăng ký giúp quý khách dễ dàng quản lý đơn hàng, theo dõi trạng thái giao hàng, lưu sản phẩm yêu thích và nhận các ưu đãi thành viên.</p>
+<p>Truy cập biểu tượng tài khoản ở góc phải trên cùng, chọn "Đăng ký", sau đó điền thông tin: họ tên, email, số điện thoại và mật khẩu. Nên dùng email và số điện thoại chính chủ để nhận thông tin xác minh và khuyến mãi.</p>
+<p>Nếu đã có tài khoản, chọn "Đăng nhập" và điền thông tin đã đăng ký. Nếu quên mật khẩu, nhấn “Quên mật khẩu” để lấy lại qua email.</p>
 
 <h4>2. Tìm kiếm sản phẩm</h4>
-<p>Sau khi đăng nhập thành công, quý khách có thể dễ dàng tìm kiếm sản phẩm mình quan tâm bằng nhiều cách:</p>
+<p>Sau khi đăng nhập, quý khách có thể dễ dàng tìm kiếm sản phẩm thời trang theo các cách sau:</p>
 <ul>
-  <li><strong>Thanh tìm kiếm:</strong> Nhập tên sản phẩm như "sữa rửa mặt cho da dầu", "kem chống nắng SPF 50", "son môi lì lâu trôi",... hệ thống sẽ gợi ý các sản phẩm phù hợp.</li>
-  <li><strong>Danh mục:</strong> Tại menu chính, quý khách có thể duyệt theo từng danh mục như: Sữa rửa mặt, Kem chống nắng, Son môi, Tẩy trang, Kem nền, Phấn phủ,...</li>
+  <li><strong>Thanh tìm kiếm:</strong> Nhập từ khóa như “áo thun unisex”, “quần jogger nam”, “hoodie nữ”,... để hệ thống gợi ý sản phẩm phù hợp.</li>
+  <li><strong>Danh mục:</strong> Duyệt các danh mục như: Áo, Quần, Bộ đồ, Sản phẩm mới, Sản phẩm bán chạy, Sale,...</li>
 </ul>
-<p>Mỗi sản phẩm trên website đều được trình bày chi tiết về thành phần, công dụng, cách dùng, dung tích, giá bán và đánh giá từ người dùng để quý khách yên tâm lựa chọn.</p>
+<p>Mỗi sản phẩm đều hiển thị rõ: hình ảnh, mô tả chất liệu, form dáng, màu sắc, kích thước (size), giá bán và đánh giá từ khách hàng trước đó.</p>
 
 <h4>3. Thêm sản phẩm vào giỏ hàng</h4>
-<p>Sau khi tìm được sản phẩm ưng ý, quý khách bấm nút "Thêm vào giỏ hàng" để lưu sản phẩm lại trong giỏ. Quý khách có thể thêm nhiều sản phẩm khác nhau vào cùng một giỏ để đặt hàng một lần.</p>
-<p>Trong trang chi tiết sản phẩm, quý khách có thể:</p>
+<p>Khi chọn được sản phẩm ưng ý, quý khách nhấn “Thêm vào giỏ hàng”. Trong trang chi tiết, quý khách có thể:</p>
 <ul>
-  <li>Kiểm tra thông tin sản phẩm: giá, màu, dung tích,...</li>
-  <li>Chọn số lượng cần mua</li>
+  <li>Xem mô tả chi tiết: chất liệu, form dáng, xuất xứ</li>
+  <li>Chọn size (S, M, L, XL) và số lượng muốn mua</li>
 </ul>
-<p>Ngoài ra, quý khách cũng có thể lưu sản phẩm yêu thích vào danh sách "Yêu thích" để tham khảo hoặc mua sau.</p>
+<p>Sản phẩm sẽ được lưu trong giỏ để đặt hàng sau hoặc quý khách có thể lưu vào "Yêu thích" nếu muốn mua sau.</p>
 
 <h4>4. Kiểm tra giỏ hàng và đặt hàng</h4>
-<p>Để kiểm tra các sản phẩm đã chọn, quý khách nhấp vào biểu tượng "Giỏ hàng" nằm ở góc phải phía trên màn hình. Tại đây, hệ thống sẽ hiển thị tất cả sản phẩm đang có trong giỏ hàng với các thông tin như:</p>
+<p>Click vào biểu tượng "Giỏ hàng" để xem lại sản phẩm đã chọn. Tại đây hiển thị:</p>
 <ul>
-  <li>Thông tin cá nhân</li>
-  <li>Tên sản phẩm, hình ảnh, dung tích/màu sắc</li>
-  <li>Số lượng và giá tiền</li>
+  <li>Thông tin tài khoản</li>
+  <li>Tên sản phẩm, hình ảnh, size, màu sắc</li>
+  <li>Số lượng, đơn giá, thành tiền</li>
   <li>Tổng giá trị đơn hàng</li>
 </ul>
-<p>Quý khách có thể điều chỉnh số lượng hoặc xóa sản phẩm khỏi giỏ nếu không còn nhu cầu. Sau khi kiểm tra xong, bấm “Tiến hành đặt hàng” để sang bước nhập thông tin và chọn phương thức thanh toán.</p>
+<p>Quý khách có thể thay đổi size, số lượng hoặc xóa sản phẩm. Khi sẵn sàng, nhấn “Tiến hành đặt hàng”.</p>
 
-<h4>5. Điều chỉnh thông tin và địa chỉ giao hàng</h4>
-<p>Ở bước tiếp theo, quý khách cần cung cấp hoặc xác nhận lại các thông tin giao hàng bao gồm:</p>
+<h4>5. Cập nhật thông tin giao hàng</h4>
+<p>Ở bước này, quý khách cần cung cấp đầy đủ thông tin nhận hàng gồm:</p>
 <ul>
   <li>Họ tên người nhận</li>
-  <li>Số điện thoại liên hệ</li>
-  <li>Địa chỉ nhận hàng chính xác (bao gồm số nhà, phường/xã, quận/huyện, tỉnh/thành)</li>
+  <li>Số điện thoại</li>
+  <li>Địa chỉ nhận hàng (rõ ràng và chi tiết)</li>
 </ul>
-<p>Thông tin này sẽ được dùng để đơn vị vận chuyển giao hàng đến đúng người và đúng địa điểm. Quý khách cũng có thể để lại ghi chú cho người giao hàng nếu cần (ví dụ: gọi trước khi đến, giao ngoài giờ hành chính,...).</p>
-<p>Beauty Shop cam kết bảo mật tuyệt đối thông tin cá nhân và chỉ sử dụng cho mục đích xử lý đơn hàng.</p>
+<p>Có thể thêm ghi chú như: "giao buổi tối", "liên hệ trước khi đến". Mọi thông tin đều được bảo mật và chỉ sử dụng phục vụ giao hàng.</p>
 
-<h4>6. Kiểm tra và xác nhận đặt hàng</h4>
-<p>Trước khi hoàn tất, quý khách kiểm tra lại toàn bộ thông tin gồm:</p>
+<h4>6. Xác nhận đặt hàng</h4>
+<p>Trước khi hoàn tất đơn, quý khách cần kiểm tra:</p>
 <ul>
-  <li>Sản phẩm đã chọn</li>
-  <li>Số lượng, dung tích, màu sắc</li>
-  <li>Phương thức thanh toán: COD (thanh toán khi nhận hàng), chuyển khoản ngân hàng, hoặc ví điện tử</li>
-  <li>Thông tin nhận hàng và chi phí vận chuyển (nếu có)</li>
+  <li>Sản phẩm, size, số lượng</li>
+  <li>Địa chỉ và thông tin liên hệ</li>
+  <li>Phí vận chuyển (nếu có)</li>
+  <li>Phương thức thanh toán: COD, chuyển khoản hoặc ví điện tử</li>
 </ul>
-<p>Sau khi chắc chắn, quý khách nhấn “Xác nhận đặt hàng”. Hệ thống sẽ gửi email xác nhận đơn hàng ngay lập tức đến địa chỉ email đã đăng ký. Đơn hàng sẽ được xử lý trong vòng 24 giờ và giao đến tay khách hàng trong thời gian cam kết (2–5 ngày tùy khu vực).</p>
-<p>Beauty Shop luôn theo dõi tiến trình giao hàng và sẵn sàng hỗ trợ nếu có bất kỳ sự cố hay chậm trễ nào. Trong trường hợp cần đổi/trả hàng theo chính sách, quý khách có thể liên hệ trực tiếp hotline hoặc email hỗ trợ để được giải quyết nhanh chóng.</p>
-
+<p>Chọn “Xác nhận đặt hàng” để hoàn tất. Email xác nhận sẽ được gửi ngay. Đơn hàng sẽ được xử lý trong 24h và giao từ 2–5 ngày tùy khu vực.</p>
+<p>The Bad Gold hỗ trợ theo dõi đơn hàng và giải quyết sự cố nhanh chóng. Nếu cần đổi/trả hàng, quý khách vui lòng liên hệ theo thông tin bên dưới.</p>
 
 <h4>7. Liên hệ</h4>
 <p>
-<strong>CỬA HÀNG MỸ PHẨM BEAUTY SHOP</strong><br>
+<strong>CỬA HÀNG THỜI TRANG THE BAD GOLD</strong><br>
 Địa chỉ: 162/1, Đường 3/2, Ninh Kiều, Cần Thơ<br>
-Hotline: 0879 342 732 – Email: webmipham@gmail.com<br>
-Thời gian làm việc: 8:00 – 20:00 (Thứ 2 – Thứ 7)
+Hotline: 0907 329 236 – Email: thebadgold@gmail.com<br>
+Thời gian làm việc: 8:00 – 20:00 (Thứ 2 – Thứ 7)
 </p>
 
   </div>
@@ -354,7 +351,7 @@ Thời gian làm việc: 8:00 – 20:00 (Thứ 2 – Thứ 7)
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;" />
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

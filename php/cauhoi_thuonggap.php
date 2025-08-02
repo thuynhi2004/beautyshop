@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" >
-    <title> BeautyShop </title>
+    <title> The Bad Gold </title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/chinhsach.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -112,7 +112,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -280,73 +280,56 @@
   <div class="content" >
     <h2>Câu hỏi thường gặp</h2>
 
-<h5>1. Khi mua sản phẩm tại <strong>Beauty Shop</strong>, tôi có được bảo hành không?</h5>
+<h5>1. Khi mua sản phẩm tại <strong>The Bad Gold</strong>, tôi có được bảo hành không?</h5>
 <p>
-Đối với các sản phẩm mỹ phẩm, Beauty Shop cam kết tất cả sản phẩm đều là hàng chính hãng. 
-Do đặc thù sản phẩm tiêu dùng, chúng tôi không áp dụng chính sách bảo hành dài hạn mà chỉ hỗ trợ đổi trả trong vòng <strong>07 ngày</strong> nếu sản phẩm có lỗi do nhà sản xuất, còn nguyên tem niêm phong và chưa qua sử dụng.
-</p>
-<p>
-Khách hàng có thể liên hệ <strong>hotline</strong> hoặc inbox fanpage để gửi phản hồi và được hỗ trợ nhanh chóng.
+  Các sản phẩm thời trang tại <strong>The Bad Gold</strong> không có chính sách bảo hành dài hạn do tính chất hàng hóa. Tuy nhiên, chúng tôi luôn đặt uy tín lên hàng đầu và cam kết hỗ trợ <strong>đổi trả trong vòng 07 ngày</strong> nếu sản phẩm gặp lỗi như rách, bung chỉ, lỗi in/thêu, giao sai mẫu hoặc size. Mọi trường hợp đều được tiếp nhận và xử lý nhanh chóng nếu đúng điều kiện đổi trả.
 </p>
 
-<h5>2. Tôi có được đổi trả nếu sản phẩm không phù hợp với da?</h5>
+<h5>2. Tôi có thể đổi trả nếu chọn sai size không?</h5>
 <p>
-Rất tiếc, với các sản phẩm mỹ phẩm đã mở nắp hoặc sử dụng, <strong>Beauty Shop</strong> không thể hỗ trợ đổi trả nếu sản phẩm không phù hợp với da do tính chất cá nhân hóa. Để tránh rủi ro, Quý khách có thể tham khảo kỹ thông tin sản phẩm, bảng thành phần hoặc inbox fanpage để được tư vấn trước khi mua.
+  Có. Trong vòng <strong>07 ngày</strong> kể từ khi nhận hàng, nếu bạn chọn nhầm size và sản phẩm còn mới, chưa sử dụng, chưa giặt và còn tag đầy đủ, <strong>The Bad Gold</strong> sẽ hỗ trợ đổi size. Chúng tôi khuyến khích bạn tham khảo bảng size kỹ lưỡng hoặc inbox fanpage để được tư vấn theo chiều cao, cân nặng trước khi đặt hàng.
 </p>
 
-<h5>3. Nếu sản phẩm bị bể vỡ, rò rỉ khi nhận hàng thì xử lý như thế nào?</h5>
+<h5>3. Nếu sản phẩm bị lỗi hoặc sai mẫu khi nhận hàng thì xử lý như thế nào?</h5>
 <p>
-Trường hợp Quý khách nhận hàng online mà sản phẩm bị vỡ, chảy, móp méo hoặc sai mô tả, vui lòng <strong>chụp ảnh/video sản phẩm</strong> và liên hệ hotline hoặc fanpage trong vòng <strong>24h</strong> kể từ khi nhận hàng để được hỗ trợ đổi sản phẩm mới hoặc hoàn tiền miễn phí.
+  Hãy <strong>chụp ảnh rõ nét hoặc quay video</strong> sản phẩm bị lỗi ngay khi nhận hàng, sau đó gửi về fanpage hoặc số hotline của <strong>The Bad Gold</strong> trong vòng <strong>24 giờ</strong>. Đội ngũ CSKH sẽ xác minh và hỗ trợ đổi mới hoặc hoàn tiền toàn phần nếu lỗi được xác nhận là từ nhà sản xuất hoặc khâu vận chuyển.
 </p>
 
-<h5>4. Làm thế nào để theo dõi đơn hàng và kiểm tra tiến độ giao hàng?</h5>
+<h5>4. Làm sao để theo dõi đơn hàng đã đặt?</h5>
 <p>
-Quý khách có thể tra cứu tiến độ đơn hàng thông qua email xác nhận đơn hoặc liên hệ <strong>số hotline</strong> để được cập nhật thông tin vận chuyển.
+  Sau khi đặt hàng thành công, bạn sẽ nhận được một email hoặc tin nhắn xác nhận đơn hàng có mã theo dõi. Bạn có thể tra cứu trạng thái đơn hàng ngay trên website hoặc liên hệ trực tiếp qua fanpage/hotline để được hỗ trợ cập nhật nhanh chóng và chính xác nhất.
 </p>
 
-<h5>5. Mua online nhưng không thích sản phẩm, tôi có thể trả lại không?</h5>
+<h5>5. Tôi không thích sản phẩm sau khi nhận, có thể trả lại không?</h5>
 <p>
-<strong>Beauty Shop</strong> chỉ hỗ trợ đổi/trả nếu sản phẩm bị lỗi, không đúng mô tả hoặc bị hư hỏng trong quá trình vận chuyển. Với lý do <strong>"không thích"</strong>, rất tiếc chúng tôi chưa hỗ trợ trả hàng để đảm bảo quyền lợi người mua tiếp theo.
+  Rất tiếc, chúng tôi <strong>không hỗ trợ trả hàng nếu lý do là không thích hoặc đổi ý</strong> sau khi nhận hàng. Chính sách đổi trả của <strong>The Bad Gold</strong> chỉ áp dụng cho các trường hợp lỗi kỹ thuật hoặc giao sai sản phẩm. Hãy cân nhắc kỹ trước khi đặt để tránh phát sinh không mong muốn.
 </p>
 
-<h5>6. Tôi cần được tư vấn sử dụng sản phẩm thì liên hệ ở đâu?</h5>
+<h5>6. Tôi cần tư vấn về chất liệu và form sản phẩm thì liên hệ ở đâu?</h5>
 <p>
-Quý khách có thể tham khảo hướng dẫn sử dụng in trên bao bì hoặc liên hệ trực tiếp qua fanpage, website hoặc gọi <strong>số hotline</strong> để được hỗ trợ nhanh chóng.
+  Trên mỗi trang sản phẩm đều có mô tả chi tiết về <strong>chất liệu vải, form dáng và cách chọn size</strong>. Nếu bạn cần tư vấn thêm, hãy inbox fanpage hoặc gọi đến hotline. Đội ngũ CSKH của chúng tôi luôn sẵn sàng hỗ trợ nhiệt tình từ 8h đến 22h hàng ngày.
 </p>
 
-<h5>7. <strong>Beauty Shop</strong> có giao hàng tận nhà không?</h5>
+<h5>7. <strong>The Bad Gold</strong> có giao hàng tận nơi không?</h5>
 <p>
-Có. <strong>Beauty Shop</strong> hỗ trợ giao hàng tận nơi trên toàn quốc, bao gồm cả các khu vực nội thành, ngoại thành và vùng sâu vùng xa. Quý khách chỉ cần đặt hàng online qua website, fanpage hoặc hotline – đơn hàng sẽ được chuyển đến tận nhà nhanh chóng.
-
-Với các khu vực nội thành, thời gian giao hàng thường từ <strong>1–2</strong> ngày làm việc. Khu vực tỉnh, huyện có thể mất từ <strong>2–7</strong> ngày làm việc tùy vị trí.
-
-Ngoài ra, khách hàng sẽ được liên hệ trước khi giao, và có thể chọn hình thức thanh toán khi nhận hàng (COD) hoặc chuyển khoản trước.
+  Có. Chúng tôi giao hàng toàn quốc thông qua các đơn vị vận chuyển uy tín như Giao Hàng Nhanh, J&T, Viettel Post,... Đơn nội thành thường nhận trong vòng <strong>1–3 ngày</strong>, đơn tỉnh sẽ nhận sau <strong>3–7 ngày</strong> tùy khu vực. Bạn sẽ được cập nhật mã vận đơn sau khi shop gửi hàng thành công.
 </p>
 
-<h5>8. Tôi muốn biết chi tiết thành phần sản phẩm?</h5>
+<h5>8. Làm sao tôi biết sản phẩm có vừa với mình không?</h5>
 <p>
-Vui lòng xem chi tiết bảng thành phần (INCI) tại phần mô tả sản phẩm trên website hoặc inbox fanpage để được gửi thông tin cụ thể.
+  Tất cả sản phẩm tại <strong>The Bad Gold</strong> đều có <strong>bảng size chi tiết</strong> đi kèm. Chúng tôi cung cấp <strong>4 size phổ biến: S, M, L, XL</strong> phù hợp với vóc dáng người Việt từ 40kg đến 90kg và chiều cao từ 140cm đến 185cm. Nếu không chắc chắn, bạn chỉ cần cung cấp chiều cao, cân nặng, sở thích mặc ôm hay rộng, đội ngũ CSKH sẽ tư vấn size phù hợp nhất cho bạn.
 </p>
 
-<h5>9.  Tôi có thể kiểm tra hàng trước khi thanh toán không?</h5>
+<h5>9. Tôi có được kiểm tra hàng trước khi thanh toán không?</h5>
 <p>
-Có. Hiện tại, các đơn hàng COD (thanh toán khi nhận hàng) sẽ được hỗ trợ kiểm tra bên ngoài (tem, hộp, mã vạch...) nhưng <strong>không mở seal</strong> nếu là mỹ phẩm còn nguyên niêm phong. Điều này để đảm bảo vệ sinh và chất lượng sản phẩm cho người dùng khác.
+  Với các đơn hàng thanh toán khi nhận (COD), bạn được <strong>kiểm tra mã đơn, mẫu mã và tình trạng đóng gói</strong> trước khi thanh toán. Tuy nhiên, để đảm bảo niêm phong và chất lượng, <strong>không hỗ trợ thử hàng</strong> trước khi nhận. Nếu phát hiện lỗi, bạn có thể liên hệ đổi trả theo quy định trong vòng 07 ngày.
 </p>
 
-<h5>10. Mua son/kem nền/kem chống nắng sai màu, sai tông da thì có đổi được không?</h5>
+<h5>10. Mua áo/quần sai màu hoặc không hợp kiểu dáng có đổi được không?</h5>
 <p>
-Rất tiếc, các sản phẩm mỹ phẩm có màu sắc như son môi, kem nền, phấn phủ, kem chống nắng có màu <strong>không áp dụng đổi trả   </strong> nếu lý do là chọn sai màu hoặc cảm thấy không hợp với da sau khi sử dụng. Đây là chính sách chung nhằm đảm bảo an toàn vệ sinh và chất lượng sản phẩm cho khách hàng khác, bởi mỹ phẩm là mặt hàng nhạy cảm liên quan đến sức khỏe làn da. Quý khách vui lòng liên hệ trước qua fanpage hoặc hotline để được tư vấn.
+  Có. Nếu sản phẩm chưa sử dụng, còn tag và còn trong thời gian hỗ trợ, bạn có thể <strong>đổi màu, mẫu hoặc size</strong>. Tuy nhiên, mỗi đơn chỉ được hỗ trợ đổi <strong>một lần</strong>, và bạn vui lòng thanh toán phí vận chuyển phát sinh nếu có. Trước khi đổi, hãy inbox để xác nhận tình trạng và mẫu cần đổi.
 </p>
 
-<h5>11. Hóa đơn sai tên, địa chỉ thì có sửa đổi được không?</h5>
-<p>
-Có thể. Nếu sau khi nhận hóa đơn điện tử mà Quý khách phát hiện sai sót về tên người mua, địa chỉ. <strong>Beauty Shop</strong> hoàn toàn hỗ trợ điều chỉnh thông tin. Tuy nhiên, để đảm bảo đúng quy định của cơ quan thuế, Quý khách cần liên hệ với bộ phận chăm sóc khách hàng trong vòng 24 giờ kể từ khi xuất hóa đơn.
-</p>
-
-<h5>12. Nếu tôi không có nhà khi giao hàng thì sao?</h5>
-<p>
-Đơn vị vận chuyển sẽ gọi điện trước khi giao. Nếu không liên hệ được, họ sẽ giao lại tối đa 2 lần. Trong trường hợp không nhận hàng, đơn sẽ được hoàn về kho. Quý khách có thể liên hệ để đặt lại đơn mới.
-</p>
 
   </div>
 </div>
@@ -359,7 +342,7 @@ Có thể. Nếu sau khi nhận hóa đơn điện tử mà Quý khách phát hi
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

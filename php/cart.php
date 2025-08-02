@@ -42,22 +42,44 @@ if (isset($_GET['maSP']) && is_numeric($_GET['maSP'])) {
 
         // Kiểm tra sản phẩm đã có trong giỏ chưa
         $found = false;
-        foreach ($_SESSION['cart'] as &$product) {
-            if ($product['maSP'] == $maSP) {
-                $product['quantity'] += $quantity;
-                $found = true;
-                break;
-            }
-        }
+        $size = isset($_GET['size']) ? htmlspecialchars($_GET['size']) : '';
+
+        // Truy vấn lấy ma_size từ bảng size
+$ma_size = null;
+if (!empty($size)) {
+    $stmtSize = $conn->prepare("SELECT ma_size FROM size WHERE ten_size = ?");
+    $stmtSize->bind_param("s", $size);
+    $stmtSize->execute();
+    $resultSize = $stmtSize->get_result();
+    if ($rowSize = $resultSize->fetch_assoc()) {
+        $ma_size = $rowSize['ma_size'];
+    }
+    $stmtSize->close();
+}
+
+
+foreach ($_SESSION['cart'] as &$product) {
+    if ($product['maSP'] == $maSP && $product['size'] == $size) {
+        $product['quantity'] += $quantity;
+        $found = true;
+        break;
+    }
+}
+
         if (!$found) {
-            $_SESSION['cart'][] = [
-                'maSP' => $row['maSP'],
-                'tenSP' => $row['tenSP'],
-                'giaBan' => $row['giaBan'],
-                'hinhAnh' => $row['hinhAnh'],
-                'quantity' => $quantity
-            ];
+          $size = isset($_GET['size']) ? htmlspecialchars($_GET['size']) : ''; // lấy size từ URL
+          
+     $_SESSION['cart'][] = [
+    'maSP' => $row['maSP'],
+    'tenSP' => $row['tenSP'],
+    'giaBan' => $row['giaBan'],
+    'hinhAnh' => $row['hinhAnh'],
+    'quantity' => $quantity,
+    'size' => $size,
+    'ma_size' => $ma_size
+];
         }
+
     }
 
     $stmt->close();
@@ -166,14 +188,16 @@ if ($payment_method === 'vnpay') {
         $order_id = $stmt->insert_id;
 
         // Lưu chi tiết đơn hàng NGAY TẠI ĐÂY
-        $stmt_detail = $conn->prepare("INSERT INTO donhang_chitiet (ma_donhang, maSP, soLuong, giaBan, ngayDat) VALUES (?, ?, ?, ?, ?)");
+        $stmt_detail = $conn->prepare("INSERT INTO donhang_chitiet (ma_donhang, maSP, soLuong, giaBan, ngayDat, ma_size) VALUES (?, ?, ?, ?, ?, ?)");
+
 
         foreach ($_SESSION['cart'] as $item) {
             $maSP = $item['maSP'];
             $soLuong = $item['quantity'];
             $giaBan = $item['giaBan'] * $soLuong;
+            $ma_size = isset($item['ma_size']) ? $item['ma_size'] : null;
 
-            $stmt_detail->bind_param("iiids", $order_id, $maSP, $soLuong, $giaBan, $ngayDat);
+            $stmt_detail->bind_param("iiidsi", $order_id, $maSP, $soLuong, $giaBan, $ngayDat, $ma_size);
             $stmt_detail->execute();
 
             // Trừ tồn kho
@@ -206,14 +230,17 @@ if ($payment_method === 'vnpay') {
       if ($stmt->execute()) {
           $orderID = $stmt->insert_id;
 
-          $stmt_detail = $conn->prepare("INSERT INTO donhang_chitiet (ma_donhang, maSP, soLuong, giaBan, ngayDat) VALUES (?, ?, ?, ?, ?)");
+          $stmt_detail = $conn->prepare("INSERT INTO donhang_chitiet (ma_donhang, maSP, soLuong, giaBan, ngayDat, ma_size) VALUES (?, ?, ?, ?, ?, ?)");
+
+
 
           foreach ($_SESSION['cart'] as $item) {
               $maSP = $item['maSP'];
               $soLuong = $item['quantity'];
               $giaBan = $item['giaBan'] * $item['quantity'];
+              $ma_size = isset($item['ma_size']) ? $item['ma_size'] : null;
 
-              $stmt_detail->bind_param("iiids", $orderID, $maSP, $soLuong, $giaBan, $ngayDat);
+              $stmt_detail->bind_param("iiidsi", $orderID, $maSP, $soLuong, $giaBan, $ngayDat, $ma_size);
               $stmt_detail->execute();
 
               $stmt_updateQty = $conn->prepare("UPDATE sanpham SET soLuong = soLuong - ? WHERE maSP = ?");
@@ -469,6 +496,7 @@ if ($payment_method === 'vnpay') {
                     <th>Hình ảnh</th>
                     <th>Tên sản phẩm</th>
                     <th>Giá</th>
+                    <th>Size</th>
                     <th>Số lượng</th>
                     <th>Tổng tiền</th>
                     <th>Thao tác</th>
@@ -482,6 +510,8 @@ if ($payment_method === 'vnpay') {
         <td class="price" data-price="<?php echo $product['giaBan']; ?>">
             <?php echo number_format($product['giaBan'], 0, ',', '.'); ?> VNĐ
         </td>
+        <td><?php echo htmlspecialchars($product['size']); ?></td>
+
         <td>
             <input type="number" class="quantity" name="quantity[<?php echo $key; ?>]" 
                    value="<?php echo $product['quantity']; ?>" min="1"
@@ -581,7 +611,7 @@ if ($payment_method === 'vnpay') {
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

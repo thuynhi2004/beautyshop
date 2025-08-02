@@ -128,7 +128,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -297,11 +297,11 @@
   <div class="content" >
     <h2>Chính sách vận chuyển-giao nhận</h2>
     <h4>1. Dịch vụ áp dụng</h4>
-<p>Chính sách giao hàng được áp dụng cho tất cả các đơn hàng mỹ phẩm bao gồm: <strong>sữa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền và phấn phủ</strong> khi mua sắm tại website <strong>BeautyShop</strong> và các kênh bán hàng trực tuyến chính thức của chúng tôi.</p>
+<p>Chính sách giao hàng được áp dụng cho tất cả các đơn hàng mỹ phẩm bao gồm: <strong>sữa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền và phấn phủ</strong> khi mua sắm tại website <strong>The Bad Gold</strong> và các kênh bán hàng trực tuyến chính thức của chúng tôi.</p>
 <p>Chính sách áp dụng cho các đơn hàng thỏa điều kiện về giá trị tối thiểu và khu vực giao hàng.</p>
 
 <h4>2. Phạm vi áp dụng</h4>
-<p>Để đảm bảo khách hàng nhận được sản phẩm đúng thời gian và trạng thái tốt nhất, Beauty Shop phân chia khu vực giao hàng thành hai nhóm: <strong>Nội thành</strong> và <strong>Ngoại thành</strong>.</p>
+<p>Để đảm bảo khách hàng nhận được sản phẩm đúng thời gian và trạng thái tốt nhất, The Bad Gold phân chia khu vực giao hàng thành hai nhóm: <strong>Nội thành</strong> và <strong>Ngoại thành</strong>.</p>
 
 <h5>Nội thành (Phường, xã, quận, huyện)</h5>
 <ul>
@@ -363,7 +363,7 @@
   <li>Thời gian giao hàng có thể thay đổi theo điều kiện thời tiết, khu vực, chính sách vận chuyển.</li>
   <li>Đơn hàng đặt sau 17h sẽ được xử lý vào ngày làm việc tiếp theo.</li>
   <li>Đối với đơn hàng có yêu cầu kiểm hàng trước khi thanh toán, thời gian xử lý có thể lâu hơn.</li>
-  <li>Beauty Shop cam kết xử lý đơn hàng trong vòng 24h sau khi xác nhận đơn.</li>
+  <li><strong>The Bad Gold</strong> cam kết xử lý đơn hàng trong vòng 24h sau khi xác nhận đơn.</li>
 </ul>
 
 </div>
@@ -377,7 +377,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

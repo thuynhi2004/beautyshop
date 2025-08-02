@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" >
-    <title> BeautyShop </title>
+    <title> The Bad Gold </title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/chinhsach.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -143,7 +143,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -311,8 +311,8 @@
 
   <div class="content" >
     <h2>Chính sách đổi trả</h2>
-    <h4>I. QUY ĐỊNH CHUNG</h4>
-    <table>
+    <h4>I. QUY ĐỊNH CHUNG</h4>
+<table>
   <thead>
     <tr>
       <th>STT</th>
@@ -325,155 +325,155 @@
       <td>1</td>
       <td><strong>Đủ điều kiện đổi trả</strong></td>
       <td>
-        Sản phẩm chưa sử dụng, còn nguyên tem, nhãn mác và bao bì ban đầu, không có dấu hiệu mở nắp hoặc tác động bên ngoài, nhưng đảm bảo:<br>
-        - Chưa bóc tem, chưa mở nắp<br>
-        - Không bị dơ, vỡ, biến dạng, đổi màu hoặc có mùi lạ<br>
-        - Đổi trả trong vòng 7 ngày kể từ ngày mua hàng<br>
-        - Có hóa đơn mua hàng gốc tại <strong>Beauty Shop</strong><br>
-        - Sản phẩm thuộc nhóm có hỗ trợ đổi trả <strong>(không áp dụng với sản phẩm khuyến mãi đặc biệt)</strong>
+        Sản phẩm chưa qua sử dụng, còn nguyên tag mác, bao bì và không có dấu hiệu bị giặt, bẩn hoặc biến dạng:<br>
+        - Tag và tem size còn nguyên vẹn<br>
+        - Không bị bẩn, rách, co rút, bạc màu<br>
+        - Đổi trả trong vòng 7 ngày kể từ ngày nhận hàng<br>
+        - Có hóa đơn mua hàng gốc tại <strong>The Bad Gold</strong><br>
+        - Áp dụng cho sản phẩm không thuộc chương trình khuyến mãi đặc biệt
       </td>
     </tr>
     <tr>
       <td>2</td>
       <td><strong>Đủ điều kiện bảo hành</strong></td>
       <td>
-         Sản phẩm gặp lỗi kỹ thuật hoặc hư hỏng do lỗi từ nhà sản xuất trong quá trình chưa sử dụng hoặc mới sử dụng lần đầu:<br>
-        - Có dấu hiệu như: tách lớp, đổi màu, kết tủa, có mùi lạ<br>
-        - Bao bì còn nguyên, thông tin sản phẩm rõ ràng<br>
-        - Còn hạn sử dụng và có hóa đơn mua hàng tại <strong>Beauty Shop</strong><br>
-        - Được xác nhận lỗi bởi nhân viên kỹ thuật hoặc nhà phân phối chính hãng
+        Sản phẩm lỗi kỹ thuật (đường may, khóa kéo, nút...) do nhà sản xuất trong lần sử dụng đầu tiên:<br>
+        - Có dấu hiệu lỗi như bung chỉ, lệch size, không đúng mô tả<br>
+        - Tag mác còn nguyên, chưa giặt hoặc chưa mặc<br>
+        - Có hóa đơn tại <strong>The Bad Gold</strong><br>
+        - Được xác nhận lỗi bởi nhân viên CSKH hoặc nhà cung cấp
       </td>
     </tr>
     <tr>
       <td>3</td>
       <td><strong>Không đủ điều kiện bảo hành/đổi trả</strong></td>
       <td>
-        - Sản phẩm đã sử dụng, không còn tem, nhãn<br>
-        - Bảo quản sai cách gây biến chất<br>
-        - Sản phẩm không mua tại <strong>Beauty Shop</strong><br>
-        - Không có hóa đơn/chứng từ chứng minh nguồn gốc sản phẩm <br>
-        - Quá thời gian quy định
+        - Sản phẩm đã giặt hoặc sử dụng<br>
+        - Bảo quản sai cách gây phai màu, co rút, giãn<br>
+        - Không mua tại <strong>The Bad Gold</strong><br>
+        - Thiếu hóa đơn/xác minh đơn hàng<br>
+        - Quá thời hạn đổi trả theo quy định
       </td>
     </tr>
     <tr>
       <td>4</td>
       <td><strong>Phí phát sinh trong quá trình đổi trả</strong></td>
       <td>
-        - Phí kiểm tra hàng hóa nếu có nghi vấn sử dụng hoặc lỗi không do nhà sản xuất<br>
-        - Phí vận chuyển 2 chiều nếu khách yêu cầu đổi trả tận nơi<br>
-        - Nếu sản phẩm kèm quà tặng hoặc khuyến mãi không còn, khách hàng phải bù phần giá trị tương đương<br>
-        - Trường hợp đổi do lý do cá nhân (không ưng ý), chi phí phát sinh sẽ được thông báo cụ thể
+        - Phí kiểm tra nếu có nghi vấn sử dụng hoặc lỗi không rõ ràng<br>
+        - Phí vận chuyển 2 chiều nếu đổi trả tận nơi<br>
+        - Sản phẩm đi kèm quà tặng, nếu thiếu phải hoàn lại hoặc bù tương đương<br>
+        - Đổi do nhu cầu cá nhân sẽ thông báo rõ phí cụ thể theo từng trường hợp
       </td>
     </tr>
     <tr>
       <td colspan="3">
         <strong>Lưu ý:</strong><br>
-        - Chỉ áp dụng đổi trả 1 lần cho mỗi đơn hàng<br>
-        - Sản phẩm thuộc nhóm khuyến mãi đặc biệt hoặc “flash sale” không áp dụng đổi trả<br>
-        - Mỹ phẩm là sản phẩm nhạy cảm, cần kiểm tra kỹ trước khi thanh toán<br>
-        - Vui lòng liên hệ nhân viên <strong>Beauty Shop</strong> để được tư vấn trước khi đổi/trả hàng
+        - Mỗi đơn hàng chỉ đổi trả 1 lần<br>
+        - Sản phẩm thuộc “Flash Sale” hoặc chương trình đặc biệt không áp dụng đổi trả<br>
+        - Vui lòng thử kỹ size và kiểm tra kỹ sản phẩm trước khi thanh toán<br>
+        - Liên hệ CSKH của <strong>The Bad Gold</strong> để được tư vấn trước khi đổi/trả
       </td>
     </tr>
   </tbody>
 </table>
-    
-    <h4>II. CÁC CHÍNH SÁCH ĐỔI TRẢ</h4>
-    <h5>2.1. chính sách đổi trả các sản phẩm: sửa rửa mặt, kem chống nắng, trang điểm môi, tẩy trang, kem nền-phấn phủ</h5>
-    <h5>2.1.1. Sản phẩm mới</h5>
 
-    <table>
+<h4>II. CÁC CHÍNH SÁCH ĐỔI TRẢ</h4>
+<h5>2.1. Chính sách đổi trả áp dụng cho sản phẩm: áo, quần, jacket, phụ kiện thời trang</h5>
+<h5>2.1.1. Sản phẩm mới</h5>
+
+<table>
   <thead>
     <tr>
       <th>Trường hợp</th>
-      <th>Thời gian (tính từ ngày mua)</th>
+      <th>Thời gian (tính từ ngày nhận hàng)</th>
       <th>Chính sách đổi trả</th>
-      <th>Phí khấu hao khi trả hàng<br>(tính theo giá trị sản phẩm trên đơn)</th>
+      <th>Phí khấu hao khi trả hàng<br>(tính theo giá trị sản phẩm)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Sản phẩm lỗi từ nhà sản xuất</td>
+      <td>Lỗi từ nhà sản xuất</td>
       <td>0 – 7 ngày</td>
       <td>
-        <span class="highlight">1 đổi 1 cùng loại</span> nếu sản phẩm chưa sử dụng, bao bì còn nguyên, có dấu hiệu lỗi như tách lớp, đổi màu, mùi lạ, rò rỉ.<br>
-        Khách gửi lại sản phẩm, Beauty Shop kiểm tra lỗi và hỗ trợ đổi mới hoặc hoàn trả giá trị tương đương sau khi đánh giá. Nếu hết hàng, được đổi sản phẩm tương đương hoặc cao hơn (bù chênh lệch).
+        <span class="highlight">1 đổi 1 cùng loại</span> nếu sản phẩm còn tag, chưa mặc, phát hiện lỗi như đường may, lỗi in, sai size.<br>
+        Sau khi kiểm tra, The Bad Gold hỗ trợ đổi mới hoặc hoàn tiền tương đương. Nếu hết hàng, có thể đổi mẫu tương đương hoặc cao hơn (bù chênh lệch).
       </td>
-      <td>10% trong 30 ngày đầu</td>
+      <td>0% – miễn phí</td>
     </tr>
     <tr>
-      <td>Khách đổi vì nhu cầu cá nhân</td>
+      <td>Khách muốn đổi vì không vừa hoặc không ưng</td>
       <td>0 – 7 ngày</td>
       <td>
-        Áp dụng nếu sản phẩm chưa mở nắp, còn tem – nhãn, bao bì mới 100%.<br>
-        Khách được đổi sang sản phẩm khác có giá trị tương đương hoặc cao hơn.
+        Chấp nhận đổi sang sản phẩm khác nếu còn nguyên tag, chưa mặc, chưa giặt.<br>
+        Chỉ áp dụng 1 lần đổi và tùy mẫu có sẵn trong kho.
       </td>
-      <td>20% trong 7 ngày đầu</td>
+      <td>10% – phí xử lý tồn kho</td>
     </tr>
     <tr>
       <td>Lỗi do người dùng</td>
       <td>0 – 30 ngày</td>
       <td>
-        Không áp dụng đổi trả. Nếu còn hạn dùng và có lỗi nhẹ, Beauty Shop hỗ trợ gửi về hãng (nếu có chính sách).
+        Không áp dụng đổi trả. Có thể hỗ trợ sửa chữa nếu sản phẩm cho phép và được hãng đồng ý.
       </td>
       <td>Không hỗ trợ</td>
     </tr>
     <tr>
-      <td colspan="4"><strong>Phụ phí đổi trả khác nếu có (tính theo % đơn hàng):</strong>
+      <td colspan="4"><strong>Phụ phí đổi trả khác nếu có (tính theo % giá trị sản phẩm):</strong>
         <ul>
-          <li><strong>Trầy xước nhẹ:</strong> 0% nếu ở vị trí khuất, < 0.5cm.</li>
-          <li><strong>Trầy xước vừa:</strong> 10% nếu > 0.5cm hoặc dễ nhìn thấy.</li>
-          <li><strong>Trầy xước nặng, mất tem, rách hộp:</strong> <span class="highlight">Không đủ điều kiện đổi trả</span>.</li>
-          <li><strong>Phí vỏ hộp:</strong> 5% nếu thiếu vỏ.</li>
-          <li><strong>Phí hoàn đơn công ty:</strong> 10% nếu không có biên bản thu hồi.</li>
+          <li><strong>Bẩn nhẹ (có thể làm sạch):</strong> 5%</li>
+          <li><strong>Rách nhẹ ở viền/quai áo:</strong> 10%</li>
+          <li><strong>Mất tag, mác, tem size:</strong> <span class="highlight">Không đủ điều kiện đổi</span></li>
+          <li><strong>Thiếu túi/vỏ hộp kèm theo:</strong> 5%</li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-    <h5>2.1.2. Sản phẩm cũ</h5>
+<h5>2.1.2. Sản phẩm đã sử dụng</h5>
 
-    <table>
+<table>
   <thead>
     <tr>
       <th>Trường hợp</th>
-      <th>Thời gian<br>(tính từ ngày mua)</th>
+      <th>Thời gian<br>(tính từ ngày nhận hàng)</th>
       <th>Chính sách đổi trả</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Sản phẩm lỗi từ nhà sản xuất</td>
+      <td>Sản phẩm lỗi kỹ thuật (sau khi mặc 1 lần)</td>
       <td>0 – 7 ngày</td>
       <td>
-        <strong>Đổi 1 sản phẩm tương đương</strong><br>
-        (Cùng loại, cùng dung tích, cùng hạn sử dụng)<br>
-        Nếu không có sản phẩm tương đương, hoàn lại 100% giá trị sản phẩm (trừ các chi phí liên quan nếu có).
+        <strong>Đổi sản phẩm tương đương</strong><br>
+        Nếu còn hàng cùng size và mẫu.<br>
+        Nếu không có, hỗ trợ đổi mẫu tương đương hoặc hoàn tiền theo giá trị sản phẩm.
       </td>
     </tr>
     <tr>
-      <td></td>
-      <td>Vẫn còn hạn sử dụng</td>
+      <td>Sản phẩm vẫn còn sử dụng được</td>
+      <td>Dưới 30 ngày</td>
       <td>
-        <em>Beauty Shop</em> hỗ trợ gửi sản phẩm lỗi về hãng/phân phối để bảo hành theo chính sách hiện hành.
+        <em>The Bad Gold</em> hỗ trợ gửi sản phẩm về hãng/thợ sửa nếu có lỗi nhẹ (đứt chỉ, bung nút...). Phí sửa do khách hàng chi trả.
       </td>
     </tr>
     <tr>
-      <td>Đổi trả theo nhu cầu</td>
+      <td>Đổi trả theo nhu cầu cá nhân</td>
       <td><em>Không áp dụng</em></td>
       <td>
-        Sản phẩm mỹ phẩm là hàng tiêu dùng cá nhân, không áp dụng đổi trả theo nhu cầu khi đã mua.
+        Sản phẩm đã qua sử dụng không áp dụng đổi trả vì lý do không ưng ý sau khi mặc.
       </td>
     </tr>
     <tr>
       <td>Lỗi do người dùng</td>
-      <td>Trong hạn sử dụng</td>
+      <td>Dưới 30 ngày</td>
       <td>
-        <em>Beauty Shop</em> hỗ trợ gửi sản phẩm đi kiểm tra, khách hàng chịu toàn bộ chi phí sửa chữa hoặc xử lý (nếu có).
+        <em>The Bad Gold</em> có thể hỗ trợ đánh giá lỗi và tư vấn xử lý hoặc giới thiệu nơi sửa phù hợp. Chi phí do khách hàng chi trả.
       </td>
     </tr>
   </tbody>
 </table>
+
 
   </div>
 </div>
@@ -485,7 +485,7 @@
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

@@ -134,6 +134,169 @@
   border-bottom: 2px solid black;
 }
 
+/*form chọn size*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.modal-image {
+  width: 180px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modal-details {
+  flex: 1;
+  text-align: left;
+}
+
+#modalTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#modalPrice {
+  font-size: 16px;
+  color: #555;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.size-option {
+  cursor: pointer;
+}
+
+.size-option input[type="radio"] {
+  display: none;
+}
+
+.size-option span {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  transition: 0.3s;
+}
+
+.size-option input[type="radio"]:checked + span {
+  background-color: #6c757d; /* màu xám */
+  color: white;
+  border-color: #6c757d;
+}
+
+.modal1 {
+  display: none; /* mở bằng JS */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  overflow: auto;
+
+}
+
+.modal-content1 {
+  background-color: #fff;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.size-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.size-table th, .size-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+.size-guide {
+  background-color: #f1f1f1;   /* nền xám nhạt */
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.size-guide:hover {
+  background-color: #e0e0e0;
+}
+
+.size-guide span {
+  color: #333;
+  font-weight: 500;
+}
+
 </style>
 
 
@@ -175,7 +338,12 @@ if ($result->num_rows > 0) {
         echo '<h3 class="product-name"><a href="chitietsp.php?maSP=' . $row['maSP'] . '">' . $row['tenSP'] . '</a></h3>';
         echo '<p class="product-price">Giá: ' . number_format($row['giaBan'], 0, ',', '.') . ' VNĐ</p>';
         echo '<div class="button-group">';
-        echo '<a href="php/cart.php?maSP=' . $row['maSP'] . '" class="add-to-cart">Thêm giỏ hàng</a>';
+        echo '<a href="#" 
+        class="add-to-cart open-modal" 
+        data-masp="' . $row['maSP'] . '" 
+        data-ten="' . htmlspecialchars($row['tenSP']) . '" 
+        data-hinh="' . $row['hinhAnh'] . '" 
+        data-gia="' . $row['giaBan'] . '">Thêm giỏ hàng</a>';
         echo '<a href="php/chitietsp.php?maSP=' . $row['maSP'] . '" class="add-to-cart view-button">Xem</a>';
         echo '</div>';
         echo '</div>';
@@ -204,3 +372,167 @@ if ($result->num_rows > 0) {
 </div>
 
 </div>
+
+
+<!-- Modal Chọn Size -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+
+    <div class="modal-body">
+      <img id="modalImage" src="" alt="Sản phẩm" class="modal-image">
+      <div class="modal-details">
+        <h3 id="modalTitle"></h3>
+        <p id="modalPrice"></p>
+
+        <!-- Link hướng dẫn chọn kích cỡ -->
+      <div class="size-guide" onclick="openSizeGuide()">
+        <span style="margin-left: 5px;">Hướng dẫn chọn kích cỡ</span>
+      </div>  
+    </div>
+
+  </div>
+
+  
+    <div class="size-options">
+      <label class="size-option">
+        <input type="radio" name="size" value="S">
+        <span>S</span>
+      </label>
+
+      <label class="size-option">
+        <input type="radio" name="size" value="M">
+        <span>M</span>
+      </label>
+
+      <label class="size-option">
+        <input type="radio" name="size" value="L">
+        <span>L</span>
+      </label>
+
+      <label class="size-option">
+        <input type="radio" name="size" value="XL">
+        <span>XL</span>
+      </label>
+
+    </div>
+
+    <button class="add-to-cart" id="confirmAddToCart">Thêm giỏ hàng</button>
+  </div>
+</div>
+
+<!-- Modal hướng dẫn chọn kích cỡ -->
+<div id="sizeGuideModal" class="modal1">
+  <div class="modal-content1">
+    <span class="close-button" onclick="closeSizeGuide()">&times;</span>
+    <h3>Hướng dẫn chọn kích cỡ</h3>
+
+    <!-- Bảng size Áo -->
+    <h4>Bảng size Áo</h4>
+    <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align: center; margin-bottom: 20px;">
+      <thead>
+        <tr>
+          <th>Kích cỡ</th>
+          <th>Dài (cm)</th>
+          <th>Rộng</th>
+          <th>Chiều cao (cm)</th>
+          <th>Cân nặng (kg)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>S</td><td>65</td><td>52</td><td>140-155</td><td>40-50</td></tr>
+        <tr><td>M</td><td>68</td><td>55</td><td>150-165</td><td>50-60</td></tr>
+        <tr><td>L</td><td>71</td><td>58</td><td>160-175</td><td>60-75</td></tr>
+        <tr><td>XL</td><td>74</td><td>61</td><td>170-185</td><td>75-90</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Bảng size Quần -->
+    <h4>Bảng size Quần</h4>
+    <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align: center; margin-bottom: 20px;">
+      <thead>
+        <tr>
+          <th>Kích cỡ</th>
+          <th>Lưng (cm)</th>
+          <th>Dài (cm)</th>
+          <th>Mông (cm)</th>
+          <th>Chiều cao (cm)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>S</td><td>60-65</td><td>90</td><td>75-80</td><td>145-155</td></tr>
+        <tr><td>M</td><td>66-72</td><td>94</td><td>81-85</td><td>155-165</td></tr>
+        <tr><td>L</td><td>73-79</td><td>98</td><td>86-90</td><td>165-175</td></tr>
+        <tr><td>XL</td><td>80-86</td><td>102</td><td>91-100</td><td>175-185</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('productModal');
+    const closeBtn = document.querySelector('.close-button');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalPrice = document.getElementById('modalPrice');
+    const confirmBtn = document.getElementById('confirmAddToCart');
+    let currentProduct = {};
+
+    document.querySelectorAll('.open-modal').forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Lấy dữ liệu sản phẩm
+            const maSP = this.dataset.masp;
+            const tenSP = this.dataset.ten;
+            const hinhAnh = this.dataset.hinh;
+            const giaBan = parseInt(this.dataset.gia).toLocaleString('vi-VN') + ' VNĐ';
+
+            // Lưu tạm
+            currentProduct = { maSP: maSP };
+
+            // Hiển thị vào modal
+            modalImage.src = hinhAnh;
+            modalTitle.textContent = tenSP;
+            modalPrice.textContent = 'Giá: ' + giaBan;
+
+            modal.style.display = 'block';
+        });
+    });
+
+    // Đóng modal
+    closeBtn.onclick = () => modal.style.display = 'none';
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = 'none'; }
+
+    // Xác nhận thêm vào giỏ hàng
+    confirmBtn.onclick = () => {
+        const size = document.querySelector('input[name="size"]:checked');
+        if (!size) {
+            alert('Vui lòng chọn size!');
+            return;
+        }
+
+        // Gửi tới PHP (có thể dùng AJAX, hoặc chuyển trang)
+        const url = `php/cart.php?maSP=${currentProduct.maSP}&size=${size.value}`;
+        window.location.href = url;
+    };
+});
+</script>
+
+
+<script>
+  function openSizeGuide() {
+  document.getElementById("sizeGuideModal").style.display = "block";
+}
+</script>
+
+<script>
+  function closeSizeGuide() {
+  document.getElementById("sizeGuideModal").style.display = "none";
+}
+</script>
+
+

@@ -112,7 +112,7 @@
       <nav class="navbar navbar-expand-lg border-bottom sticky-top  ">
         <div class="container">
           <a class="navbar-brand" href="index.php">
-            <img class="logo" src="../img/logo.png" alt="Bootstrap"  />
+            <img class="logo" src="../img/logo_thebadgold.png" alt="Bootstrap"  style="height: 60px;"/>
           </a>
           <button
             class="navbar-toggler"
@@ -281,41 +281,41 @@
   <div class="content" >
 
      <h2>Chính sách bảo mật</h2>
-<p>Beauty Shop cam kết bảo mật toàn bộ thông tin cá nhân mà khách hàng cung cấp khi mua các sản phẩm mỹ phẩm như sữa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền, phấn phủ... Chính sách này quy định cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn.</p>
+<p><strong>The Bad Gold</strong> cam kết bảo mật toàn bộ thông tin cá nhân mà khách hàng cung cấp khi mua các sản phẩm mỹ phẩm như sữa rửa mặt, kem chống nắng, son môi, tẩy trang, kem nền, phấn phủ... Chính sách này quy định cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn.</p>
 
 <h5>1. Mục đích và phạm vi thu thập</h5>
-<p>Để truy cập và sử dụng một số dịch vụ tại <strong>Beauty Shop</strong>, bạn có thể sẽ được yêu cầu đăng ký với chúng tôi thông tin cá nhân (Email, Họ tên, Số điện thoại liên lạc…). Mọi thông tin khai báo phải đảm bảo tính chính xác và hợp pháp. FPTshop.com.vn không chịu mọi trách nhiệm liên quan đến pháp luật của thông tin khai báo. Việc thu thập thông tin cá nhân như họ tên, số điện thoại, email, địa chỉ… nhằm phục vụ việc liên hệ giao hàng, tư vấn chăm sóc da và hỗ trợ đổi trả khi cần thiết. Chúng tôi không thu thập thông tin không liên quan đến hoạt động kinh doanh mỹ phẩm.</p>
+<p>Để truy cập và sử dụng một số dịch vụ tại <strong>The Bad Gold</strong>, bạn có thể sẽ được yêu cầu đăng ký với chúng tôi thông tin cá nhân (Email, Họ tên, Số điện thoại liên lạc…). Mọi thông tin khai báo phải đảm bảo tính chính xác và hợp pháp. <strong>The Bad Gold</strong> không chịu mọi trách nhiệm liên quan đến pháp luật của thông tin khai báo. Việc thu thập thông tin cá nhân như họ tên, số điện thoại, email, địa chỉ… nhằm phục vụ việc liên hệ giao hàng, tư vấn chăm sóc da và hỗ trợ đổi trả khi cần thiết. Chúng tôi không thu thập thông tin không liên quan đến hoạt động kinh doanh mỹ phẩm.</p>
 
 <h5>2. Phạm vi sử dụng thông tin</h5>
 <p>Chúng tôi thu thập và sử dụng thông tin cá nhân bạn với mục đích phù hợp và hoàn toàn tuân thủ nội dung của “Chính sách bảo mật” này. Khi cần thiết, chúng tôi có thể sử dụng những thông tin này để liên hệ trực tiếp với bạn dưới các hình thức như: gởi thư ngỏ, đơn đặt hàng, thư cảm ơn, sms, thông tin về kỹ thuật và bảo mật…Thông tin khách hàng được sử dụng trong nội bộ hệ thống để thực hiện các giao dịch mua bán, gửi sản phẩm, chăm sóc sau bán hàng, giới thiệu chương trình khuyến mãi và phản hồi thắc mắc từ khách hàng.</p>
 
 <h5>3. Thời gian lưu trữ thông tin</h5>
-<p>Dữ liệu cá nhân của Thành viên sẽ được lưu trữ cho đến khi có yêu cầu hủy bỏ hoặc tự thành viên đăng nhập và thực hiện hủy bỏ. Còn lại trong mọi trường hợp thông tin cá nhân thành viên sẽ được bảo mật trên máy chủ của <strong>Beauty Shop</strong>.</p>
+<p>Dữ liệu cá nhân của Thành viên sẽ được lưu trữ cho đến khi có yêu cầu hủy bỏ hoặc tự thành viên đăng nhập và thực hiện hủy bỏ. Còn lại trong mọi trường hợp thông tin cá nhân thành viên sẽ được bảo mật trên máy chủ của <strong>The Bad Gold</strong>.</p>
 
 <h5>4. Đơn vị thu thập và quản lý</h5>
 <p>
-Cửa hàng Beauty Shop Việt Nam<br>
+Cửa hàng The Bad Gold Việt Nam<br>
 Địa chỉ: 162/1, Đường 3/2, Ninh Kiều, Cần Thơ<br>
-Email: webmipham@gmail.com | Hotline: 0879 342 732
+Email: thebadgold@gmail.com | Hotline: 0907 326 239
 </p>
 
 <h5>5. Ai có thể tiếp cận và chỉnh sửa thông tin</h5>
 <p>Chỉ bộ phận quản lý đơn hàng, chăm sóc khách hàng mới có quyền truy cập và chỉnh sửa thông tin. Khách hàng cũng có thể yêu cầu cập nhật/xóa thông tin của mình bất cứ lúc nào qua email hoặc hotline.</p>
 
 <h5>6. Cam kết bảo mật</h5>
-<p>Thông tin cá nhân của thành viên trên Beauty Shop được Beauty Shop cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá nhân của Beauty Shop. Việc thu thập và sử dụng thông tin của mỗi thành viên chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.<br>
+<p>Thông tin cá nhân của thành viên trên <strong>The Bad Gold</strong> được <strong>The Bad Gold</strong> cam kết bảo mật tuyệt đối theo chính sách bảo vệ thông tin cá nhân của <strong>The Bad Gold</strong>. Việc thu thập và sử dụng thông tin của mỗi thành viên chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những trường hợp pháp luật có quy định khác.<br>
 
 Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho bên thứ 3 nào về thông tin cá nhân của thành viên khi không có sự cho phép đồng ý từ thành viên. <br>
 
-Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân thành viên, Beauty Shop sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho thành viên được biết. <br>
+Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân thành viên, <strong>The Bad Gold</strong> sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng điều tra xử lý kịp thời và thông báo cho thành viên được biết. <br>
 
-Ban quản lý Beauty Shop yêu cầu các cá nhân khi đăng ký/mua hàng là thành viên, phải cung cấp đầy đủ thông tin cá nhân có liên quan như: Họ và tên, địa chỉ liên lạc, email, số chứng minh nhân dân, điện thoại, số tài khoản, số thẻ thanh toán …., và chịu trách nhiệm về tính pháp lý của những thông tin trên. Ban quản lý Beauty Shop không chịu trách nhiệm cũng như không giải quyết mọi khiếu nại có liên quan đến quyền lợi của Thành viên đó nếu xét thấy tất cả thông tin cá nhân của thành viên đó cung cấp khi đăng ký ban đầu là không chính xác.</p>
+Ban quản lý <strong>The Bad Gold</strong>yêu cầu các cá nhân khi đăng ký/mua hàng là thành viên, phải cung cấp đầy đủ thông tin cá nhân có liên quan như: Họ và tên, địa chỉ liên lạc, email, số chứng minh nhân dân, điện thoại, số tài khoản, số thẻ thanh toán …., và chịu trách nhiệm về tính pháp lý của những thông tin trên. Ban quản lý <strong>The Bad Gold</strong> không chịu trách nhiệm cũng như không giải quyết mọi khiếu nại có liên quan đến quyền lợi của Thành viên đó nếu xét thấy tất cả thông tin cá nhân của thành viên đó cung cấp khi đăng ký ban đầu là không chính xác.</p>
 
 <h5>7. Bảo vệ thông tin thanh toán</h5>
 <p>Thông tin thẻ tín dụng/thanh toán điện tử (nếu có) được bảo mật thông qua hệ thống mã hóa SSL và các chuẩn bảo mật của ngân hàng.</p>
 
 <h5>8. Khách hàng làm gì khi cần kiểm tra/xóa dữ liệu?</h5>
-<p>Bạn có thể gửi yêu cầu xóa dữ liệu qua email Trung tâm hỗ trợ của chúng tôi: <strong>webmipham@gmail.com</strong>. Vui lòng cung cấp càng nhiều thông tin càng tốt về dữ liệu nào bạn muốn xóa. Yêu cầu sẽ được chuyển đến nhóm thích hợp để đánh giá và xử lý. Chúng tôi sẽ liên hệ từng bước để cập nhật cho bạn về tiến trình xóa.</p>
+<p>Bạn có thể gửi yêu cầu xóa dữ liệu qua email Trung tâm hỗ trợ của chúng tôi: <strong>thebadgold@gmail.com</strong>. Vui lòng cung cấp càng nhiều thông tin càng tốt về dữ liệu nào bạn muốn xóa. Yêu cầu sẽ được chuyển đến nhóm thích hợp để đánh giá và xử lý. Chúng tôi sẽ liên hệ từng bước để cập nhật cho bạn về tiến trình xóa.</p>
 
   </div>
 </div>
@@ -327,7 +327,7 @@ Ban quản lý Beauty Shop yêu cầu các cá nhân khi đăng ký/mua hàng l�
           <div class="col-md-4">
             <div class="text-start mx-4 mb-2">
             <a class="navbar-brand" href="#">
-                <img src="../img/logoshop.png" alt="Bootstrap" style="width: 150px; height: auto;" />
+                <img src="../img/logo_thebadgold.png" alt="Bootstrap" style="width: 150px; height: 80px;"/>
             </a>
               <p class="small text-start">
                 Thương hiệu siêu thị uy tín và chất lượng, cam kết mang đến

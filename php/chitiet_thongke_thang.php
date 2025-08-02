@@ -14,16 +14,17 @@ $sql = "SELECT
             d.ngayDat,
             s.tenSP,
             s.hinhAnh,
+            sz.ten_size AS size,
             c.soLuong,
             c.giaBan,
             (c.soLuong * c.giaBan) AS tongTienSP
         FROM donhang d
         JOIN donhang_chitiet c ON d.ma_donhang = c.ma_donhang
         JOIN sanpham s ON c.maSP = s.maSP
+        LEFT JOIN size sz ON c.ma_size = sz.ma_size
         WHERE DATE_FORMAT(d.ngayDat, '%Y-%m') = ? 
           AND d.trangthai != 'Đã huỷ'
         ORDER BY d.ma_donhang, d.ngayDat ASC";
-
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $thang);
@@ -55,6 +56,7 @@ $result = $stmt->get_result();
                 <th>Hình ảnh</th>
                 <th>Tên sản phẩm</th>
                 <th>Giá</th>
+                <th>Size</th>
                 <th>Số lượng</th>
                 <th>Tổng</th>
                 <th>Ngày đặt</th>
@@ -93,7 +95,9 @@ if ($result->num_rows > 0) {
 
             echo "<td><img src='" . $item['hinhAnh'] . "' alt='Ảnh' width='60'></td>";
             echo "<td>" . $item['tenSP'] . "</td>";
-            echo "<td>" . number_format($item['giaBan'], 0, ',', '.') . " đ</td>";
+            $donGia = $item['soLuong'] > 0 ? $item['giaBan'] / $item['soLuong'] : 0;
+            echo "<td>" . number_format($donGia, 0, ',', '.') . " đ</td>";
+            echo "<td>" . ($item['size'] ?? '-') . "</td>";
             echo "<td>" . $item['soLuong'] . "</td>";
 
             if ($first) {
@@ -105,10 +109,10 @@ if ($result->num_rows > 0) {
             $first = false;
         }
 
-        echo "<tr class='phancach'><td colspan='8'></td></tr>";
+        echo "<tr class='phancach'><td colspan='9'></td></tr>";
     }
 } else {
-    echo "<tr><td colspan='8'>Không có đơn hàng nào trong tháng này.</td></tr>";
+    echo "<tr><td colspan='9'>Không có đơn hàng nào trong tháng này.</td></tr>";
 }
 ?>
         </table>
